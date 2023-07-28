@@ -11,23 +11,34 @@
 <body>
     <div class="container">
         <div class="row" style="height: 100vh">
-            <div class="col-md-6 m-auto d-flex justify-content-center">
-                <form>
+            <div class="col-md-5 m-auto d-flex justify-content-center flex-column">
+                <img src="./img/logo.png"  class="img-fluid mx-auto" alt="Logo Cencenproperty">
+                <div>
+                    <h3>DASHBOARD LOGIN</h3>
+                </div>
+                <form action="/login" method="POST">
                     @csrf
-                    <img src="./img/logo.png"  class="img-fluid" alt="Logo Cencenproperty">
-                    <div class="mb-4">
-                        <h3>DASHBOARD LOGIN</h3>
-                    </div>
                     <div class="mb-3">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address">
+                        <input id="email" name="email" type="email" class="form-control @error('email') is-invalid @enderror"  placeholder="Email address" value="{{ old('email') }}" autofocus required>
+                        @error('email')
+                        <div class="invalid-feedback">
+                            {{ $message }}
+                        </div>
+                        @enderror
                         </div>
                     <div class="mb-3">
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input id="password" name="password" type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password" required>
                     </div>
-                    <div class="d-grid mx-auto">
+                    <div class="d-grid mx-auto mb-3">
                         <button type="submit" class="btn btn-primary d-grid">Login</button>
                     </div>
                 </form>
+                @if(session()->has('loginError'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>{{ session('loginError') }}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>                    
+                @endif
             </div>
         </div>
     </div>
