@@ -9,6 +9,9 @@
 
   {{-- Main CSS --}}
   <link rel="stylesheet" href="./css/styles.css">
+
+  {{-- Bootstrap Icons --}}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <title>{{ $title }}</title>
 </head>
 <body>
@@ -39,11 +42,43 @@
           </div>
         </nav>
 
-        {{-- UPLOAD --}}
+        {{-- EDIT VIEW --}}
         <div class="container-fluid mt-5 mb-3">
           <div class="row ps-md-5">
             <div class="col-md-2">
               <h3 class="d-block">Edit</h3>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid mb-3">
+          <div class="row">
+            <div class="col-md-2">
+              <img src="https://source.unsplash.com/200x200?house" class="img-fluid ms-md-5 rounded" alt="image house">
+            </div>
+            <div class="col-md-5 border border-3 rounded px-3 py-2 ms-md-3">
+              <h6>Title</h6>
+              <h6 class="p-0 m-0">IDR. 4.500.000,00</h6>
+              <p class="p-0 m-0"><small>150 sqm</small></p>
+              <p class="p-0 m-0"><i class="bi bi-bricks"></i>2</p>
+              <p class="p-0 mb-0"><i class="bi bi-bricks"></i>1</p>
+              <button class="btn btn-primary btn-sm mt-1"><a href="/edit" class="text-decoration-none text-white">Edit</a></button>
+              <button class="btn btn-danger btn-sm mt-1"><a href="/delete" class="text-decoration-none text-white">Delete</a></button>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid mb-3">
+          <div class="row">
+            <div class="col-md-2">
+              <img src="https://source.unsplash.com/200x200?home" class="img-fluid ms-md-5 rounded" alt="image house">
+            </div>
+            <div class="col-md-5 border border-3 rounded px-3 py-2 ms-md-3">
+              <h6>Title</h6>
+              <h6 class="p-0 m-0">IDR. 4.500.000,00</h6>
+              <p class="p-0 m-0"><small>150 sqm</small></p>
+              <p class="p-0 m-0"><i class="bi bi-bricks"></i>2</p>
+              <p class="p-0 mb-0"><i class="bi bi-bricks"></i>1</p>
+              <button class="btn btn-primary btn-sm mt-1"><a href="/edit" class="text-decoration-none text-white">Edit</a></button>
+              <button class="btn btn-danger btn-sm mt-1"><a href="/delete" class="text-decoration-none text-white">Delete</a></button>
             </div>
           </div>
         </div>

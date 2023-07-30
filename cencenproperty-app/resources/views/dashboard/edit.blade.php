@@ -9,6 +9,8 @@
 
   {{-- Main CSS --}}
   <link rel="stylesheet" href="./css/styles.css">
+  {{-- Bootstrap Icons --}}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <title>{{ $title }}</title>
 </head>
 <body>
@@ -27,8 +29,8 @@
                   <h5 class="text-white mb-0">Welcome, {{ auth()->user()->name }}</h5>
                 </li>
               </ul>
-                <h5 class="mx-3 my-1"><a href="/dashboard" class="text-white text-decoration-none {{ $active }}">Upload</a></h5>
-                <h5 class="mx-3 my-1"><a href="/dashboard2" class="text-decoration-none text-white">Edit</a></h5>
+                <h5 class="mx-3 my-1"><a href="/dashboard" class="text-white text-decoration-none ">Upload</a></h5>
+                <h5 class="mx-3 my-1"><a href="/dashboard2" class="text-decoration-none text-white {{ $active }}">Edit</a></h5>
               <span class="navbar-text">
                 <form action="/logout" method="post">
                   @csrf
@@ -43,7 +45,7 @@
         <div class="container-fluid mt-5 mb-3">
           <div class="row ps-md-5">
             <div class="col-md-2">
-              <h3 class="d-block">Upload</h3>
+              <h3 class="d-block">Edit</h3>
             </div>
           </div>
         </div>
@@ -182,7 +184,7 @@
               </div>
               <div class="col-md-5">
                   <div class="d-grid">
-                    <button type="submit" class="btn btn-primary">Upload</button>
+                    <button type="submit" class="btn btn-primary">Edit</button>
                   </div>
               </div>
             </div>

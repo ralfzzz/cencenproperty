@@ -30,3 +30,4 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', [DashboardController::class, 'view']);
 Route::get('/dashboard2', [DashboardController::class, 'view2']);
+Route::get('/edit', [DashboardController::class, 'edit']);

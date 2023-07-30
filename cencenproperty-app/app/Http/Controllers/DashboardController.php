@@ -19,4 +19,11 @@ class DashboardController extends Controller
             'active' => 'active'
         ]);
     }
+
+    public function edit(){
+        return view('dashboard.edit',[
+            'title' => 'Dashboard',
+            'active' => 'active'
+        ]);
+    }
 }
