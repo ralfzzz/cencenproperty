@@ -15,7 +15,7 @@
 </head>
 <body>
         {{-- NAVBAR --}}
-        <nav class="navbar navbar-expand-lg bg-dark shadow sticky-top">
+        <nav class="navbar navbar-expand-lg bg-dark shadow sticky-top pe-3">
           <div class="container-fluid px-0">
             <div class="col-md-2 d-flex justify-content-center">
               <a class="navbar-brand mx-auto" href="#"><img src="./img/logo_white.png" alt="white logo"></a>
@@ -49,7 +49,44 @@
             </div>
           </div>
         </div>
+        {{-- FORM UPLOAD --}}
         <form action="" method="" class="mb-5">
+          {{-- sell/rent --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="inputSell" class="col-form-label d-block ps-md-5">Sell/Rent</label>
+              </div>
+              <div class="col-md-5">
+                <select class="form-select" id="inputSell">
+                  <option disabled selected>Choose...</option>
+                  <option>Sell</option>
+                  <option>Rent</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          {{-- property type --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="inputType" class="col-form-label d-block ps-md-5">Property Type</label>
+              </div>
+              <div class="col-md-5">
+                <select class="form-select" id="inputType">
+                  <option disabled selected>Choose...</option>
+                  <option>Rumah</option>
+                  <option>Apartemen</option>
+                  <option>Tanah</option>
+                  <option>Rumah Susun/ Townhouse</option>
+                  <option>Ruko</option>
+                  <option>Kios</option>
+                  <option>Kost</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          {{-- title --}}
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
@@ -60,6 +97,20 @@
               </div>
             </div>
           </div>
+          {{-- deskripsi --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="description" class="col-form-label d-block ps-md-5">Description</label>
+              </div>
+              <div class="col-md-5">
+                <div class="input-group">
+                  <textarea class="form-control" rows="5" id="description" name="text" placeholder="Rmah ini adalah..."></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{-- address --}}
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
@@ -70,6 +121,22 @@
               </div>
             </div>
           </div>
+          {{-- size type --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="sizeType" class="col-form-label d-block ps-md-5">Size Type</label>
+              </div>
+              <div class="col-md-5">
+                <select class="form-select" id="sizeType">
+                  <option disabled selected>Choose...</option>
+                  <option>Land Size</option>
+                  <option>Building Size</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          {{-- size --}}
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
@@ -83,6 +150,7 @@
               </div>
             </div>
           </div>
+          {{-- bedroom --}}
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
@@ -98,6 +166,18 @@
               </div>
             </div>
           </div>
+          {{-- addtional bedroom --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="addBed" class="col-form-label d-block ps-md-5">Addtional Bedroom</label>
+              </div>
+              <div class="col-md-5">
+                <input type="text" class="form-control" id="addBed">
+              </div>
+            </div>
+          </div>
+          {{-- bathroom --}}
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
@@ -113,6 +193,7 @@
               </div>
             </div>
           </div>
+          {{-- furniture --}}
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
@@ -121,13 +202,14 @@
               <div class="col-md-5">
                 <select class="form-select" id="inputBathroom">
                   <option disabled selected>Choose...</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
+                  <option>Unfurnished</option>
+                  <option>Semi Furnished</option>
+                  <option>Fully Furnished</option>
                 </select>
               </div>
             </div>
           </div>
+          {{-- facility --}}
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
@@ -140,10 +222,11 @@
               </div>
             </div>
           </div>
+          {{-- locate --}}
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
-                <label for="location" class="col-form-label d-block ps-md-5">Locate near</label>
+                <label for="location" class="col-form-label d-block ps-md-5">Located near</label>
               </div>
               <div class="col-md-5">
                 <div class="input-group">
@@ -152,6 +235,7 @@
               </div>
             </div>
           </div>
+          {{-- price --}}
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
@@ -165,6 +249,7 @@
               </div>
             </div>
           </div>
+          {{-- image --}}
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
@@ -173,11 +258,12 @@
               <div class="col-md-5">
                 <div class="input-group">
                   <input type="file" class="form-control" id="inputImage">
+                  {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
-                <img class="img-preview img-fluid mb-2 col-sm-5 px-0">
               </div>
             </div>
           </div>
+          {{-- upload button --}}
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
@@ -190,6 +276,11 @@
             </div>
           </div>
         </form>
+
+        {{-- FOOTER --}}
+          <footer style="background-color: rgba(0, 0, 0, 0.1)">
+            <p class="text-md-end text-body-secondary text-white p-4 m-0">© 2023 Wepsait</p>
+          </footer>
 </body>
   {{-- Bootstrap JS --}}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>{{ $title }}</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, rgba(255,255,255, 0.8) 0 100%), url('https://source.unsplash.com/1920x1080?home');
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
