@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DashboardPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,5 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/dashboard', [DashboardController::class, 'view']);
 Route::get('/dashboard2', [DashboardController::class, 'view2']);
 Route::get('/edit', [DashboardController::class, 'edit']);
+
+Route::Resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
