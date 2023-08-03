@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use auth;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,39 @@ class DashboardPostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // return $request->file('image')->store('post_image');
+
+        $validateInput = $request->validate([
+            'sell_rent' => 'required|max:255',
+            'property_type' => 'required|',
+            'title' => 'required|unique:posts',
+            'description' => 'required',
+            'address' => 'required',
+            'size_type' => 'required',
+            'size' => 'required',
+            'bedroom' => 'required',
+            'additional_bedroom' => 'required',
+            'bathroom' => 'required',
+            'furniture_electronics' => 'required',
+            'facility' => 'required',
+            'located_near' => 'required',
+            'price' => 'required',
+            // 'image' => 'image|file|max:1024',
+            // 'user_id' => auth()->user()->id
+        ]);
+
+        
+        if ($request->file('image')) {
+                $validateInput['image'] = $request->file('image')->store('post_images');
+            }
+            
+            $validateInput['user_id'] = auth()->user()->id;
+            // dd($validateInput);
+        // $validateInput['excerpt'] = Str::limit(strip_tags($validateInput['body']), 50);
+
+        Post::create($validateInput);
+
+        return redirect('/dashboard')->with('success','Post succesfully created!');
     }
 
     /**

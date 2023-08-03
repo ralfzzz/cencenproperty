@@ -49,19 +49,32 @@
             </div>
           </div>
         </div>
+        @if(session()->has('success'))
+        <div class="container-fluid">
+          <div class="row ps-md-5 me-md-1">
+            <div class="col-md-7 pe-md-4">
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{ session('success') }}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        @endif
         {{-- FORM UPLOAD --}}
-        <form action="" method="" class="mb-5">
+        <form action="/dashboard/posts" method="POST" class="mb-5" enctype="multipart/form-data">
+          @csrf
           {{-- sell/rent --}}
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
-                <label for="inputSell" class="col-form-label d-block ps-md-5">Sell/Rent</label>
+                <label for="sell_rent" class="col-form-label d-block ps-md-5">Sell/Rent</label>
               </div>
               <div class="col-md-5">
-                <select class="form-select" id="inputSell">
+                <select class="form-select" id="sell_rent" name="sell_rent">
                   <option disabled selected>Choose...</option>
-                  <option>Sell</option>
-                  <option>Rent</option>
+                  <option value="Sell">Sell</option>
+                  <option value="Rent">Rent</option>
                 </select>
               </div>
             </div>
@@ -70,18 +83,18 @@
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
-                <label for="inputType" class="col-form-label d-block ps-md-5">Property Type</label>
+                <label for="property_type" class="col-form-label d-block ps-md-5">Property Type</label>
               </div>
               <div class="col-md-5">
-                <select class="form-select" id="inputType">
+                <select class="form-select" id="property_type" name="property_type">
                   <option disabled selected>Choose...</option>
-                  <option>Rumah</option>
-                  <option>Apartemen</option>
-                  <option>Tanah</option>
-                  <option>Rumah Susun/ Townhouse</option>
-                  <option>Ruko</option>
-                  <option>Kios</option>
-                  <option>Kost</option>
+                  <option value="Rumah">Rumah</option>
+                  <option value="Apartemen">Apartemen</option>
+                  <option value="Tanah">Tanah</option>
+                  <option value="Rumah Susun/ Townhouse">Rumah Susun/ Townhouse</option>
+                  <option value="Ruko">Ruko</option>
+                  <option value="Kios">Kios</option>
+                  <option value="Kost">Kost</option>
                 </select>
               </div>
             </div>
@@ -90,10 +103,10 @@
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
-                <label for="inputTitle" class="col-form-label d-block ps-md-5">Title</label>
+                <label for="title" class="col-form-label d-block ps-md-5">Title</label>
               </div>
               <div class="col-md-5">
-                <input type="text" class="form-control" id="inputTitle">
+                <input type="text" class="form-control" id="title" name="title">
               </div>
             </div>
           </div>
@@ -105,7 +118,7 @@
               </div>
               <div class="col-md-5">
                 <div class="input-group">
-                  <textarea class="form-control" rows="5" id="description" name="text" placeholder="Rmah ini adalah..."></textarea>
+                  <textarea class="form-control" rows="5" id="description" name="description" placeholder="Rumah ini adalah..."></textarea>
                 </div>
               </div>
             </div>
@@ -114,10 +127,10 @@
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
-                <label for="inputAddress" class="col-form-label d-block ps-md-5">Address</label>
+                <label for="address" class="col-form-label d-block ps-md-5">Address</label>
               </div>
               <div class="col-md-5">
-                <input type="text" class="form-control" id="inputAddress">
+                <input type="text" class="form-control" id="address" name="address">
               </div>
             </div>
           </div>
@@ -125,10 +138,10 @@
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
-                <label for="sizeType" class="col-form-label d-block ps-md-5">Size Type</label>
+                <label for="size_type" class="col-form-label d-block ps-md-5">Size Type</label>
               </div>
               <div class="col-md-5">
-                <select class="form-select" id="sizeType">
+                <select class="form-select" id="size_type" name="size_type">
                   <option disabled selected>Choose...</option>
                   <option>Land Size</option>
                   <option>Building Size</option>
@@ -140,11 +153,11 @@
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
-                <label for="inputSize" class="col-form-label d-block ps-md-5">Size</label>
+                <label for="size" class="col-form-label d-block ps-md-5">Size</label>
               </div>
               <div class="col-md-5">
                 <div class="input-group">
-                <input type="text" class="form-control" id="inputSize">
+                <input type="number" class="form-control" id="size" name="size">
                 <span class="input-group-text bg-dark text-white">sqm</span>
                 </div>
               </div>
@@ -154,14 +167,14 @@
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
-                <label for="inputBedroom" class="col-form-label d-block ps-md-5">Bedroom</label>
+                <label for="bedroom" class="col-form-label d-block ps-md-5">Bedroom</label>
               </div>
               <div class="col-md-5">
-                <select class="form-select" id="inputBedroom">
+                <select class="form-select" id="bedroom" name="bedroom">
                   <option disabled selected>Choose...</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
                 </select>
               </div>
             </div>
@@ -170,10 +183,10 @@
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
-                <label for="addBed" class="col-form-label d-block ps-md-5">Addtional Bedroom</label>
+                <label for="addtional_bedroom" class="col-form-label d-block ps-md-5">Addtional Bedroom</label>
               </div>
               <div class="col-md-5">
-                <input type="text" class="form-control" id="addBed">
+                <input type="number" class="form-control" id="additional_bedroom" name="additional_bedroom">
               </div>
             </div>
           </div>
@@ -181,10 +194,10 @@
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
-                <label for="inputBathroom" class="col-form-label d-block ps-md-5">Bathroom</label>
+                <label for="bathroom" class="col-form-label d-block ps-md-5">Bathroom</label>
               </div>
               <div class="col-md-5">
-                <select class="form-select" id="inputBathroom">
+                <select class="form-select" id="bathroom" name="bathroom">
                   <option disabled selected>Choose...</option>
                   <option>1</option>
                   <option>2</option>
@@ -197,10 +210,10 @@
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
-                <label for="inputBathroom" class="col-form-label d-block ps-md-5">Furniture & Electronics</label>
+                <label for="furniture_electronics" class="col-form-label d-block ps-md-5">Furniture & Electronics</label>
               </div>
               <div class="col-md-5">
-                <select class="form-select" id="inputBathroom">
+                <select class="form-select" id="furniture_electronics" name="furniture_electronics">
                   <option disabled selected>Choose...</option>
                   <option>Unfurnished</option>
                   <option>Semi Furnished</option>
@@ -217,7 +230,7 @@
               </div>
               <div class="col-md-5">
                 <div class="input-group">
-                  <textarea class="form-control" rows="5" id="facility" name="text" placeholder="&#8226 Gym..."></textarea>
+                  <textarea class="form-control" rows="5" id="facility" placeholder="&#8226 Gym..." name="facility"></textarea>
                 </div>
               </div>
             </div>
@@ -226,11 +239,11 @@
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
-                <label for="location" class="col-form-label d-block ps-md-5">Located near</label>
+                <label for="located_near" class="col-form-label d-block ps-md-5">Located near</label>
               </div>
               <div class="col-md-5">
                 <div class="input-group">
-                  <textarea class="form-control" rows="5" id="location" name="text" placeholder="&#8226 Supermal Karawaci..."></textarea>
+                  <textarea class="form-control" rows="5" id="located_near" name="located_near" placeholder="&#8226 Supermal Karawaci..."></textarea>
                 </div>
               </div>
             </div>
@@ -239,12 +252,12 @@
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
-                <label for="inputPrice" class="col-form-label d-block ps-md-5">Price</label>
+                <label for="price" class="col-form-label d-block ps-md-5">Price</label>
               </div>
               <div class="col-md-5">
                 <div class="input-group">
                   <span class="input-group-text bg-dark text-white">IDR</span>
-                <input type="text" class="form-control" id="inputPrice">
+                <input type="number" class="form-control" id="price" name="price">
                 </div>
               </div>
             </div>
@@ -253,11 +266,12 @@
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
-                <label for="inputImage" class="col-form-label d-block ps-md-5">Image</label>
+                <label for="image" class="col-form-label d-block ps-md-5">Image</label>
               </div>
               <div class="col-md-5">
+                <img class="img-preview img-fluid mb-2 col-sm-5 px-0">
                 <div class="input-group">
-                  <input type="file" class="form-control" id="inputImage">
+                  <input type="file" class="form-control" id="image" name="image" onchange="previewImage()">
                   {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
               </div>
@@ -284,4 +298,19 @@
 </body>
   {{-- Bootstrap JS --}}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script>
+    function previewImage() {
+            const image = document.querySelector('#image');
+            const imgPreview = document.querySelector('.img-preview');
+
+            imgPreview.style.display = 'block';
+
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0]);
+
+            oFReader.onload = function (oFREvent) {
+                imgPreview.src=oFREvent.target.result;
+            }
+        }
+  </script>
 </html>
