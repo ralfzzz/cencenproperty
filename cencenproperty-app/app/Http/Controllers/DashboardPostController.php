@@ -54,6 +54,7 @@ class DashboardPostController extends Controller
             'facility' => 'required',
             'located_near' => 'required',
             'price' => 'required',
+            'image' => 'required|image|file|max:1024'
             // 'image' => 'image|file|max:1024',
             // 'user_id' => auth()->user()->id
         ]);

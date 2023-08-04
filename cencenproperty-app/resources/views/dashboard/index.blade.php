@@ -71,11 +71,16 @@
                 <label for="sell_rent" class="col-form-label d-block ps-md-5">Sell/Rent</label>
               </div>
               <div class="col-md-5">
-                <select class="form-select" id="sell_rent" name="sell_rent">
+                <select class="form-select @error('sell_rent') is-invalid @enderror" id="sell_rent" name="sell_rent">
                   <option disabled selected>Choose...</option>
                   <option value="Sell">Sell</option>
                   <option value="Rent">Rent</option>
                 </select>
+                @error('sell_rent')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
               </div>
             </div>
           </div>
@@ -86,7 +91,7 @@
                 <label for="property_type" class="col-form-label d-block ps-md-5">Property Type</label>
               </div>
               <div class="col-md-5">
-                <select class="form-select" id="property_type" name="property_type">
+                <select class="form-select @error('property_type') is-invalid @enderror" id="property_type" name="property_type">
                   <option disabled selected>Choose...</option>
                   <option value="Rumah">Rumah</option>
                   <option value="Apartemen">Apartemen</option>
@@ -96,6 +101,11 @@
                   <option value="Kios">Kios</option>
                   <option value="Kost">Kost</option>
                 </select>
+                @error('property_type')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
               </div>
             </div>
           </div>
@@ -106,7 +116,12 @@
                 <label for="title" class="col-form-label d-block ps-md-5">Title</label>
               </div>
               <div class="col-md-5">
-                <input type="text" class="form-control" id="title" name="title">
+                <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{ old('title') }}">
+                @error('title')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
               </div>
             </div>
           </div>
@@ -118,7 +133,12 @@
               </div>
               <div class="col-md-5">
                 <div class="input-group">
-                  <textarea class="form-control" rows="5" id="description" name="description" placeholder="Rumah ini adalah..."></textarea>
+                  <textarea class="form-control @error('description') is-invalid @enderror" rows="5" id="description" name="description" placeholder="Rumah ini adalah...">{{ old('description') }}</textarea>
+                  @error('description')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
                 </div>
               </div>
             </div>
@@ -130,7 +150,12 @@
                 <label for="address" class="col-form-label d-block ps-md-5">Address</label>
               </div>
               <div class="col-md-5">
-                <input type="text" class="form-control" id="address" name="address">
+                <input type="text" class="form-control @error('address') is-invalid @enderror" id="address" name="address" value="{{ old('address') }}">
+                @error('address')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
               </div>
             </div>
           </div>
@@ -141,11 +166,16 @@
                 <label for="size_type" class="col-form-label d-block ps-md-5">Size Type</label>
               </div>
               <div class="col-md-5">
-                <select class="form-select" id="size_type" name="size_type">
+                <select class="form-select @error('size_type') is-invalid @enderror" id="size_type" name="size_type">
                   <option disabled selected>Choose...</option>
                   <option>Land Size</option>
                   <option>Building Size</option>
                 </select>
+                @error('size_type')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
               </div>
             </div>
           </div>
@@ -157,8 +187,13 @@
               </div>
               <div class="col-md-5">
                 <div class="input-group">
-                <input type="number" class="form-control" id="size" name="size">
+                <input type="number" class="form-control @error('size') is-invalid @enderror" id="size" name="size" value="{{ old('size') }}">
                 <span class="input-group-text bg-dark text-white">sqm</span>
+                @error('size')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
                 </div>
               </div>
             </div>
@@ -170,12 +205,17 @@
                 <label for="bedroom" class="col-form-label d-block ps-md-5">Bedroom</label>
               </div>
               <div class="col-md-5">
-                <select class="form-select" id="bedroom" name="bedroom">
+                <select class="form-select @error('bedroom') is-invalid @enderror" id="bedroom" name="bedroom">
                   <option disabled selected>Choose...</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                 </select>
+                @error('bedroom')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
               </div>
             </div>
           </div>
@@ -186,7 +226,12 @@
                 <label for="addtional_bedroom" class="col-form-label d-block ps-md-5">Addtional Bedroom</label>
               </div>
               <div class="col-md-5">
-                <input type="number" class="form-control" id="additional_bedroom" name="additional_bedroom">
+                <input type="number" class="form-control @error('additional_bedroom') is-invalid @enderror" id="additional_bedroom" name="additional_bedroom" value="{{ old('additional_bedroom') }}">
+                @error('additional_bedroom')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
               </div>
             </div>
           </div>
@@ -197,12 +242,17 @@
                 <label for="bathroom" class="col-form-label d-block ps-md-5">Bathroom</label>
               </div>
               <div class="col-md-5">
-                <select class="form-select" id="bathroom" name="bathroom">
+                <select class="form-select @error('bathroom') is-invalid @enderror" id="bathroom" name="bathroom">
                   <option disabled selected>Choose...</option>
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
                 </select>
+                @error('bathroom')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
               </div>
             </div>
           </div>
@@ -213,12 +263,17 @@
                 <label for="furniture_electronics" class="col-form-label d-block ps-md-5">Furniture & Electronics</label>
               </div>
               <div class="col-md-5">
-                <select class="form-select" id="furniture_electronics" name="furniture_electronics">
+                <select class="form-select @error('furniture_electronics') is-invalid @enderror" id="furniture_electronics" name="furniture_electronics">
                   <option disabled selected>Choose...</option>
                   <option>Unfurnished</option>
                   <option>Semi Furnished</option>
                   <option>Fully Furnished</option>
                 </select>
+                @error('furniture')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
               </div>
             </div>
           </div>
@@ -230,7 +285,12 @@
               </div>
               <div class="col-md-5">
                 <div class="input-group">
-                  <textarea class="form-control" rows="5" id="facility" placeholder="&#8226 Gym..." name="facility"></textarea>
+                  <textarea class="form-control @error('facility') is-invalid @enderror" rows="5" id="facility" placeholder="&#8226 Gym..." name="facility">{{ old('facility') }}</textarea>
+                  @error('facility')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
                 </div>
               </div>
             </div>
@@ -243,7 +303,12 @@
               </div>
               <div class="col-md-5">
                 <div class="input-group">
-                  <textarea class="form-control" rows="5" id="located_near" name="located_near" placeholder="&#8226 Supermal Karawaci..."></textarea>
+                  <textarea class="form-control @error('located_near') is-invalid @enderror" rows="5" id="located_near" name="located_near" placeholder="&#8226 Supermal Karawaci...">{{ old('located_near') }}</textarea>
+                  @error('located_near')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
                 </div>
               </div>
             </div>
@@ -257,7 +322,12 @@
               <div class="col-md-5">
                 <div class="input-group">
                   <span class="input-group-text bg-dark text-white">IDR</span>
-                <input type="number" class="form-control" id="price" name="price">
+                <input type="number" class="form-control @error('price') is-invalid @enderror" id="price" name="price" value="{{ old('price') }}">
+                @error('price')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
                 </div>
               </div>
             </div>
@@ -269,11 +339,11 @@
                 <label for="image" class="col-form-label d-block ps-md-5">Image</label>
               </div>
               <div class="col-md-5">
-                <img class="img-preview img-fluid mb-2 col-sm-5 px-0">
                 <div class="input-group">
-                  <input type="file" class="form-control" id="image" name="image" onchange="previewImage()">
+                  <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image" onchange="previewImage()">
                   {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
+                <img class="img-preview img-fluid mt-2 col-sm-5 px-0">
               </div>
             </div>
           </div>
