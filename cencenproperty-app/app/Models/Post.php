@@ -22,6 +22,11 @@ class Post extends Model
     //     'password',
     // ];
 
+    protected $with = [
+        'user',
+        'category'
+    ];
+
     protected $guarded = [
         'id',
     ];
