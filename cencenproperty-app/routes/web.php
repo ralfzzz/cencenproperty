@@ -25,12 +25,12 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/login', [LoginController::class, 'view']);
+Route::get('/login', [LoginController::class, 'view'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/dashboard', [DashboardController::class, 'view']);
-Route::get('/dashboard2', [DashboardController::class, 'view2']);
-Route::get('/edit', [DashboardController::class, 'edit']);
+Route::get('/dashboard', [DashboardController::class, 'view'])->middleware('auth');
+Route::get('/dashboard2', [DashboardController::class, 'view2'])->middleware('auth');
+Route::get('/edit', [DashboardController::class, 'edit'])->middleware('auth');
 
 Route::Resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
