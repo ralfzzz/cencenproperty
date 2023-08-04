@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Database\Factories\PostFactory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,12 +15,44 @@ class PostFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+
+    public static function slugify($text, string $divider = '-')
+        {
+        // replace non letter or digits by divider
+        $text = preg_replace('~[^\pL\d]+~u', $divider, $text);
+
+        // transliterate
+        $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+
+        // remove unwanted characters
+        $text = preg_replace('~[^-\w]+~', '', $text);
+
+        // trim
+        $text = trim($text, $divider);
+
+        // remove duplicate divider
+        $text = preg_replace('~-+~', $divider, $text);
+
+        // lowercase
+        $text = strtolower($text);
+
+        if (empty($text)) {
+            return 'n-a';
+        }
+
+        return $text;
+        }
+    
     public function definition()
     {
+        $title = fake()->sentence();
+
         return [
             'sell_rent' => fake()->word(),
             'property_type' => fake()->word(),
-            'title' => fake()->sentence(),
+            'title' => $title,
+            'slug' => PostFactory::slugify($title),
             'description' => fake()->text(),
             'address' => fake()->sentence(),
             'size_type' => fake()->word(),
@@ -33,7 +66,6 @@ class PostFactory extends Factory
             'price' => fake()->randomDigitNotNull(),
             'image' => fake()->text(),
             'user_id' => mt_rand(1,3)
-
         ];
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use auth;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Database\Factories\PostFactory;
 
 class DashboardPostController extends Controller
 {
@@ -63,6 +64,8 @@ class DashboardPostController extends Controller
             }
             
             $validateInput['user_id'] = auth()->user()->id;
+
+            $validateInput['slug'] = PostFactory::slugify($request->title);
             // dd($validateInput);
         // $validateInput['excerpt'] = Str::limit(strip_tags($validateInput['body']), 50);
 

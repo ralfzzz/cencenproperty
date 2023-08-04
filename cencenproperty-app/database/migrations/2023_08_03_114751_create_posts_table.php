@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('sell_rent');
             $table->string('property_type');
             $table->string('title')->unique();
+            $table->string('slug')->unique();
             $table->text('description');
             $table->text('address');
             $table->string('size_type');
