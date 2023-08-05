@@ -31,6 +31,6 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', [DashboardController::class, 'view'])->middleware('auth');
 Route::get('/dashboard2', [DashboardController::class, 'view2'])->middleware('auth');
-Route::get('/edit', [DashboardController::class, 'edit'])->middleware('auth');
+// Route::get('/edit', [DashboardController::class, 'edit'])->middleware('auth');
 
 Route::Resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');

@@ -6,6 +6,7 @@ use auth;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Database\Factories\PostFactory;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardPostController extends Controller
 {
@@ -94,7 +95,11 @@ class DashboardPostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('dashboard.edit',[
+            'title' => 'Dashboard Edit',
+            'active' => 'active',
+            'posts' => $post
+        ]);
     }
 
     /**
@@ -106,7 +111,39 @@ class DashboardPostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $rules = ([
+            'sell_rent' => 'required|max:255',
+            'property_type' => 'required|',
+            'title' => 'required',
+            'description' => 'required',
+            'address' => 'required',
+            'size_type' => 'required',
+            'size' => 'required',
+            'bedroom' => 'required',
+            'additional_bedroom' => 'required',
+            'bathroom' => 'required',
+            'furniture_electronics' => 'required',
+            'facility' => 'required',
+            'located_near' => 'required',
+            'price' => 'required',
+            'image' => 'required|image|file|max:1024'
+        ]);
+
+        $validateInput = $request->validate($rules);
+
+        if ($request->file('image')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $validateInput['image'] = $request->file('image')->store('post_images');
+        }
+        $validateInput['slug'] = PostFactory::slugify($request->title);
+
+        $validateInput['user_id'] = auth()->user()->id;
+
+        Post::where('id', $post->id)->update($validateInput);
+
+        return redirect("/dashboard2")->with('success','Post succesfully edited!');
     }
 
     /**
@@ -117,6 +154,12 @@ class DashboardPostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+
+        if ($post->image) {
+            Storage::delete($post->image);
+        }
+        Post::destroy($post->id);
+
+    return redirect('/dashboard2')->with('success','Post succesfully deleted!');
     }
 }

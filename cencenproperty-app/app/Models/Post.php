@@ -24,7 +24,6 @@ class Post extends Model
 
     protected $with = [
         'user',
-        'category'
     ];
 
     protected $guarded = [
