@@ -57,7 +57,7 @@
                 <button class="btn btn-primary">Rent</button>
               </form>
             </div>
-            <div class="col-md-5 ps-0 pe-3 me-5">
+            <div class="col-md-5 ps-0 pe-3 me-5 ms-2">
                 <form action="">
                 <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2">

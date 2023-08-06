@@ -194,12 +194,7 @@
                 <label for="bedroom" class="col-form-label d-block ps-md-5">Bedroom</label>
               </div>
               <div class="col-md-5">
-                <select class="form-select @error('bedroom') is-invalid @enderror" id="bedroom" name="bedroom">
-                  <option disabled>Choose...</option>
-                  <option value="1" @if($posts->bedroom == '1') selected @endif>1</option>
-                  <option value="2" @if($posts->bedroom == '2') selected @endif>2</option>
-                  <option value="3" @if($posts->bedroom == '3') selected @endif>3</option>
-                </select>
+                <input type="number" class="form-control @error('bedroom') is-invalid @enderror" id="bedroom" name="bedroom" value="{{ old('bedroom', $posts->bedroom) }}">
                 @error('bedroom')
                 <div class="invalid-feedback">
                     {{ $message }}
@@ -231,12 +226,7 @@
                 <label for="bathroom" class="col-form-label d-block ps-md-5">Bathroom</label>
               </div>
               <div class="col-md-5">
-                <select class="form-select @error('bathroom') is-invalid @enderror" id="bathroom" name="bathroom">
-                  <option disabled >Choose...</option>
-                  <option value="1" @if($posts->bathroom == '1') selected @endif>1</option>
-                  <option value="2" @if($posts->bathroom == '2') selected @endif>2</option>
-                  <option value="3" @if($posts->bathroom == '3') selected @endif>3</option>
-                </select>
+                <input type="number" class="form-control @error('bathroom') is-invalid @enderror" id="bathroom" name="bathroom" value="{{ old('bathroom', $posts->bathroom) }}">
                 @error('bathroom')
                 <div class="invalid-feedback">
                     {{ $message }}

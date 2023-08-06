@@ -131,13 +131,15 @@ class DashboardPostController extends Controller
 
         $validateInput = $request->validate($rules);
 
+        $uniq_slug = PostFactory::slugify($request->title).uniqid('-CC', true);
+        $validateInput['slug'] = $uniq_slug;
+
         if ($request->file('image')) {
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
             $validateInput['image'] = $request->file('image')->store('post_images');
         }
-        $validateInput['slug'] = PostFactory::slugify($request->title);
 
         $validateInput['user_id'] = auth()->user()->id;
 

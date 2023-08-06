@@ -19,7 +19,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('sell_rent');
             $table->string('property_type');
-            $table->string('title')->unique();
+            $table->string('title');
             $table->string('slug')->unique();
             $table->text('description');
             $table->text('address');
