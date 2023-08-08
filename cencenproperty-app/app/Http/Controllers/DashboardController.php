@@ -10,14 +10,12 @@ class DashboardController extends Controller
     public function view(){
         return view('dashboard.index',[
             'title' => 'Dashboard Upload',
-            'active' => 'active'
         ]);
     }
 
     public function view2(){
         return view('dashboard.index2',[
             'title' => 'Dashboard Edit',
-            'active' => 'active',
             'posts' => Post::latest()->get()
         ]);
     }

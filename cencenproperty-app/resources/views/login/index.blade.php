@@ -19,9 +19,6 @@
         <div class="row" style="height: 100vh">
             <div class="col-md-5 m-auto d-flex justify-content-center flex-column">
                 <img src="./img/logo.png"  class="img-fluid mx-auto" alt="Logo Cencenproperty">
-                <div>
-                    <h3>DASHBOARD LOGIN</h3>
-                </div>
                 <form action="/login" method="POST">
                     @csrf
                     <div class="mb-3">
