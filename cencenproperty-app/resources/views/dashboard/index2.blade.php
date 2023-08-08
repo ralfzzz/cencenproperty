@@ -10,18 +10,18 @@
               <h3 class="d-block">Edit</h3>
             </div>
             <div class="col-md-4 gap-2 d-flex px-0 justify-content-end">
-              <form action="">
+              <form action="/dashboard/posts/sell">
                 <button class="btn btn-primary">Sell</button>
               </form>
-              <form action="">
-                <button class="btn btn-primary">Rent</button>
+              <form action="/dashboard/posts/rent">
+                <button class="btn btn-primary" type="submit">Rent</button>
               </form>
             </div>
             <div class="col-md-5 ps-0 pe-3 me-5 ms-2">
-                <form action="">
+                <form action="/dashboard/posts/search">
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2">
-                  <button class="btn btn-primary" type="submit" id="editSearch">Search</button>
+                  <input name="search" type="text" class="form-control" placeholder="Search..." aria-describedby="button-addon2" value="{{ request('search') }}">
+                  <button class="btn btn-primary" type="submit" id="search">Search</button>
                 </div>
               </form>
               </div>
@@ -65,5 +65,4 @@
         @endforeach
 
 </body>
-
 @endsection

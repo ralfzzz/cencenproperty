@@ -20,6 +20,27 @@ class DashboardController extends Controller
         ]);
     }
 
+    public function rent(){
+        return view('dashboard.index2',[
+            'title' => 'Dashboard Edit',
+            'posts' => Post::latest()->where('sell_rent', '=', 'Rent')->get()
+        ]);
+    }
+
+    public function sell(){
+        return view('dashboard.index2',[
+            'title' => 'Dashboard Edit',
+            'posts' => Post::latest()->where('sell_rent', '=', 'Sell')->get()
+        ]);
+    }
+
+    public function search(){
+        return view('dashboard.index2',[
+            'title' => 'Dashboard Edit',
+            'posts' => Post::latest()->filter(request(['search']))->get()
+        ]);
+    }
+
     // public function edit(){
     //     return view('dashboard.edit',[
     //         'title' => 'Dashboard',
