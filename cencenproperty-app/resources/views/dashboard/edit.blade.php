@@ -280,6 +280,7 @@
               </div>
               <div class="col-md-5">
                 <div class="input-group">
+                  <input type="hidden" name="oldImage" value="{{ $posts->image }}">
                   <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image" onchange="previewImage()">
                   {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
