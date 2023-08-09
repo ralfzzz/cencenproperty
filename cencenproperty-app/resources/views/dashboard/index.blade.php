@@ -60,7 +60,7 @@
                   <option value="Rumah Susun/ Townhouse">Rumah Susun/ Townhouse</option>
                   <option value="Ruko">Ruko</option>
                   <option value="Kios">Kios</option>
-                  <option value="Kost">Kost</option>
+                  <option value="Kantor">Kantor</option>
                 </select>
                 @error('property_type')
                 <div class="invalid-feedback">

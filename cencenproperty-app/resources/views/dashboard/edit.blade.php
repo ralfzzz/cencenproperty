@@ -49,7 +49,7 @@
                   <option value="Rumah Susun/ Townhouse" @if($posts->property_type == 'Rumah Susun/ Townhouse') selected @endif>Rumah Susun/ Townhouse</option>
                   <option value="Ruko" @if($posts->property_type == 'Ruko') selected @endif>Ruko</option>
                   <option value="Kios" @if($posts->property_type == 'Kios') selected @endif>Kios</option>
-                  <option value="Kost" @if($posts->property_type == 'Kost') selected @endif>Kost</option>
+                  <option value="Kantor" @if($posts->property_type == 'Kantor') selected @endif>Kantor</option>
                 </select>
                 @error('property_type')
                 <div class="invalid-feedback">

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>{{ $title }}</title>
     <style>
@@ -18,7 +18,7 @@
     <div class="container">
         <div class="row" style="height: 100vh">
             <div class="col-md-5 m-auto d-flex justify-content-center flex-column">
-                <img src="./img/logo.png"  class="img-fluid mx-auto" alt="Logo Cencenproperty">
+                <img src="/img/logo.png"  class="img-fluid mx-auto" alt="Logo Cencenproperty">
                 <form action="/login" method="POST">
                     @csrf
                     <div class="mb-3">
@@ -33,7 +33,7 @@
                         <input id="password" name="password" type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password" required>
                     </div>
                     <div class="d-grid mx-auto mb-3">
-                        <button type="submit" class="btn btn-primary d-grid">Login</button>
+                        <button type="submit" class="btn btn-secondary d-grid"><strong>Login</strong></button>
                     </div>
                 </form>
                 @if(session()->has('loginError'))

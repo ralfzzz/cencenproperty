@@ -16,3 +16,26 @@ body{
 .active{
     text-decoration: underline !important;
 }
+
+.btn-secondary {
+    color: black !important;
+    background-color: #BC9C22 !important;
+    border-color: #BC9C22 !important;
+    transition: all .7s;
+  }
+  .btn-secondary:hover {
+    color: black !important;
+    background-color:#BC9C22 !important;
+    filter: brightness(90%);
+    border-color: #BC9C22 !important;
+  }
+
+.text-bg-warning{
+    color: black !important;
+    background-color: #BC9C22 !important;
+    border-color: #BC9C22 !important;
+}
+
+#nothing-found{
+    height: auto;
+}
