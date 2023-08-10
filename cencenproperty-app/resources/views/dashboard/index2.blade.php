@@ -48,7 +48,11 @@
         <div class="container-fluid mb-3">
           <div class="row">
             <div class="col-md-1 ms-md-5 me-md-5 p-0">
-              <img src="{{ asset('storage/'.$post->image) }}" class="img-fluid object-fit-cover rounded" alt="image house" style="max-width: 180px">
+              @if($post->image)
+                <img src="{{ asset('storage/'.$post->image) }}" class="img-fluid object-fit-cover rounded" alt="image house" style="max-width: 180px">
+              @else
+                <img src="https://source.unsplash.com/200x200?home" class="img-fluid object-fit-cover rounded" alt="image house" style="max-width: 180px">
+              @endif
             </div>
             <div class="col-md-9 border border-3 rounded px-3 py-2 ms-md-4">
               @if($post->sell_rent == 'Sell')
