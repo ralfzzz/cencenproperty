@@ -10,7 +10,7 @@
             </div>
           </div>
         </div>
-        @if(session()->has('success'))
+        {{-- @if(session()->has('success'))
         <div class="container-fluid">
           <div class="row ps-md-5 me-md-1">
             <div class="col-md-7 pe-md-4">
@@ -21,7 +21,7 @@
             </div>
           </div>
         </div>
-        @endif
+        @endif --}}
         {{-- FORM UPLOAD --}}
         <form action="/dashboard/posts" method="POST" class="mb-5" enctype="multipart/form-data">
           @csrf

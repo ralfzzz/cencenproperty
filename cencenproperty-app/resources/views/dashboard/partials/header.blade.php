@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg bg-dark shadow sticky-top pe-3">
     <div class="container-fluid px-0">
       <div class="col-md-2 d-flex justify-content-center">
-        <a class="navbar-brand mx-auto" href="#"><img src="/img/logo_white.png" alt="white logo"></a>
+        <a class="navbar-brand mx-auto" href="#"><img src="/img/live_logo_white.png" alt="white logo" style="max-height: 60px"></a>
       </div>
       <button class="navbar-toggler navbar-light bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
