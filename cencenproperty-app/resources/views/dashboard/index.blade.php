@@ -305,7 +305,7 @@
               </div>
               <div class="col-md-5">
                   <div class="d-grid">
-                    <button type="submit" class="btn btn-primary">Upload</button>
+                    <button type="submit" class="btn btn-secondary">Upload</button>
                   </div>
               </div>
             </div>

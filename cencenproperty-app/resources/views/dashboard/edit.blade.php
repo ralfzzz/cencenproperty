@@ -299,7 +299,7 @@
               </div>
               <div class="col-md-5">
                   <div class="d-grid">
-                    <button type="submit" class="btn btn-primary">Edit</button>
+                    <button type="submit" class="btn btn-secondary">Edit</button>
                   </div>
               </div>
             </div>

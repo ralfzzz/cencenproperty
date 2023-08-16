@@ -9,7 +9,7 @@
     <title>{{ $title }}</title>
     <style>
         body{
-            background-image: linear-gradient(to right, rgba(255,255,255, 0.8) 0 100%), url('https://source.unsplash.com/1920x1080?home');
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0 100%), url('https://source.unsplash.com/1920x1080?home');
             background-size: cover;
         }
     </style>
