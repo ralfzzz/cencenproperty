@@ -64,7 +64,7 @@
                     <button class="btn btn-primary buttongold" type="submit" id="sewa-beli-btn">Sewa</button>
                     <button class="btn btn-primary buttongold" type="submit" id="sewa-beli-btn">Beli</button>
                 </div>
-                <div class="row align-items-centercol-wrapper">
+                <div class="row align-items-center col-wrapper">
                     <div class="input-group">
                         <input type="text" class="form-control" id="search-input" placeholder="Search Anything" >
                     </div>
@@ -72,48 +72,40 @@
                 <span>
                     <hr>
                 </span>
-                <div class="row align-items-center col-wrapper">
-                    <div class="col">
-                        <div class="dropdown" id="first">
-                            <label for="first" class="form-label">Lokasi</label>
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
-                            Cari
-                            </button>
-                            <ul class="dropdown-menu">
+                <div class="row align-items-center col-wrapper" id="dropdown-filter-container" >
+                    <div class="col dropdown" id="dropdown-filter">
+                        <label class="form-label">Lokasi</label>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
+                        Cari
+                        </button>
+                        <ul class="dropdown-menu">
                             <li><h6 class="dropdown-header">Dropdown header</h6></li>
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
-                    
-                    <div class="col">
-                        <div class="dropdown" id="second">
-                            <label for="second" class="form-label ">Tipe</label>
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
-                                Cari
-                            </button>
-                            <ul class="dropdown-menu">
+                    <div class="col dropdown" id="dropdown-filter">
+                        <label class="form-label">Tipe</label>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
+                            Cari
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>                            
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="col dropdown" id="dropdown-filter">
+                        <label class="form-label">Furnishing</label>
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
+                            Cari
+                        </button>
+                        <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </div>
-                        
-                    </div>
-                    <div class="col">
-                        <div class="dropdown" id="third">
-                            <label for="third" class="form-label">Furnishing</label>
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
-                                Cari
-                            </button>
-                            <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </div>
