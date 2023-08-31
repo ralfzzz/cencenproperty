@@ -49,9 +49,9 @@
           <div class="row">
             <div class="col-md-1 ms-md-5 me-md-5 p-0">
               @if($post->image)
-                <img src="{{ asset('storage/'.$post->image) }}" class="img-fluid object-fit-scale img-thumbnail" alt="image house" style="max-width: 180px; max-height: 180px;">
+                <img src="{{ asset('storage/'.$post->image) }}" class="img-fluid object-fit-cover img-thumbnail" alt="image house" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px">
               @else
-                <img src="https://source.unsplash.com/200x200?home" class="img-fluid object-fit-scale img-thumbnail" alt="image house" style="max-width: 180px; max-height: 180px;">
+                <img src="https://source.unsplash.com/200x200?home" class="img-fluid object-fit-cover img-thumbnail" alt="image house" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px">
               @endif
             </div>
             <div class="col-md-9 border border-3 rounded px-3 py-2 ms-md-4">
