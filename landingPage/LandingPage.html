@@ -1,13 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- 
-    <style>
-        [class*="container-fluid"]{
-            background-color: rgb(36, 192, 166);
-            color: #ffffff;
-        }
-    </style>
-    -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,17 +7,17 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="index.css">
 </head>
-<body class="vh-100 oveflow-hidden">
+<body class=" oveflow-hidden page-container">
     <!-- NavBar -->
-    <nav class="navbar navbar-expand-xxl navbar-light">
-        <div class="container-fluid justify-content-end">
+    <nav class="navbar navbar-expand-xxxl navbar-light overflow-hidden">
+        <div class="container-fluid justify-content-space-around">
             <a class="navbar-brand" href="#">
                 <!-- Brand Logo -->
                 <div id="crop">
-                    <img src="Karya_Seni_Tanpa_Judul 1.png" alt="Live@">
+                    <img src="Karya_Seni_Tanpa_Judul 1.png" alt="Live@" id="logo">
                 </div>
             </a>
-            <button class="btn btn-success ms-auto buttongold">Titip&Jual</button>
+            <button class="btn btn-primary ms-auto buttongold" id="btn-titip">Titip&Jual</button>
             <button 
             class="navbar-toggler" 
             type="button" 
@@ -35,9 +27,10 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
             >
-                <span class="navbar-toggler-icon"> </span>
+            <span class="navbar-toggler-icon"> </span>
             </button>
             <div class="collapse navbar-collapse flex-grow-0" id="toggleMobileMenu">
+                
                 <ul class="navbar-nav ms-auto text-left">
                     <li>
                         <a href="#" class="nav-link">
@@ -52,9 +45,9 @@
                 </ul>
             </div>  
         </div>   
-      </nav>
-      <div id="search-bar" class="container-fluid">
-        
+    </nav>
+    <!-- Search Bar -->
+    <div id="search-bar" class="container-fluid">
         <div id="search-box" class="container">
             <div class="container"  id="title-bar">
                 <h1>Cari Properti Anda</h1>
@@ -64,10 +57,8 @@
                     <button class="btn btn-primary buttongold" type="submit" id="sewa-beli-btn">Sewa</button>
                     <button class="btn btn-primary buttongold" type="submit" id="sewa-beli-btn">Beli</button>
                 </div>
-                <div class="row align-items-center col-wrapper">
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="search-input" placeholder="Search Anything" >
-                    </div>
+                <div class="input-group col-wrapper">
+                    <input type="text" class="form-control" id="search-input" placeholder="Search Anything" >
                 </div>
                 <span>
                     <hr>
@@ -114,8 +105,19 @@
             </div>
             
         </div>
-        
-    </div>  
+    </div>
+    <!-- Properti Terbaru -->
+    <div class="container-fluid" id="new-property">
+        <div class="container"  id="section-title">
+            <h1>Properti Terbaru</h1>
+        </div>
+        <div class="container" id="new-list">
+            <img src="Screenshot 2023-08-28 232934.png" alt="">
+            <img src="Screenshot 2023-08-28 232934.png" alt="">
+            <img src="Screenshot 2023-08-28 232934.png" alt="">
+            <img src="Screenshot 2023-08-28 232934.png" alt="">
+        </div>
+    </div>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
 </html>

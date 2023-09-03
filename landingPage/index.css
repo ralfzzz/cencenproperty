@@ -32,7 +32,9 @@ img {
 
 .buttongold{
     background-color: #BC9C22;
+    border:None;
     width: 100px;
+    --bs-btn-active-bg:#bc9d229f;
 }
 
 .btn-success{
@@ -41,33 +43,33 @@ img {
 
 #search-bar{
     background-image: url("Group 44.png");
-    height: 60%;
+    height: fit-content;
     min-height: 500px;
     background-repeat:repeat-y;
     background-size: cover;
     padding-right: 0;
     padding-left: 0;
-    position: relative;
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 20vh;
 }
 
 #search-bar div#search-box{
-
-    display: inline;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     max-width: 855px;
-    height: 65%;
-    max-height: 342px;
-    margin: auto;
-    position: absolute;
-    top: 0;bottom: 0;right: 0;left: 0;
 }
 
 #search-content{
-    padding: 12px 12px 0px 12px;
+    padding: 12px 48px 0px 48px;
     background-color: black;
     opacity: 70%;
+
+}
+
+#search-box > *{
+    overflow: scroll;
 }
 
 
@@ -75,7 +77,6 @@ img {
     width: 100%;
     justify-content: space-evenly;
     display: flex;
-    padding-top: 20px;
     background: linear-gradient(black 50%,transparent 50%);
 }
 
@@ -83,7 +84,6 @@ img {
     width: 20%;
     justify-content: space-evenly;
     display: flex;
-    border: none;
 }
 
 #search-box.container{
@@ -107,7 +107,6 @@ img {
 #sewa-beli-btn{
     margin:5px;
     background-color: transparent;
-    border: 0;
     border-bottom: 3px solid rgb(255, 255, 255);
     padding: 0;
     text-align: left;
@@ -128,7 +127,6 @@ img {
 }
 
 .col-wrapper{
-    padding: 2px;
     justify-content: center;
     padding-right: calc(var(--bs-gutter-x) * 0.5);
     padding-left: calc(var(--bs-gutter-x) * 0.5);
@@ -159,19 +157,26 @@ img {
     background-color: #fff;
     text-align: left;
     width:100%;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-.btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show{
-    color: #000000;
-    background-color: #fff;
-}
-
-.btn:hover{
-    color: #000000;
-    background-color: #fff;
 }
 
 
+.buttongold:hover{
+    color: #ffffff;
+    background-color: #BC9C22;
+}
+
+.btn:active{
+    color: #ffffff;
+    background-color: #BC9C22;
+}
+
+.dropdown-toggle::after{
+    justify-content: space-between;
+}
 
 navbar-default .navbar-nav .open .dropdown-menu>li>a,.navbar-default .navbar-nav .open .dropdown-menu {
     background-color: #000000;
