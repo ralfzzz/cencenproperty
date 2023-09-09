@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/index.css">
 </head>
-<body class="page-container">
+<body>
     <!-- NavBar -->
     <nav class="navbar navbar-expand-xxxl navbar-light overflow-hidden">
         <div class="container-fluid justify-content-space-around">
@@ -704,7 +704,7 @@
           <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
         </div>
         <!-- Copyright -->
-      </footer>
+    </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
