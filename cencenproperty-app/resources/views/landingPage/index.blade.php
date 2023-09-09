@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
     <!-- NavBar -->
+    <div class="container-fluid">
     <nav class="navbar navbar-expand-xxxl navbar-light overflow-hidden">
         <div class="container-fluid justify-content-space-around">
             <a class="navbar-brand" href="#">
@@ -46,6 +47,8 @@
             </div>  
         </div>   
     </nav>
+    </div>
+
     <!-- Search Bar -->
     <div id="search-bar" class="container-fluid">
         <div id="search-box" class="container">
@@ -107,11 +110,11 @@
         </div>
     </div>
     <!-- Properti Terbaru -->
-    <div class="container-fluid" id="new-property">
-        <div class="container"  id="section-title">
+    <div class="container-fluid mt-4">
+        <div class="container">
             <h1>Properti Terbaru</h1>
         </div>
-        <div class="container" id="new-list">
+        <div class="container">
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-1 mb-5">
                 <!--Card-->
                 <!--Card Dijual-->

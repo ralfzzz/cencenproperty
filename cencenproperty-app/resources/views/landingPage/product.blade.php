@@ -11,7 +11,7 @@
   </head>
   <body>
     <!-- NavBar -->
-    <nav class="navbar navbar-expand-xxxl navbar-light overflow-hidden">
+    <nav class="navbar navbar-expand-xxxl navbar-light overflow-hidden shadow mb-5">
         <div class="container-fluid justify-content-space-around">
             <a class="navbar-brand" href="#">
                 <!-- Brand Logo -->
@@ -55,7 +55,7 @@
 	    	<p class="container h1 text-start fw-bold">Cencen Property <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">Dijual</span> <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">Rumah</span></p>
 	    	<img src="https://source.unsplash.com/home" class="container rounded-2 my-4 object-fit-cover" style="max-height: 350px;">
 	    	
-			<div class="container">
+			<div class="container mb-5">
 			  <!-- Nav tabs -->
 			  <ul class="nav nav-underline" role="tablist">
 			    <li class="nav-item">

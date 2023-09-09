@@ -128,11 +128,6 @@ body{
     padding-left: calc(var(--bs-gutter-x) * 0.5);
 }
 
-.col{
-    flex: 0;
-    padding: 5px 25px;
-}
-
 #dropdown-filter-container{
     width: 100%;
     margin: 0;
@@ -197,45 +192,9 @@ hr {
     width: 65px;
 }
 
-
-
-#section-title{
-    display: block;
-    width: 100%;
-    position: relative;
-}
-
-#new-list{
-    padding-bottom: 90px;
-    padding: 0px;
-    height: fit-content;
-    display: flex;
-    justify-content: flex-start;
-    overflow: hidden;
-}
-
 #property-card{
     margin: 10px;
 }
-
-@media screen and (max-width: 575px) {
-    #new-property{
-        display: flex;
-        padding-top: 75px;
-        flex-direction: column;
-        max-width: 575px;
-        min-width: 215px;
-    }
-  }
-  
-  @media screen and (min-width: 575px) {
-    #new-property{
-        display: flex;
-        padding-top: 75px;
-        flex-direction: column;
-        width: fit-content;
-    }
-  }
 
 /* CARD */
 /* * Dijual-Emas */
