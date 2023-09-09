@@ -15,7 +15,7 @@
             <a class="navbar-brand" href="#">
                 <!-- Brand Logo -->
                 <div id="crop">
-                    <img src="https://source.unsplash.com/200x200?home" alt="Live@" id="logo">
+                    <img src="/img/live_logo.png" alt="Live@" id="logo">
                 </div>
             </a>
             <button class="btn btn-primary ms-auto buttongold" id="btn-titip">Titip&Jual</button>
@@ -52,7 +52,7 @@
 	  <div class="row align-items-start">
 	    <div class="col-md-7">
 	    	<p class="container h1 text-start fw-bold">Cencen Property <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">Dijual</span> <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">Rumah</span></p>
-	    	<img src="sss.jpg" class="container rounded-2 my-4 object-fit-cover" style="max-height: 350px;">
+	    	<img src="https://source.unsplash.com/home" class="container rounded-2 my-4 object-fit-cover" style="max-height: 350px;">
 	    	
 			<div class="container">
 			  <!-- Nav tabs -->
