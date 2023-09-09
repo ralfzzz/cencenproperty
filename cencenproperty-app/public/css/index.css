@@ -236,3 +236,28 @@ hr {
         width: fit-content;
     }
   }
+
+/* CARD */
+/* * Dijual-Emas */
+            .dijual {
+                background-color: #bc9c22;
+            }
+            .dijual .badge {
+                color: #bc9c22;
+            }
+            .dijual p {
+                color: black;
+            }
+            /* Dijual-Emas */
+
+            /* Disewa-Biru */
+            .disewa {
+                background-color: #366ace;
+            }
+            .disewa .badge {
+                color: #366ace;
+            }
+            .disewa p {
+                color: black;
+            }
+            /* Disewa-Biru */
