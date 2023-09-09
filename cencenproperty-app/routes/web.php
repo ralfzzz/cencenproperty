@@ -42,3 +42,4 @@ Route::get('/dashboard2', [DashboardController::class, 'view2'])->middleware('au
 Route::Resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 
 Route::get('/LandingPage', [LandingPageController::class, 'view']);
+Route::get('/page', [LandingPageController::class, 'page']);
