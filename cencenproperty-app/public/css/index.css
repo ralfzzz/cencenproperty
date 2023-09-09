@@ -1,13 +1,16 @@
-.body{
-    background-color: #fff ;
-    background-blend-mode: multiply;
+body{
+    height: 100%;
+    width: 100%;
 }
 
-img {
+.navbar{
+    min-width: 215px;
+}
+
+#logo {
     width: 120px;
     height: 50px;
     object-fit: cover;
-    
 }
 
 #crop{
@@ -42,21 +45,22 @@ img {
 }
 
 #search-bar{
-    background-image: url("Group 44.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("https://source.unsplash.com/800x800?home");
     height: fit-content;
     min-height: 500px;
     background-repeat:repeat-y;
     background-size: cover;
     padding-right: 0;
     padding-left: 0;
-    position: absolute;
     display:flex;
     justify-content: center;
     align-items: center;
-    min-width: 20vh;
+    min-width: 215px;
+    display:flex;
+    padding: 5px;
 }
 
-#search-bar div#search-box{
+#search-box{
     width: 100%;
     max-width: 855px;
 }
@@ -65,13 +69,7 @@ img {
     padding: 12px 48px 0px 48px;
     background-color: black;
     opacity: 70%;
-
 }
-
-#search-box > *{
-    overflow: scroll;
-}
-
 
 #btn-container{
     width: 100%;
@@ -113,8 +111,6 @@ img {
     border-radius:0px;
     width: fit-content;
 }
-
-
 
 #search-input{
     width:100%
@@ -200,3 +196,43 @@ hr {
     height: 65px;
     width: 65px;
 }
+
+
+
+#section-title{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+#new-list{
+    padding-bottom: 90px;
+    padding: 0px;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+#property-card{
+    margin: 10px;
+}
+
+@media screen and (max-width: 575px) {
+    #new-property{
+        display: flex;
+        padding-top: 75px;
+        flex-direction: column;
+        max-width: 575px;
+        min-width: 215px;
+    }
+  }
+  
+  @media screen and (min-width: 575px) {
+    #new-property{
+        display: flex;
+        padding-top: 75px;
+        flex-direction: column;
+        width: fit-content;
+    }
+  }
