@@ -9,7 +9,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/index.css">
 </head>
-<body class=" overflow-hidden page-container">
+<body class="page-container">
     <!-- NavBar -->
     <nav class="navbar navbar-expand-xxxl navbar-light overflow-hidden">
         <div class="container-fluid justify-content-space-around">
