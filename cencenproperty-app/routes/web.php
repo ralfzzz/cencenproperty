@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\DashboardPostController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +40,5 @@ Route::get('/dashboard2', [DashboardController::class, 'view2'])->middleware('au
 // Route::get('/edit', [DashboardController::class, 'edit'])->middleware('auth');
 
 Route::Resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+
+Route::get('/LandingPage', [LandingPageController::class, 'view']);
