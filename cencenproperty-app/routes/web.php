@@ -43,3 +43,4 @@ Route::Resource('/dashboard/posts', DashboardPostController::class)->middleware(
 
 Route::get('/LandingPage', [LandingPageController::class, 'view']);
 Route::get('/page', [LandingPageController::class, 'page']);
+Route::get('/category', [LandingPageController::class, 'category']);

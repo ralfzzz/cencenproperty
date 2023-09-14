@@ -10,6 +10,7 @@
             integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="/css/index.css">
         <style>
             /* Dijual-Emas */
             .dijual {

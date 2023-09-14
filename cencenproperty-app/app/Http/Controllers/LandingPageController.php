@@ -13,4 +13,8 @@ class LandingPageController extends Controller
     public function page(){
         return view('landingPage.product');
     }
+
+    public function category(){
+        return view('landingPage.category');
+    }
 }
