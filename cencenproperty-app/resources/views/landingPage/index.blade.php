@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Live@</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
     <!-- NavBar -->
-    <div class="container-fluid">
+    <div class="shadow container-fluid">
     <nav class="navbar navbar-expand-xxxl navbar-light overflow-hidden">
         <div class="container-fluid justify-content-space-around">
             <a class="navbar-brand" href="#">
@@ -18,7 +18,7 @@
                     <img src="/img/live_logo.png" alt="Live@" id="logo">
                 </div>
             </a>
-            <button class="btn btn-primary ms-auto buttongold" id="btn-titip">Titip&Jual</button>
+            <button class="btn btn-primary ms-auto buttongold" id="btn-titip">Titip Jual</button>
             <button 
             class="navbar-toggler" 
             type="button" 
@@ -50,10 +50,10 @@
     </div>
 
     <!-- Search Bar -->
-    <div id="search-bar" class="container-fluid">
+    <div id="search-bar" class="container-fluid" style="font-family:Arial, Helvetica, sans-serif">
         <div id="search-box" class="container">
             <div class="container"  id="title-bar">
-                <h1>Cari Properti Anda</h1>
+                <h1 style="font-family: Arial, Helvetica, sans-serif">Cari Properti Anda</h1>
             </div>
             <div class="text-center" id="search-content">
                 <div class="col-wrapper" id="sewa-beli-container">
@@ -67,7 +67,7 @@
                     <hr>
                 </span>
                 <div class="row align-items-center col-wrapper" id="dropdown-filter-container" >
-                    <div class="col dropdown" id="dropdown-filter">
+                    <div class="col dropdown" id="dropdown-filter" style="font-family: Arial, Helvetica, sans-serif;">
                         <label class="form-label">Lokasi</label>
                         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
                         Cari
@@ -106,13 +106,14 @@
             <div class="col-wrapper" id="btn-container">
                 <button class="btn btn-primary buttongold" type="submit" id="search-button">Search</button>
             </div>
-            
         </div>
     </div>
+
     <!-- Properti Terbaru -->
     <div class="container-fluid mt-4">
         <div class="container">
-            <h1>Properti Terbaru</h1>
+            <h1 class="mt-5 mb-3" style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: bold;
+            color: #BC9C22;">Properti Terbaru</h1>
         </div>
         <div class="container">
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-1 mb-5">
@@ -549,170 +550,185 @@
     </div>
 
     <!--Kategori-->
-    <div class="container-fluid ps-5 fw-bold" style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
-        <p class="mt-4 ms-3 mb-4" style="color: #bc9c22">Kategori Pilihan Untukmu</p>
-          <div id="Kategori" class="row mx-auto text-white text-center" style="flex-wrap: nowrap">
-            <div class="col-md-3 ms-3 rounded-2" style="background-image: url(/img/apartement1.jpg);
-            height:158px; width:500px">
-            <p class="pt-5 mt-3">Apartemen</p>
-              <div class="row pt-3">
-                <div class="col-md-12 ms-0 mt-5 rounded-2" style="background-image: url(/img/apartement1.jpg); 
-                height:158px; width:500px;">
-                <p class="pt-3 mt-5">Rumah</p>
+    <div class="container-fluid fw-bold px-0" style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
+        <p class="mt-4 ps-4 ms-3 mb-4" style="color:#bc9c22">Kategori Pilihan Untukmu</p>
+        <form action="">
+        <div class="container-fluid" style="width: 1261px; height: 100%;" id="Kategori">
+          <div class="row text-white text-center px-0">
+            
+            <div class="col-md-3 px-0">
+              <div class="row-5 rounded-2" style="background-image: url(https://source.unsplash.com/450x400?home); height:158px; width:350px;">
+                <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 60px;">
+                  <button type="Apartment" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px;border: #0000;">Apartment</button> 
                 </div>
               </div>
-            </div>
-  
-            <div class="col-md-3 ms-3 pt-5 rounded-2" style="background-image: url(/img/apartement1.jpg); 
-            height: 333px; width: 161px;">
-            <p class="pt-5 mt-5">Ruko</p>
+              <div class="row-6 mt-3 rounded-2" style="background-image: url(https://source.unsplash.com/500x400?home); height:158px; width:350px;">
+                <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 60px;">
+                  <button type="Rumah" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px;border: #0000;">Rumah</button> 
+                </div>
+              </div>
             </div>
             
-            <div class="col-md-3 ms-3 pt-5 rounded-2" style="background-image: url(/img/apartement1.jpg); 
-            height: 333px; width: 161px;">
-            <p class="pt-5 mt-5">Kost</p>
+            <div class="col-md-2">
+              <div class="row-12 ms-5 rounded-2" style="background-image: url(https://source.unsplash.com/600x400?home); height: 333px; width: 161px;">
+                <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 140px;">
+                  <button type="Ruko" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Ruko</button> 
+                </div>
+              </div> 
+            </div>
+             
+            <div class="col-md-2">
+              <div class="row-12 ms-4 rounded-2" style="background-image: url(https://source.unsplash.com/400x400?home); height: 333px; width: 161px;">
+                <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 140px;">
+                  <button type="Kost" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Kost</button> 
+                </div>
+              </div> 
             </div>
   
-            <div class="col-md-3 ms-3 rounded-2" style="background-image: url(/img/apartement1.jpg); 
-            height:99px; width:505px;">
-            <p class="pt-3 mt-3">Kios</p>
-              <div class="row pt-4">
-                <div class="col-md-6 ms-0 mt-3 rounded-2" style="background-image: url(/img/apartement1.jpg); 
-                height:99px; width:525px;">
-                <p class="pt-3 mt-3">Tanah</p>
+            <div class="col-md-5 px-3">
+              <div class="row-4 rounded-2" style="background-image: url(https://source.unsplash.com/1000x800?home); height:100px; width:505px;">
+                <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 32px;">
+                  <button type="Kios" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Kios</button> 
                 </div>
-                <div class="col-md-12 ms-0 mt-3 rounded-2" style="background-image: url(/img/apartement1.jpg); 
-                height:99px; width:525px;">
-                <p class="pt-4 mt-2">Kantor</p>
+              </div>
+              <div class="row-4 mt-3 rounded-2" style="background-image: url(https://source.unsplash.com/800x800?home); height:100px; width:505px;">
+                <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 32px;">
+                  <button type="Tanah" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Tanah</button> 
+                </div>
+              </div>
+              <div class="row-4 mt-3 rounded-2" style="background-image: url(https://source.unsplash.com/900x800?home); height:100px; width:505px;">
+                <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 32px;">
+                  <button type="Kantor" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Kantor</button> 
                 </div>
               </div>
             </div>
           </div>
+        </form></div>
       </div>
-    </div>
   
-      <!--Testimoni-->
-    <div id="carouselExampleIndicators" class="carousel slide pt-5" data-bs-ride="carousel">
-      <div class="container-fluid px-0">
-        <div class="Testimoni" style="background-image: url(/img/livroom.jpg); 
-        background-size:100%; height:600px; width: 100%;">
-          <div class="mask text-white fw-bold pt-5 ps-5" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; 
-          background-color: rgba(188, 157, 34, 0.70); height:100%; width:100%;">
-          <p>Testimoni</p>
-          <div class="container">
-            <div class="row">
-                <div class="col-md-3 p-0">
-                    <div class="row-md-5 bg-primary">
-                            <img class="img-fluid w-100" src="https://source.unsplash.com/200x200?home" alt="Card image" style="max-height: 270px;">
-                    </div>
-                    <div class="row-md-7 px-3 py-2" style="background-color: #BC9C22;"> 
-                        <p class="my-0 text-white">Fadhil <br>CEO</p>
-                    </div>
-                </div>
-                <div class="col-md-9 p-5 bg-white">
-                    <p class="fs-6 text-align-justify my-auto mt-5" style="color: #BC9C22;"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-                </div>
-            </div></div>
+    <!--Testimoni-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-label="Slide 1" style="width: 125px"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" style="width: 125px"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" style="width: 125px"></button>
         </div>
+        <div class="container-fluid px-0" style="margin-top: 105px;">
+          <div class="Testimoni" style="background-image: url(Asset/livroom.jpg); 
+            background-size:100%; height:550px; width: 100%">
+            <div class="mask text-white fw-bold pt-5 ps-5" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; 
+              background-color: rgba(188, 157, 34, 0.70); height:100%; width:100%;"><p>Testimoni</p>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-3 p-0">
+                        <div class="row-md-5 bg-primary">
+                          <img class="img-fluid w-100" src="/img/Cencen Property Logo (Sosmed).png" alt="Testimoni 0" style="max-height: 270px;">
+                        </div>
+                        <div class="row-md-7 px-3 py-2" style="background-color: #BC9C22;"> 
+                          <p class="my-0 text-white">M.Fadhil<br>CEO</p>
+                        </div>
+                      </div>
+                      <div class="col-md-9 p-5 bg-white">
+                        <p class="fs-6 text-align-justify my-auto mt-5" style="color: #BC9C22;"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="carousel-item">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-3 p-0">
+                        <div class="row-md-5 bg-primary">
+                          <img class="img-fluid w-100" src="/img/Cencen Property Logo (Sosmed).png" alt="Testimoni 1" style="max-height: 270px;">
+                        </div>
+                        <div class="row-md-7 px-3 py-2" style="background-color: #BC9C22;"> 
+                          <p class="my-0 text-white">Nur<br>User 1</p>
+                        </div>
+                      </div>
+                      <div class="col-md-9 p-5 bg-white">
+                        <p class="fs-6 text-align-justify my-auto mt-5" style="color: #BC9C22;"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="carousel-item">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-3 p-0">
+                        <div class="row-md-5 bg-primary">
+                          <img class="img-fluid w-100" src="/img/Cencen Property Logo (Sosmed).png" alt="Testimoni 2" style="max-height: 270px;">
+                        </div>
+                        <div class="row-md-7 px-3 py-2" style="background-color: #BC9C22;"> 
+                          <p class="my-0 text-white">Hidayat<br>User 2</p>
+                        </div>
+                      </div>
+                      <div class="col-md-9 p-5 bg-white">
+                        <p class="fs-6 text-align-justify my-auto mt-5" style="color: #BC9C22;"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-            style="width: 125px;"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-            style="width: 125px;"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-            style="width: 125px;"
-          ></button>
-        </div>
-      </div>
-    </div>
 
-      <!--Pertanyaan-->
-      <div class="container pt-5 mt-5 mb-5" style="font-family: Arial, Helvetica, sans-serif; 
-      color: #bc9c22; width:600px">
-        <h4 class="fw-bold text-center" style="font-size: 20px">Ajukan Pertanyaan</h4>
-        <form action="/action_page.php">
-          <div class="mb-3 mt-4">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email">
-          </div>
-          <div class="mb-3 mt-4">
-            <label for="pertantyaan">Pertanyaan</label>
-            <textarea class="form-control" rows="6 " id="pertanyaan" name="text"></textarea>
-          </div>
-          <div style="text-align-last:right">
-            <button type="submit" class="btn text-white mb-5 " style="background-color: #bc9c22;">Submit</button>
-          </div>
-        </form>
-      </div>
+    <!--Pertanyaan-->
+    <div class="container pt-5 mt-5 mb-5" style="font-family: Arial, Helvetica, sans-serif; color: #bc9c22; width:600px">
+      <h4 class="fw-bold text-center" style="font-size: 20px">Ajukan Pertanyaan</h4>
+      <form action="/action_page.php">
+        <div class="mb-3 mt-4">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class="mb-3 mt-4">
+          <label for="pertantyaan">Pertanyaan</label>
+          <textarea class="form-control" rows="6 " id="pertanyaan" name="text"></textarea>
+        </div>
+        <div style="text-align-last:right">
+          <button type="submit" class="btn text-white mb-5 " style="background-color: #bc9c22;">
+            <a><span class="fa fa-paper-plane me-2"></span>Submit</a>
+          </button>
+        </div>
+      </form>
+    </div>
   
      <!-- Footer -->
-    <footer class="text-white text-center text-lg-start" style="background-image:url(https://source.unsplash.com/800x800?home);">
-        <div class="container p-4">
-          <div class="row">
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Footer Content</h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-                voluptatem veniam, est atque cumque eum delectus sint!
-              </p>
+     <footer class="container-fluid px-0" style="background-image:url(https://source.unsplash.com/900x800?home); height: 400px; width: 100%;">
+        <div class="mask text-white" style="background-color: rgba(89, 89, 89, 0.6); height:100%; width:100%;">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5 mb-3" style="padding-top: 60px; font-family: Arial, Helvetica, sans-serif">
+                <ul class="text-white px-0 text-decoration-underline fw-bold" style="font-size: 20px;">
+                  <img src="/img/live_logo_white_crop.png" alt="" style="width: 150px;">
+                </ul>
+                <p> 
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                  when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                </p>
+              </div>
+              <div class="col-md-1">
+                <div class="vr mt-4 bg-light" style="height: 350px; min-width: 2px; margin-left: 35px;"></div>
+              </div>
+              <div class="col-md-6 mb-3" style="padding-top: 60px; font-family: Arial, Helvetica, sans-serif">
+                <ul class="text-white px-0 text-decoration-underline fw-bold" style="font-size: 20px;">Contact Us</ul>
+                <a><span class="fa fa-whatsapp me-2"></span>+62812345679</a></br>
+                <a><span class="fa fa-envelope me-2"></span>liveat@gmail.com</a>
+              </div>
             </div>
-  
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0 ps-5">
-              <h5 class="text-uppercase mb-0">Links</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!" class="text-white">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!" class="text-white">Link 4</a>
-                </li>
-              </ul>
-            </div>
-            <!--Grid column-->
           </div>
-          <!--Grid row-->
         </div>
-        <!-- Grid container -->
-      
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-          © 2020 Copyright:
-          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
+      </footer>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="/js/owl.carousel.min.js"></script>
-<script
-            src="https://kit.fontawesome.com/ef9fe87b9c.js"
-            crossorigin="anonymous"
-        ></script>
+<script src="https://kit.fontawesome.com/ef9fe87b9c.js" crossorigin="anonymous"></script>
 </html>
