@@ -81,7 +81,7 @@
     <!--Navbar-->
     <div class="container">
       <!--Seacrh bar-->
-      <nav class="navbar my-4">
+      <nav class="navbar my-5">
         <div class="container-fluid p-0">
           <form class="d-flex" role="search">
             <input
@@ -110,16 +110,6 @@
         </div>
       </nav>
       <!--Seacrh bar-->
-      <!--Kategori-->
-      <div class="align-items-start mb-3">
-        <p
-          class="badge bg text-wrap p-4 py-3 mb-0"
-          style="font-size: 15px; background-color: #366ace"
-        >
-          Apartemen
-        </p>
-      </div>
-      <!--Kategori-->
       <!--Card-->
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3 mb-4">
         <!--Card Dijual-->
