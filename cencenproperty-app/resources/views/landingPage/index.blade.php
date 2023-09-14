@@ -109,445 +109,406 @@
         </div>
     </div>
 
-    <!-- Properti Terbaru -->
-    <div class="container-fluid mt-4">
-        <div class="container">
-            <h1 class="mt-5 mb-3" style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-weight: bold;
-            color: #BC9C22;">Properti Terbaru</h1>
+     <!-- Properti Terbaru -->
+     <div class="container fw-bold" style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
+        <p class="mt-4 ms-3 mb-4" style="color: #bc9c22">Properti Terbaru</p>
         </div>
+        <!--Card-->
         <div class="container">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-1 mb-5">
-                <!--Card-->
-                <!--Card Dijual-->
-                <div class="col">
-                    <div class="card h-100">
-                        <img
-                            src="/img/Cencen Property Logo (Sosmed).png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <!--Hot list-->
-                        <div
-                            class="card-img-overlay d-flex justify-content-end"
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3 mb-4">
+              <!--Card Dijual-->
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="https://source.unsplash.com/1000x1000?home"
+                    class="img-fluid object-fit-cover"
+                  />
+                  <!--Hot list-->
+                  <div class="card-img-overlay d-flex justify-content-end">
+                    <p
+                      class="badge bg-danger text-wrap"
+                      style="
+                        color: white;
+                        font-size: 20px;
+                        height: 70px;
+                        width: 70px;
+                        border-radius: 50%;
+      
+                        padding: 15px;
+                      "
+                    >
+                      Hot List
+                    </p>
+                  </div>
+                  <!--Hot list-->
+                  <div class="dijual">
+                    <div class="card-body py-1 h-100">
+                      <div class="row d-flex">
+                        <p
+                          class="card-title mb-0"
+                          style="font-weight: bold; color: white"
                         >
+                          Cencen Property
+                        </p>
+                        <div class="d-flex">
+                          <div class="flex-grow-1">
                             <p
-                                class="badge bg-danger text-wrap"
-                                style="
-                                    color: white;
-                                    font-size: 15px;
-                                    height: 50px;
-                                    width: 50px;
-                                    border-radius: 50%;
-                                    padding: 10px;
-                                "
+                              class="card-text mb-0"
+                              style="color: white; font-size: 13px"
                             >
-                                Hot List
+                              Jakarta Pusat
                             </p>
-                        </div>
-                        <!--Hot list-->
-                        <div class="dijual">
-                            <div class="card-body py-1 h-100">
-                                <div class="row d-flex">
-                                    <p
-                                        class="card-title mb-0"
-                                        style="font-weight: bold; color: white"
-                                    >
-                                        Cencen Property
-                                    </p>
-                                    <div class="d-flex">
-                                        <div class="flex-grow-1">
-                                            <p
-                                                class="card-text mb-0"
-                                                style="
-                                                    color: white;
-                                                    font-size: 13px;
-                                                "
-                                            >
-                                                Jakarta Pusat
-                                            </p>
-                                            <p
-                                                class="badge bg-light text-wrap mb-0"
-                                                style="font-size: 9px"
-                                            >
-                                                Rumah
-                                            </p>
-                                            <p
-                                                class="badge bg-light text-wrap mb-2"
-                                                style="font-size: 9px"
-                                            >
-                                                Furnished
-                                            </p>
-                                        </div>
-                                        <div class="d-flex px-2">
-                                            <div
-                                                class="vertical-line"
-                                                style="
-                                                    border-right: 3px solid
-                                                        white;
-                                                    height: 80%;
-                                                    margin-top: 6px;
-                                                "
-                                            ></div>
-                                        </div>
-
-                                        <div class="d-flex align-items-center">
-                                            <p
-                                                class="badge bg-light text-wrap p-2 py-3 mb-0"
-                                                style="font-size: 13px"
-                                            >
-                                                Dijual
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dijual">
-                            <div
-                                class="card-body py-1"
-                                style="background-color: white"
+                            <p
+                              class="badge bg-light text-wrap mb-0"
+                              style="font-size: 8px"
                             >
-                                <p
-                                    class="card-text pb-1"
-                                    style="
-                                        margin-bottom: 0;
-                                        margin-top: 0;
-                                        font-size: 13px;
-                                    "
-                                >
-                                    Rp500.000.000,-
-                                </p>
-                                <div class="d-flex">
-                                    <div class="pe-2">
-                                        <p style="font-size: 12px">
-                                            <i class="fa-solid fa-bed"></i> 1+1
-                                        </p>
-                                    </div>
-                                    <div class="pe-2">
-                                        <p style="font-size: 12px">
-                                            <i class="fa-solid fa-bath"></i> 2
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Card Dijual-->
-                <!--Card Disewa-->
-                <div class="col">
-                    <div class="card h-100">
-                        <img
-                            src="/img/Cencen Property Logo (Sosmed).png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="disewa">
-                            <div class="card-body py-1 h-100">
-                                <div class="row d-flex">
-                                    <p
-                                        class="card-title mb-0"
-                                        style="font-weight: bold; color: white"
-                                    >
-                                        Cencen Property
-                                    </p>
-                                    <div class="d-flex">
-                                        <div class="flex-grow-1">
-                                            <p
-                                                class="card-text mb-0"
-                                                style="
-                                                    color: white;
-                                                    font-size: 13px;
-                                                "
-                                            >
-                                                Jakarta Pusat
-                                            </p>
-                                            <p
-                                                class="badge bg-light text-wrap mb-0"
-                                                style="font-size: 9px"
-                                            >
-                                                Apartemen
-                                            </p>
-                                            <p
-                                                class="badge bg-light text-wrap mb-2"
-                                                style="font-size: 9px"
-                                            >
-                                                Semi Furnished
-                                            </p>
-                                        </div>
-                                        <div class="d-flex px-2">
-                                            <div
-                                                class="vertical-line"
-                                                style="
-                                                    border-right: 3px solid
-                                                        white;
-                                                    height: 80%;
-                                                    margin-top: 6px;
-                                                "
-                                            ></div>
-                                        </div>
-
-                                        <div class="d-flex align-items-center">
-                                            <p
-                                                class="badge bg-light text-wrap p-2 py-3 mb-0"
-                                                style="font-size: 13px"
-                                            >
-                                                Disewa
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="disewa">
-                            <div
-                                class="card-body py-1"
-                                style="background-color: white"
+                              Rumah
+                            </p>
+                            <p
+                              class="badge bg-light text-wrap mb-2"
+                              style="font-size: 8px"
                             >
-                                <p
-                                    class="card-text pb-1"
-                                    style="
-                                        margin-bottom: 0;
-                                        margin-top: 0;
-                                        font-size: 13px;
-                                    "
-                                >
-                                    Rp500.000.000,-
-                                </p>
-                                <div class="d-flex">
-                                    <div class="pe-2">
-                                        <p style="font-size: 12px">
-                                            <i class="fa-solid fa-bed"></i> 1+1
-                                        </p>
-                                    </div>
-                                    <div class="pe-2">
-                                        <p style="font-size: 12px">
-                                            <i class="fa-solid fa-bath"></i> 2
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                              Furnished
+                            </p>
+                          </div>
+                          <div class="d-flex px-2">
+                            <div
+                              class="vertical-line"
+                              style="
+                                border-right: 3px solid white;
+                                height: 80%;
+                                margin-top: 6px;
+                              "
+                            ></div>
+                          </div>
+      
+                          <div class="d-flex align-items-center">
+                            <p
+                              class="badge bg-light text-wrap p-2 py-3 mb-0"
+                              style="font-size: 13px"
+                            >
+                              Dijual
+                            </p>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
+                  <div class="dijual">
+                    <div class="card-body py-1" style="background-color: white">
+                      <p
+                        class="card-text pb-1"
+                        style="margin-bottom: 0; margin-top: 0; font-size: 13px"
+                      >
+                        Rp500.000.000,-
+                      </p>
+                      <div class="d-flex">
+                        <div class="pe-2">
+                          <p style="font-size: 12px">
+                            <i class="fa-solid fa-bed"></i> 1+1
+                          </p>
+                        </div>
+                        <div class="pe-2">
+                          <p style="font-size: 12px">
+                            <i class="fa-solid fa-bath"></i> 2
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <!--Card Disewa-->
-                <!--Card Dijual-->
-                <div class="col">
-                    <div class="card h-100">
-                        <img
-                            src="/img/Cencen Property Logo (Sosmed).png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <!--Hot list-->
-                        <div
-                            class="card-img-overlay d-flex justify-content-end"
+              </div>
+              <!--Card Dijual-->
+              <!--Card Disewa-->
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="https://source.unsplash.com/500x500?home"
+                    class="img-fluid object-fit-cover"
+                    alt="..."
+                  />
+                  <div class="disewa">
+                    <div class="card-body py-1 h-100">
+                      <div class="row d-flex">
+                        <p
+                          class="card-title mb-0"
+                          style="font-weight: bold; color: white"
                         >
+                          Cencen Property
+                        </p>
+                        <div class="d-flex">
+                          <div class="flex-grow-1">
                             <p
-                                class="badge bg-danger text-wrap"
-                                style="
-                                    color: white;
-                                    font-size: 15px;
-                                    height: 50px;
-                                    width: 50px;
-                                    border-radius: 50%;
-                                    padding: 10px;
-                                "
+                              class="card-text mb-0"
+                              style="color: white; font-size: 13px"
                             >
-                                Hot List
+                              Jakarta Pusat
                             </p>
-                        </div>
-                        <!--Hot list-->
-                        <div class="dijual">
-                            <div class="card-body py-1 h-100">
-                                <div class="row d-flex">
-                                    <p
-                                        class="card-title mb-0"
-                                        style="font-weight: bold; color: white"
-                                    >
-                                        Cencen Property
-                                    </p>
-                                    <div class="d-flex">
-                                        <div class="flex-grow-1">
-                                            <p
-                                                class="card-text mb-0"
-                                                style="
-                                                    color: white;
-                                                    font-size: 13px;
-                                                "
-                                            >
-                                                Jakarta Pusat
-                                            </p>
-                                            <p
-                                                class="badge bg-light text-wrap mb-0"
-                                                style="font-size: 9px"
-                                            >
-                                                Rumah
-                                            </p>
-                                            <p
-                                                class="badge bg-light text-wrap mb-2"
-                                                style="font-size: 9px"
-                                            >
-                                                Furnished
-                                            </p>
-                                        </div>
-                                        <div class="d-flex px-2">
-                                            <div
-                                                class="vertical-line"
-                                                style="
-                                                    border-right: 3px solid
-                                                        white;
-                                                    height: 80%;
-                                                    margin-top: 6px;
-                                                "
-                                            ></div>
-                                        </div>
-
-                                        <div class="d-flex align-items-center">
-                                            <p
-                                                class="badge bg-light text-wrap p-2 py-3 mb-0"
-                                                style="font-size: 13px"
-                                            >
-                                                Dijual
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dijual">
-                            <div
-                                class="card-body py-1"
-                                style="background-color: white"
+                            <p
+                              class="badge bg-light text-wrap mb-0"
+                              style="font-size: 8px"
                             >
-                                <p
-                                    class="card-text pb-1"
-                                    style="
-                                        margin-bottom: 0;
-                                        margin-top: 0;
-                                        font-size: 13px;
-                                    "
-                                >
-                                    Rp500.000.000,-
-                                </p>
-                                <div class="d-flex">
-                                    <div class="pe-2">
-                                        <p style="font-size: 12px">
-                                            <i class="fa-solid fa-bed"></i> 1+1
-                                        </p>
-                                    </div>
-                                    <div class="pe-2">
-                                        <p style="font-size: 12px">
-                                            <i class="fa-solid fa-bath"></i> 2
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Card Dijual-->
-                <!--Card Disewa-->
-                <div class="col">
-                    <div class="card h-100">
-                        <img
-                            src="/img/Cencen Property Logo (Sosmed).png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="disewa">
-                            <div class="card-body py-1 h-100">
-                                <div class="row d-flex">
-                                    <p
-                                        class="card-title mb-0"
-                                        style="font-weight: bold; color: white"
-                                    >
-                                        Cencen Property
-                                    </p>
-                                    <div class="d-flex">
-                                        <div class="flex-grow-1">
-                                            <p
-                                                class="card-text mb-0"
-                                                style="
-                                                    color: white;
-                                                    font-size: 13px;
-                                                "
-                                            >
-                                                Jakarta Pusat
-                                            </p>
-                                            <p
-                                                class="badge bg-light text-wrap mb-0"
-                                                style="font-size: 9px"
-                                            >
-                                                Apartemen
-                                            </p>
-                                            <p
-                                                class="badge bg-light text-wrap mb-2"
-                                                style="font-size: 9px"
-                                            >
-                                                Semi Furnished
-                                            </p>
-                                        </div>
-                                        <div class="d-flex px-2">
-                                            <div
-                                                class="vertical-line"
-                                                style="
-                                                    border-right: 3px solid
-                                                        white;
-                                                    height: 80%;
-                                                    margin-top: 6px;
-                                                "
-                                            ></div>
-                                        </div>
-
-                                        <div class="d-flex align-items-center">
-                                            <p
-                                                class="badge bg-light text-wrap p-2 py-3 mb-0"
-                                                style="font-size: 13px"
-                                            >
-                                                Disewa
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="disewa">
-                            <div
-                                class="card-body py-1"
-                                style="background-color: white"
+                              Apartemen
+                            </p>
+                            <p
+                              class="badge bg-light text-wrap mb-2"
+                              style="font-size: 8px"
                             >
-                                <p
-                                    class="card-text pb-1"
-                                    style="
-                                        margin-bottom: 0;
-                                        margin-top: 0;
-                                        font-size: 13px;
-                                    "
-                                >
-                                    Rp500.000.000,-
-                                </p>
-                                <div class="d-flex">
-                                    <div class="pe-2">
-                                        <p style="font-size: 12px">
-                                            <i class="fa-solid fa-bed"></i> 1+1
-                                        </p>
-                                    </div>
-                                    <div class="pe-2">
-                                        <p style="font-size: 12px">
-                                            <i class="fa-solid fa-bath"></i> 2
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                              Semi Furnished
+                            </p>
+                          </div>
+                          <div class="d-flex px-2">
+                            <div
+                              class="vertical-line"
+                              style="
+                                border-right: 3px solid white;
+                                height: 80%;
+                                margin-top: 6px;
+                              "
+                            ></div>
+                          </div>
+      
+                          <div class="d-flex align-items-center">
+                            <p
+                              class="badge bg-light text-wrap p-2 py-3 mb-0"
+                              style="font-size: 13px"
+                            >
+                              Disewa
+                            </p>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
+                  <div class="disewa">
+                    <div class="card-body py-1" style="background-color: white">
+                      <p
+                        class="card-text pb-1"
+                        style="margin-bottom: 0; margin-top: 0; font-size: 13px"
+                      >
+                        Rp500.000.000,-
+                      </p>
+                      <div class="d-flex">
+                        <div class="pe-2">
+                          <p style="font-size: 12px">
+                            <i class="fa-solid fa-bed"></i> 1+1
+                          </p>
+                        </div>
+                        <div class="pe-2">
+                          <p style="font-size: 12px">
+                            <i class="fa-solid fa-bath"></i> 2
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <!--Card Disewa-->
-                <!--Card-->
+              </div>
+              <!--Card Disewa-->
+              <!--Card Dijual-->
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="https://source.unsplash.com/1000x1000?home"
+                    class="img-fluid object-fit-cover"
+                  />
+                  <!--Hot list-->
+                  <div class="card-img-overlay d-flex justify-content-end">
+                    <p
+                      class="badge bg-danger text-wrap"
+                      style="
+                        color: white;
+                        font-size: 20px;
+                        height: 70px;
+                        width: 70px;
+                        border-radius: 50%;
+      
+                        padding: 15px;
+                      "
+                    >
+                      Hot List
+                    </p>
+                  </div>
+                  <!--Hot list-->
+                  <div class="dijual">
+                    <div class="card-body py-1 h-100">
+                      <div class="row d-flex">
+                        <p
+                          class="card-title mb-0"
+                          style="font-weight: bold; color: white"
+                        >
+                          Cencen Property
+                        </p>
+                        <div class="d-flex">
+                          <div class="flex-grow-1">
+                            <p
+                              class="card-text mb-0"
+                              style="color: white; font-size: 13px"
+                            >
+                              Jakarta Pusat
+                            </p>
+                            <p
+                              class="badge bg-light text-wrap mb-0"
+                              style="font-size: 8px"
+                            >
+                              Rumah
+                            </p>
+                            <p
+                              class="badge bg-light text-wrap mb-2"
+                              style="font-size: 8px"
+                            >
+                              Furnished
+                            </p>
+                          </div>
+                          <div class="d-flex px-2">
+                            <div
+                              class="vertical-line"
+                              style="
+                                border-right: 3px solid white;
+                                height: 80%;
+                                margin-top: 6px;
+                              "
+                            ></div>
+                          </div>
+      
+                          <div class="d-flex align-items-center">
+                            <p
+                              class="badge bg-light text-wrap p-2 py-3 mb-0"
+                              style="font-size: 13px"
+                            >
+                              Dijual
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dijual">
+                    <div class="card-body py-1" style="background-color: white">
+                      <p
+                        class="card-text pb-1"
+                        style="margin-bottom: 0; margin-top: 0; font-size: 13px"
+                      >
+                        Rp500.000.000,-
+                      </p>
+                      <div class="d-flex">
+                        <div class="pe-2">
+                          <p style="font-size: 12px">
+                            <i class="fa-solid fa-bed"></i> 1+1
+                          </p>
+                        </div>
+                        <div class="pe-2">
+                          <p style="font-size: 12px">
+                            <i class="fa-solid fa-bath"></i> 2
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Card Dijual-->
+              <!--Card Disewa-->
+              <div class="col">
+                <div class="card h-100">
+                  <img
+                    src="https://source.unsplash.com/500x500?home"
+                    class="img-fluid object-fit-cover"
+                    alt="..."
+                  />
+                  <div class="disewa">
+                    <div class="card-body py-1 h-100">
+                      <div class="row d-flex">
+                        <p
+                          class="card-title mb-0"
+                          style="font-weight: bold; color: white"
+                        >
+                          Cencen Property
+                        </p>
+                        <div class="d-flex">
+                          <div class="flex-grow-1">
+                            <p
+                              class="card-text mb-0"
+                              style="color: white; font-size: 13px"
+                            >
+                              Jakarta Pusat
+                            </p>
+                            <p
+                              class="badge bg-light text-wrap mb-0"
+                              style="font-size: 8px"
+                            >
+                              Apartemen
+                            </p>
+                            <p
+                              class="badge bg-light text-wrap mb-2"
+                              style="font-size: 8px"
+                            >
+                              Semi Furnished
+                            </p>
+                          </div>
+                          <div class="d-flex px-2">
+                            <div
+                              class="vertical-line"
+                              style="
+                                border-right: 3px solid white;
+                                height: 80%;
+                                margin-top: 6px;
+                              "
+                            ></div>
+                          </div>
+      
+                          <div class="d-flex align-items-center">
+                            <p
+                              class="badge bg-light text-wrap p-2 py-3 mb-0"
+                              style="font-size: 13px"
+                            >
+                              Disewa
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="disewa">
+                    <div class="card-body py-1" style="background-color: white">
+                      <p
+                        class="card-text pb-1"
+                        style="margin-bottom: 0; margin-top: 0; font-size: 13px"
+                      >
+                        Rp500.000.000,-
+                      </p>
+                      <div class="d-flex">
+                        <div class="pe-2">
+                          <p style="font-size: 12px">
+                            <i class="fa-solid fa-bed"></i> 1+1
+                          </p>
+                        </div>
+                        <div class="pe-2">
+                          <p style="font-size: 12px">
+                            <i class="fa-solid fa-bath"></i> 2
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Card Disewa-->
+      
+              <!--Card-->
             </div>
+            <!--Card-->
+        <!--Selengkapnya-->
+        <div class="container mt-0 d-flex justify-content-end ">
+            <form action="/action_page.php" >
+                <div >
+                  <button type="submit" class="btn text mb-0 p-0" style="background-color: transparent; color: #BC9C22;">Lihat Selengkapnya...</button>
+                </div>
+              </form>
         </div>
+        <!--Selengkapnya-->
     </div>
+    <!-- Properti Terbaru -->
 
     <!--Kategori-->
     <div class="container-fluid fw-bold px-0" style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
@@ -705,7 +666,7 @@
             <div class="row">
               <div class="col-md-5 mb-3" style="padding-top: 60px; font-family: Arial, Helvetica, sans-serif">
                 <ul class="text-white px-0 text-decoration-underline fw-bold" style="font-size: 20px;">
-                  <img src="/img/live_logo_white_crop.png" alt="" style="width: 150px;">
+                  <img src="/img/logo_white.png" alt="" style="width: 150px;">
                 </ul>
                 <p> 
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
