@@ -283,7 +283,7 @@
               </div>
             </div>
           </div>
-          {{-- image --}}
+          {{-- image1 --}}
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
@@ -295,6 +295,70 @@
                   {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
                 <img class="img-preview img-fluid mt-2 col-sm-5 px-0 ">
+                {{-- <img class="img-preview img-fluid object-fit-cover img-thumbnail" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
+              </div>
+            </div>
+          </div>
+          {{-- image2 --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="image2" class="col-form-label d-block ps-md-5">Image</label>
+              </div>
+              <div class="col-md-5">
+                <div class="input-group mb-1">
+                  <input type="file" class="form-control @error('image2') is-invalid @enderror" id="image2" name="image2" onchange="previewImage2()">
+                  {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
+                </div>
+                <img class="img-preview img-fluid mt-2 col-sm-5 px-0 image2">
+                {{-- <img class="img-preview img-fluid object-fit-cover img-thumbnail" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
+              </div>
+            </div>
+          </div>
+          {{-- image3 --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="image3" class="col-form-label d-block ps-md-5">Image</label>
+              </div>
+              <div class="col-md-5">
+                <div class="input-group mb-1">
+                  <input type="file" class="form-control @error('image3') is-invalid @enderror" id="image3" name="image3" onchange="previewImage3()">
+                  {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
+                </div>
+                <img class="img-preview img-fluid mt-2 col-sm-5 px-0 image3">
+                {{-- <img class="img-preview img-fluid object-fit-cover img-thumbnail" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
+              </div>
+            </div>
+          </div>
+          {{-- image4 --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="image4" class="col-form-label d-block ps-md-5">Image</label>
+              </div>
+              <div class="col-md-5">
+                <div class="input-group mb-1">
+                  <input type="file" class="form-control @error('image4') is-invalid @enderror" id="image4" name="image4" onchange="previewImage4()">
+                  {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
+                </div>
+                <img class="img-preview img-fluid mt-2 col-sm-5 px-0 image4">
+                {{-- <img class="img-preview img-fluid object-fit-cover img-thumbnail" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
+              </div>
+            </div>
+          </div>
+          {{-- image5 --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="image4" class="col-form-label d-block ps-md-5">Image</label>
+              </div>
+              <div class="col-md-5">
+                <div class="input-group mb-1">
+                  <input type="file" class="form-control @error('image5') is-invalid @enderror" id="image5" name="image5" onchange="previewImage5()">
+                  {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
+                </div>
+                <img class="img-preview img-fluid mt-2 col-sm-5 px-0 image5">
                 {{-- <img class="img-preview img-fluid object-fit-cover img-thumbnail" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
               </div>
             </div>

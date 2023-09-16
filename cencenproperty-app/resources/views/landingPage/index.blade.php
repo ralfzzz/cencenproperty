@@ -546,7 +546,7 @@
               </div> 
             </div>
   
-            <div class="col-md-5 px-3">
+            <div class="col-md-3 px-3">
               <div class="row-4 rounded-2" style="background-image: url(https://source.unsplash.com/1000x800?home); height:100px; width:505px;">
                 <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 32px;">
                   <button type="Kios" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Kios</button> 
@@ -567,7 +567,8 @@
         </form></div>
       </div>
   
-    <!--Testimoni-->
+    
+      <!--Testimoni-->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-label="Slide 1" style="width: 125px"></button>
@@ -639,7 +640,8 @@
         </div>
       </div>
 
-    <!--Pertanyaan-->
+    
+      <!--Pertanyaan-->
     <div class="container pt-5 mt-5 mb-5" style="font-family: Arial, Helvetica, sans-serif; color: #bc9c22; width:600px">
       <h4 class="fw-bold text-center" style="font-size: 20px">Ajukan Pertanyaan</h4>
       <form action="/action_page.php">

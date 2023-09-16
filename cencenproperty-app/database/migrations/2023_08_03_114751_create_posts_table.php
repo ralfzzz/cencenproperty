@@ -33,6 +33,10 @@ return new class extends Migration
             $table->text('located_near');
             $table->integer('price');
             $table->text('image');
+            $table->text('image2');
+            $table->text('image3');
+            $table->text('image4');
+            $table->text('image5');
 
         });
     }

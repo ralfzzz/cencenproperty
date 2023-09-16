@@ -65,6 +65,10 @@ class PostFactory extends Factory
             'located_near' => fake()->text(),
             'price' => fake()->randomDigitNotNull(),
             'image' => fake()->text(),
+            'image2' => fake()->text(),
+            'image3' => fake()->text(),
+            'image4' => fake()->text(),
+            'image5' => fake()->text(),
             'user_id' => mt_rand(1,3)
         ];
     }

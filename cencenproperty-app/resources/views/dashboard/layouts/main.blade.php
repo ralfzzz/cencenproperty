@@ -45,5 +45,61 @@
               imgPreview.src=oFREvent.target.result;
           }
       }
+  
+      function previewImage2() {
+          const image = document.querySelector('#image2');
+          const imgPreview = document.querySelector('.image2');
+
+          imgPreview.style.display = 'block';
+
+          const oFReader = new FileReader();
+          oFReader.readAsDataURL(image.files[0]);
+
+          oFReader.onload = function (oFREvent) {
+              imgPreview.src=oFREvent.target.result;
+          }
+      }
+
+      function previewImage3() {
+          const image = document.querySelector('#image3');
+          const imgPreview = document.querySelector('.image3');
+
+          imgPreview.style.display = 'block';
+
+          const oFReader = new FileReader();
+          oFReader.readAsDataURL(image.files[0]);
+
+          oFReader.onload = function (oFREvent) {
+              imgPreview.src=oFREvent.target.result;
+          }
+      }
+
+      function previewImage4() {
+          const image = document.querySelector('#image4');
+          const imgPreview = document.querySelector('.image4');
+
+          imgPreview.style.display = 'block';
+
+          const oFReader = new FileReader();
+          oFReader.readAsDataURL(image.files[0]);
+
+          oFReader.onload = function (oFREvent) {
+              imgPreview.src=oFREvent.target.result;
+          }
+      }
+
+      function previewImage5() {
+          const image = document.querySelector('#image5');
+          const imgPreview = document.querySelector('.image5');
+
+          imgPreview.style.display = 'block';
+
+          const oFReader = new FileReader();
+          oFReader.readAsDataURL(image.files[0]);
+
+          oFReader.onload = function (oFREvent) {
+              imgPreview.src=oFREvent.target.result;
+          }
+      }
 </script>
 </html>
