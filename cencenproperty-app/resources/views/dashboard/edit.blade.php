@@ -285,12 +285,12 @@
                   {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
                 @if($posts->image)
-                    {{-- <img src="{{ asset('storage/'.$posts->image) }}" class="img-preview img-fluid mb-2 col-sm-5 px-0 d-block mt-2"> --}}
-                    <img src="{{ asset('storage/'.$posts->image) }}" class="img-preview img-fluid object-fit-cover img-thumbnail d-block mt-2" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px">
+                    <img src="{{ asset('storage/'.$posts->image) }}" class="img-preview img-fluid mb-2 col-sm-5 px-0 d-block mt-2">
+                    {{-- <img src="{{ asset('storage/'.$posts->image) }}" class="img-preview img-fluid object-fit-cover img-thumbnail d-block mt-2" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
 
                 @else
-                  {{-- <img class="img-preview img-fluid mt-2 col-sm-5 px-0"> --}}
-                  <img class="img-preview img-fluid object-fit-cover img-thumbnail mt-2" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px">
+                  <img class="img-preview img-fluid mt-2 col-sm-5 px-0">
+                  {{-- <img class="img-preview img-fluid object-fit-cover img-thumbnail mt-2" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
                 @endif
               </div>
             </div>
