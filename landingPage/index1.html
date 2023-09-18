@@ -56,10 +56,20 @@
                 <h1 style="font-family: Arial, Helvetica, sans-serif">Cari Properti Anda</h1>
             </div>
             <div class="text-center" id="search-content">
-                <div class="col-wrapper" id="sewa-beli-container">
-                    <button class="btn btn-primary buttongold" type="submit" id="sewa-beli-btn">Sewa</button>
-                    <button class="btn btn-primary buttongold" type="submit" id="sewa-beli-btn">Beli</button>
-                </div>
+              <div class="col-wrapper" id="sewa-beli-container">
+                <button class="sewa-beli-btn sewa-beli-btn-active">Sewa</button>
+                <button class="sewa-beli-btn">Beli</button>
+                <script>
+                    const stateBtn = document.querySelectorAll('.sewa-beli-btn');
+                    stateBtn.forEach( state =>{
+                        state.addEventListener('click',()=>{
+                        document.querySelector('.sewa-beli-btn-active')?.classList.remove('sewa-beli-btn-active')
+                        state.classList.add('sewa-beli-btn-active')
+                        console.log("tes")
+                        });
+                    });
+                </script>
+              </div>
                 <div class="input-group col-wrapper">
                     <input type="text" class="form-control" id="search-input" placeholder="Search Anything" >
                 </div>
