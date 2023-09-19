@@ -272,7 +272,7 @@
               </div>
             </div>
           </div>
-          {{-- image --}}
+          {{-- image1 --}}
           <div class="container-fluid mb-3">
             <div class="row">
               <div class="col-md-2">
@@ -285,16 +285,110 @@
                   {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
                 @if($posts->image)
-                    <img src="{{ asset('storage/'.$posts->image) }}" class="img-preview img-fluid mb-2 col-sm-5 px-0 d-block mt-2">
+                    <img src="{{ asset('storage/'.$posts->image) }}" class="img-preview img-fluid mb-2 col-sm-5 px-0 d-block mt-2" style="max-width: 180px; max-height: 180px;">
                     {{-- <img src="{{ asset('storage/'.$posts->image) }}" class="img-preview img-fluid object-fit-cover img-thumbnail d-block mt-2" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
 
                 @else
-                  <img class="img-preview img-fluid mt-2 col-sm-5 px-0">
+                  <img class="img-preview img-fluid mt-2 col-sm-5 px-0" style="max-width: 180px; max-height: 180px;">
                   {{-- <img class="img-preview img-fluid object-fit-cover img-thumbnail mt-2" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
                 @endif
               </div>
             </div>
           </div>
+          {{-- image2 --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="image2" class="col-form-label d-block ps-md-5">Image</label>
+              </div>
+              <div class="col-md-5">
+                <div class="input-group">
+                  <input type="hidden" name="oldImage2" value="{{ $posts->image2 }}">
+                  <input type="file" class="form-control @error('image2') is-invalid @enderror" id="image2" name="image2" onchange="previewImage2()">
+                  {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
+                </div>
+                @if($posts->image2)
+                    <img src="{{ asset('storage/'.$posts->image2) }}" class="img-preview img-fluid mb-2 col-sm-5 px-0 d-block mt-2 image2" style="max-width: 180px; max-height: 180px;">
+                    {{-- <img src="{{ asset('storage/'.$posts->image) }}" class="img-preview img-fluid object-fit-cover img-thumbnail d-block mt-2" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
+
+                @else
+                  <img class="img-preview img-fluid mt-2 col-sm-5 px-0 image2" style="max-width: 180px; max-height: 180px;">
+                  {{-- <img class="img-preview img-fluid object-fit-cover img-thumbnail mt-2" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
+                @endif
+              </div>
+            </div>
+          </div>
+          {{-- image3 --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="image3" class="col-form-label d-block ps-md-5">Image</label>
+              </div>
+              <div class="col-md-5">
+                <div class="input-group">
+                  <input type="hidden" name="oldImage3" value="{{ $posts->image3 }}">
+                  <input type="file" class="form-control @error('image3') is-invalid @enderror" id="image3" name="image3" onchange="previewImage3()">
+                  {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
+                </div>
+                @if($posts->image3)
+                    <img src="{{ asset('storage/'.$posts->image3) }}" class="img-preview img-fluid mb-2 col-sm-5 px-0 d-block mt-2 image3" style="max-width: 180px; max-height: 180px;">
+                    {{-- <img src="{{ asset('storage/'.$posts->image) }}" class="img-preview img-fluid object-fit-cover img-thumbnail d-block mt-2" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
+
+                @else
+                  <img class="img-preview img-fluid mt-2 col-sm-5 px-0 image3" style="max-width: 180px; max-height: 180px;">
+                  {{-- <img class="img-preview img-fluid object-fit-cover img-thumbnail mt-2" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
+                @endif
+              </div>
+            </div>
+          </div>
+          {{-- image4 --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="image4" class="col-form-label d-block ps-md-5">Image</label>
+              </div>
+              <div class="col-md-5">
+                <div class="input-group">
+                  <input type="hidden" name="oldImage4" value="{{ $posts->image4 }}">
+                  <input type="file" class="form-control @error('image4') is-invalid @enderror" id="image4" name="image4" onchange="previewImage4()">
+                  {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
+                </div>
+                @if($posts->image4)
+                    <img src="{{ asset('storage/'.$posts->image4) }}" class="img-preview img-fluid mb-2 col-sm-5 px-0 d-block mt-2 image4" style="max-width: 180px; max-height: 180px;">
+                    {{-- <img src="{{ asset('storage/'.$posts->image) }}" class="img-preview img-fluid object-fit-cover img-thumbnail d-block mt-2" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
+
+                @else
+                  <img class="img-preview img-fluid mt-2 col-sm-5 px-0 image4" style="max-width: 180px; max-height: 180px;">
+                  {{-- <img class="img-preview img-fluid object-fit-cover img-thumbnail mt-2" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
+                @endif
+              </div>
+            </div>
+          </div>
+          {{-- image5 --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="image5" class="col-form-label d-block ps-md-5">Image</label>
+              </div>
+              <div class="col-md-5">
+                <div class="input-group">
+                  <input type="hidden" name="oldImage5" value="{{ $posts->image5 }}">
+                  <input type="file" class="form-control @error('image5') is-invalid @enderror" id="image5" name="image5" onchange="previewImage5()">
+                  {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
+                </div>
+                @if($posts->image5)
+                    <img src="{{ asset('storage/'.$posts->image5) }}" class="img-preview img-fluid mb-2 col-sm-5 px-0 d-block mt-2 image5" style="max-width: 180px; max-height: 180px;">
+                    {{-- <img src="{{ asset('storage/'.$posts->image) }}" class="img-preview img-fluid object-fit-cover img-thumbnail d-block mt-2" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
+
+                @else
+                  <img class="img-preview img-fluid mt-2 col-sm-5 px-0 image5" style="max-width: 180px; max-height: 180px;">
+                  {{-- <img class="img-preview img-fluid object-fit-cover img-thumbnail mt-2" style="max-width: 180px; max-height: 180px; min-width: 180px; min-height: 180px"> --}}
+                @endif
+              </div>
+            </div>
+          </div>
+          
+          
           {{-- upload button --}}
           <div class="container-fluid mb-3">
             <div class="row">

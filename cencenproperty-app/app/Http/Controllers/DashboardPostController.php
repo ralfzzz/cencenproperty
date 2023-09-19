@@ -160,6 +160,30 @@ class DashboardPostController extends Controller
             }
             $validateInput['image'] = $request->file('image')->store('post_images');
         }
+        if ($request->file('image2')) {
+            if ($request->oldImage2) {
+                Storage::delete($request->oldImage2);
+            }
+            $validateInput['image2'] = $request->file('image2')->store('post_images');
+        }
+        if ($request->file('image3')) {
+            if ($request->oldImage3) {
+                Storage::delete($request->oldImage3);
+            }
+            $validateInput['image3'] = $request->file('image3')->store('post_images');
+        }
+        if ($request->file('image4')) {
+            if ($request->oldImage4) {
+                Storage::delete($request->oldImage4);
+            }
+            $validateInput['image4'] = $request->file('image4')->store('post_images');
+        }
+        if ($request->file('image5')) {
+            if ($request->oldImage5) {
+                Storage::delete($request->oldImage5);
+            }
+            $validateInput['image5'] = $request->file('image5')->store('post_images');
+        }
 
         $validateInput['user_id'] = auth()->user()->id;
 
@@ -179,6 +203,18 @@ class DashboardPostController extends Controller
 
         if ($post->image) {
             Storage::delete($post->image);
+        }
+        if ($post->image2) {
+            Storage::delete($post->image2);
+        }
+        if ($post->image3) {
+            Storage::delete($post->image3);
+        }
+        if ($post->image4) {
+            Storage::delete($post->image4);
+        }
+        if ($post->image5) {
+            Storage::delete($post->image5);
         }
         Post::destroy($post->id);
 
