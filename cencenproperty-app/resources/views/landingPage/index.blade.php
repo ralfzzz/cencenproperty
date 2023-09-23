@@ -225,7 +225,7 @@
     <div class="container">
       <!-- Properti Terbaru -->
       <div
-        class="container fw-bold"
+        class="container fw-bold px-0"
         style="font-family: Arial, Helvetica, sans-serif; font-size: 20px"
       >
         <p class="mt-4 mb-4" style="color: #bc9c22">Properti Terbaru</p>
