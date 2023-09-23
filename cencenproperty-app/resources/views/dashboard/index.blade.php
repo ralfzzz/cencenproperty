@@ -34,8 +34,8 @@
               <div class="col-md-5">
                 <select class="form-select @error('sell_rent') is-invalid @enderror" id="sell_rent" name="sell_rent">
                   <option disabled selected>Choose...</option>
-                  <option value="Sell">Sell</option>
-                  <option value="Rent">Rent</option>
+                  <option value="Dijual">Dijual</option>
+                  <option value="Disewa">Disewa</option>
                 </select>
                 @error('sell_rent')
                 <div class="invalid-feedback">
@@ -57,7 +57,7 @@
                   <option value="Rumah">Rumah</option>
                   <option value="Apartemen">Apartemen</option>
                   <option value="Tanah">Tanah</option>
-                  <option value="Rumah Susun/ Townhouse">Rumah Susun/ Townhouse</option>
+                  <option value="Kos">Kos</option>
                   <option value="Ruko">Ruko</option>
                   <option value="Kios">Kios</option>
                   <option value="Kantor">Kantor</option>

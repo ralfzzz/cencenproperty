@@ -3,11 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
+
 
 class LandingPageController extends Controller
 {
     public function view(){
-        return view('landingPage.index');
+        return view('landingPage.index',[
+            'posts' => Post::latest()->take(8)->get()
+
+        ]);
     }
 
     public function page(){
