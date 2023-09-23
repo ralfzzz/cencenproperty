@@ -252,7 +252,7 @@
 	</div>
 
      <!-- Footer -->
-     <footer class="container-fluid px-0" style="background-image:url(https://source.unsplash.com/900x800?home); height: 400px; width: 100%;">
+     <footer class="container-fluid px-0 mt-3" style="background-image:url(https://source.unsplash.com/900x800?home); height: 400px; width: 100%;">
         <div class="mask text-white" style="background-color: rgba(89, 89, 89, 0.6); height:100%; width:100%;">
           <div class="container">
             <div class="row">
