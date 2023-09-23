@@ -95,7 +95,7 @@
                 target: "instafeed-container",
                 resolution: "low_resolution",
                 accessToken:
-                    "IGQWRNVUdnQzlxTTh1bEtZAX3FTemRrbm81ZAU5fQUNqbDlDN3FtbExYaGM2UUhpUlBfem1aWmdaajdtTzRjeHFsLVlGNThhem94enBoY29vRUpWNTd4RXk1NEFUa194MzNGd1I0RUJWejFfS2NwdlZAoTV9XQktXV0kZD",
+                    "IGQWRPTk8xNUJXSjdQa3oxQmlXRjJLMnBqNDFkSDd0WFdlNVRNVUswQWNhOFJjUFdIdWFRTG1EOHNTSW15VTg5R2N4aXg5WHZAKMVFLRVNmNTh0Yl9sb3JMcFZADOUVLVC1IUzIybDZA6ZATVyaEVXOW84OE9GcDhFSmcZD",
             });
             userFeed.run();
         </script>
