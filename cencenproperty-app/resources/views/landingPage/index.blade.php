@@ -230,10 +230,11 @@
               @if($post->image)
               <img
               src="{{ asset('storage/'.$post->image) }}"
-              class="img-fluid object-fit-cover"
+              class="img-fluid object-fit-scale"
+              style="height: 300px; min-height: 300px"
             />
               @else
-                <img src="https://source.unsplash.com/200x200?home" class="img-fluid object-fit-cover" style="height: 200px; min-height: 200px" alt="image house">
+                <img src="https://source.unsplash.com/200x200?home" class="img-fluid object-fit-fill" style="height: 300px; min-height: 300px" alt="image house">
               @endif
               <!--Hot list-->
               <div class="card-img-overlay d-flex justify-content-end">
