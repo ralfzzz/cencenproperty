@@ -19,7 +19,7 @@
                 </div>
             </a>
             <button class="btn btn-primary ms-auto buttongold" id="btn-titip">Titip Jual</button>
-    <div class="container mx-0" style="width:fit-content; ">
+    
     <style type="text/css">
       a img {
         width: 46%;
@@ -132,7 +132,7 @@
                 </ul>
             </div>  
         </div>
-        </div>  
+       
     </nav>
     </div>
 
