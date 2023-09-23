@@ -15,7 +15,7 @@ class LandingPageController extends Controller
     }
 
     public function category(){
-        return view('landingPage.category');
+        return view('landingPage.kategori');
     }
 
     public function tes(){
