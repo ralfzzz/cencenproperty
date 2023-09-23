@@ -45,3 +45,4 @@ Route::get('/LandingPage', [LandingPageController::class, 'view']);
 Route::get('/page', [LandingPageController::class, 'page']);
 Route::get('/category', [LandingPageController::class, 'category']);
 Route::get('/tes', [LandingPageController::class, 'tes']);
+Route::get('/terbaru', [LandingPageController::class, 'terbaru']);

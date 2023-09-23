@@ -21,4 +21,8 @@ class LandingPageController extends Controller
     public function tes(){
         return view('landingPage.tes');
     }
+
+    public function terbaru(){
+        return view('landingPage.terbaru');
+    }
 }

@@ -991,7 +991,7 @@
       </div>
       <!--Selengkapnya-->
       <div class="container mt-2 d-flex justify-content-end">
-        <a href="#" class="link" style="color: #bc9c22"
+        <a href="/terbaru" class="link" style="color: #bc9c22"
           >Lihat Selengkapnya...</a
         >
       </div>
