@@ -135,16 +135,6 @@
                             Home
                         </a>
                     </li>
-                    <li>
-                        <a href="#" class="nav-link">
-                            Testimoni
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">
-                            About
-                        </a>
-                    </li>
                 </ul>
             </div>  
         </div>

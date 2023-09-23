@@ -45,7 +45,7 @@
     <div class="shadow container-fluid">
       <nav class="navbar navbar-expand-xxxl navbar-light overflow-hidden" >
           <div class="container-fluid" style="justify-content: flex-end;">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="/LandingPage">
                   <!-- Brand Logo -->
                   <div id="crop">
                       <img src="/img/live_logo.png" alt="Live@" id="logo">
@@ -148,18 +148,8 @@
                   
                   <ul class="navbar-nav ms-auto text-left">
                       <li>
-                          <a href="#" class="nav-link">
+                          <a href="/LandingPage" class="nav-link">
                               Home
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#" class="nav-link">
-                              Testimoni
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#" class="nav-link">
-                              About
                           </a>
                       </li>
                   </ul>
