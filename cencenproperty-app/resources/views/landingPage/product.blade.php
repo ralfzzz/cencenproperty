@@ -129,20 +129,20 @@
     </div>
 
 		<!-- Column -->
-		<div class="container text-center">
+		<div class="container text-center mt-5">
 		<div class="row align-items-start">
 			<div class="col-md-7">
 				<p class="container h1 text-start fw-bold">Cencen Property <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">Dijual</span> <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">Rumah</span></p>
 				<div id="carouselExample" class="carousel slide my-3">
 					<div class="carousel-inner rounded-3"  style="max-height: 300px;">
 						<div class="carousel-item active">
-							<img src="sss.jpg" class="d-block w-100" alt="...">
+							<img src="https://source.unsplash.com/900x800?home" class="d-block w-100" alt="...">
 						</div>
 						<div class="carousel-item">
-							<img src="aaa.jpg" class="d-block w-100" alt="...">
+							<img src="https://source.unsplash.com/900x800?home" class="d-block w-100" alt="...">
 						</div>
 						<div class="carousel-item">
-							<img src="types-of-homes-hero.jpg" class="d-block w-100" alt="...">
+							<img src="https://source.unsplash.com/900x800?home" class="d-block w-100" alt="...">
 						</div>
 					</div>
 					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -235,7 +235,7 @@
 		</div>
 		<div class="col-md-5 sticky-top container-md">
 			<div class="card mt-3">
-				<img class="card-img-top mx-5 mt-2 mx-auto d-block" src="Karya_Seni_Tanpa_Judul 3_copy.png" alt="Card image" style="width:250px">
+				<img class="card-img-top mx-5 mt-2 mx-auto d-block" src="https://source.unsplash.com/900x800?home" alt="Card image" style="width:250px">
 				<div class="card-body">
 					<div class="row d-flex justify-content-center">
 						<div class="col-md-5 d-grid">
