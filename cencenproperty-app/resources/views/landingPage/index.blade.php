@@ -10,8 +10,8 @@
 <body>
     <!-- NavBar -->
     <div class="shadow container-fluid">
-    <nav class="navbar navbar-expand-xxxl navbar-light overflow-hidden">
-        <div class="container-fluid justify-content-space-around">
+    <nav class="navbar navbar-expand-xxxl navbar-light overflow-hidden" >
+        <div class="container-fluid" style="justify-content: flex-end;">
             <a class="navbar-brand" href="#">
                 <!-- Brand Logo -->
                 <div id="crop">
@@ -19,6 +19,87 @@
                 </div>
             </a>
             <button class="btn btn-primary ms-auto buttongold" id="btn-titip">Titip Jual</button>
+    <div class="container mx-0" style="width:fit-content; ">
+    <style type="text/css">
+      a img {
+        width: 46%;
+        margin: 2px;
+        margin-right: 0px;
+        align-items: center;
+      }
+        </style>
+    </head>
+    <body>
+        <!-- Button trigger modal -->
+        <button
+            type="button"
+            class="btn p-2 "
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+            style="background-color: transparent"
+            ;
+        >
+            <i
+                class="fa-brands fa-instagram fa-2xl"
+                style="color: #bc9c22"
+            ></i>
+        </button>
+
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            id="staticBackdrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+        >
+            <div
+                class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+            >
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                            <i
+                                class="fa-brands fa-instagram fa-bounce fa-lg"
+                            ></i>
+                            Cencen Property
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body" id="instafeed-container"></div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn"
+                            data-bs-dismiss="modal"
+                            style="background-color: #bc9c22; color: white"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+        <script type="text/javascript">
+            var userFeed = new Instafeed({
+                get: "user",
+                target: "instafeed-container",
+                resolution: "low_resolution",
+                accessToken:
+                    "IGQWRNVUdnQzlxTTh1bEtZAX3FTemRrbm81ZAU5fQUNqbDlDN3FtbExYaGM2UUhpUlBfem1aWmdaajdtTzRjeHFsLVlGNThhem94enBoY29vRUpWNTd4RXk1NEFUa194MzNGd1I0RUJWejFfS2NwdlZAoTV9XQktXV0kZD",
+            });
+            userFeed.run();
+        </script>
+
             <button 
             class="navbar-toggler" 
             type="button" 
@@ -35,6 +116,11 @@
                 <ul class="navbar-nav ms-auto text-left">
                     <li>
                         <a href="#" class="nav-link">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link">
                             Testimoni
                         </a>
                     </li>
@@ -45,7 +131,8 @@
                     </li>
                 </ul>
             </div>  
-        </div>   
+        </div>
+        </div>  
     </nav>
     </div>
 
@@ -57,8 +144,18 @@
             </div>
             <div class="text-center" id="search-content">
                 <div class="col-wrapper" id="sewa-beli-container">
-                    <button class="btn btn-primary buttongold" type="submit" id="sewa-beli-btn">Sewa</button>
-                    <button class="btn btn-primary buttongold" type="submit" id="sewa-beli-btn">Beli</button>
+                  <button class="sewa-beli-btn sewa-beli-btn-active">Sewa</button>
+                  <button class="sewa-beli-btn">Beli</button>
+                  <script>
+                      const stateBtn = document.querySelectorAll('.sewa-beli-btn');
+                      stateBtn.forEach( state =>{
+                          state.addEventListener('click',()=>{
+                          document.querySelector('.sewa-beli-btn-active')?.classList.remove('sewa-beli-btn-active')
+                          state.classList.add('sewa-beli-btn-active')
+                          console.log("tes")
+                          });
+                      });
+                  </script>
                 </div>
                 <div class="input-group col-wrapper">
                     <input type="text" class="form-control" id="search-input" placeholder="Search Anything" >
@@ -511,63 +608,60 @@
     <!-- Properti Terbaru -->
 
     <!--Kategori-->
-    <div class="container-fluid fw-bold px-0" style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
-        <p class="mt-4 ps-4 ms-3 mb-4" style="color:#bc9c22">Kategori Pilihan Untukmu</p>
-        <form action="">
-        <div class="container-fluid" style="width: 1261px; height: 100%;" id="Kategori">
-          <div class="row text-white text-center px-0">
-            
-            <div class="col-md-3 px-0">
-              <div class="row-5 rounded-2" style="background-image: url(https://source.unsplash.com/450x400?home); height:158px; width:350px;">
-                <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 60px;">
+    <div class="container fw-bold px-2" style="font-family: Arial, Helvetica, sans-serif; font-size: 20px; ">
+        <p class="mt-4 mb-4" style="color:#bc9c22">Kategori Pilihan Untukmu</p>
+        <div class="container " style="max-width: 1261px;" id="Kategori">
+          <div class="row text-white text-center px-0 " style=" justify-content:space-between;">
+            <div class="row col-md-3 px-0 mt-2" style="padding:0px;margin:0;">
+              <div class="col-md-12 rounded-2 mb-1" style=" padding:0px; background-image: url(https://source.unsplash.com/450x400?home);">
+                <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; ">
                   <button type="Apartment" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px;border: #0000;">Apartment</button> 
                 </div>
               </div>
-              <div class="row-6 mt-3 rounded-2" style="background-image: url(https://source.unsplash.com/500x400?home); height:158px; width:350px;">
-                <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 60px;">
+              <div class="col-md-12 rounded-2" style="padding:0px; background-image: url(https://source.unsplash.com/500x400?home);">
+                <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%;">
                   <button type="Rumah" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px;border: #0000;">Rumah</button> 
                 </div>
               </div>
             </div>
             
-            <div class="col-md-2">
-              <div class="row-12 ms-5 rounded-2" style="background-image: url(https://source.unsplash.com/600x400?home); height: 333px; width: 161px;">
-                <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 140px;">
-                  <button type="Ruko" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Ruko</button> 
-                </div>
-              </div> 
-            </div>
-             
-            <div class="col-md-2">
-              <div class="row-12 ms-4 rounded-2" style="background-image: url(https://source.unsplash.com/400x400?home); height: 333px; width: 161px;">
-                <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 140px;">
-                  <button type="Kost" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Kost</button> 
-                </div>
-              </div> 
-            </div>
+              <div class="col-md-2 mx-0 my-0 mt-2 px-0" style=" padding:0px;">
+                <div class=" rounded-2" style="background-image: url(https://source.unsplash.com/600x400?home); max-height:333px;height:100%; width: auto;">
+                  <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 140px;">
+                    <button type="Ruko" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Ruko</button> 
+                  </div>
+                </div> 
+              </div>
+              
+              <div class="col-md-2 mx-0 my-0 mt-2 px-0" style=" padding:0px;">
+                <div class="rounded-2" style="background-image: url(https://source.unsplash.com/400x400?home); max-height:333px; height:100%; width: auto;">
+                  <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 140px;">
+                    <button type="Kost" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Kost</button> 
+                  </div>
+                </div> 
+              </div>
+            
   
-            <div class="col-md-3 px-3">
-              <div class="row-4 rounded-2" style="background-image: url(https://source.unsplash.com/1000x800?home); height:100px; width:505px;">
+            <div class="row col-md-4 mt-2 px-0 mx-0 my-0 ">
+              <div class=" rounded-2 px-0" style="background-image: url(https://source.unsplash.com/1000x800?home); ">
                 <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 32px;">
                   <button type="Kios" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Kios</button> 
                 </div>
               </div>
-              <div class="row-4 mt-3 rounded-2" style="background-image: url(https://source.unsplash.com/800x800?home); height:100px; width:505px;">
+              <div class=" mt-3 rounded-2 px-0" style="background-image: url(https://source.unsplash.com/800x800?home);">
                 <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 32px;">
                   <button type="Tanah" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Tanah</button> 
                 </div>
               </div>
-              <div class="row-4 mt-3 rounded-2" style="background-image: url(https://source.unsplash.com/900x800?home); height:100px; width:505px;">
+              <div class=" mt-3 rounded-2 px-0" style="background-image: url(https://source.unsplash.com/900x800?home); ">
                 <div class="mask text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 32px;">
                   <button type="Kantor" class="btn text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Kantor</button> 
                 </div>
               </div>
             </div>
           </div>
-        </form></div>
+        </div>
       </div>
-  
-    
       <!--Testimoni-->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -577,8 +671,8 @@
         </div>
         <div class="container-fluid px-0" style="margin-top: 105px;">
           <div class="Testimoni" style="background-image: url(Asset/livroom.jpg); 
-            background-size:100%; height:550px; width: 100%">
-            <div class="mask text-white fw-bold pt-5 ps-5" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; 
+            background-size:100%; width: 100%">
+            <div class="mask text-white fw-bold pt-5" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif; 
               background-color: rgba(188, 157, 34, 0.70); height:100%; width:100%;"><p>Testimoni</p>
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -586,7 +680,7 @@
                     <div class="row">
                       <div class="col-md-3 p-0">
                         <div class="row-md-5 bg-primary">
-                          <img class="img-fluid w-100" src="/img/Cencen Property Logo (Sosmed).png" alt="Testimoni 0" style="max-height: 270px;">
+                          <img class="img-" src="/img/Cencen Property Logo (Sosmed).png" alt="Testimoni 0" style="max-height: 270px;">
                         </div>
                         <div class="row-md-7 px-3 py-2" style="background-color: #BC9C22;"> 
                           <p class="my-0 text-white">M.Fadhil<br>CEO</p>
@@ -604,7 +698,7 @@
                     <div class="row">
                       <div class="col-md-3 p-0">
                         <div class="row-md-5 bg-primary">
-                          <img class="img-fluid w-100" src="/img/Cencen Property Logo (Sosmed).png" alt="Testimoni 1" style="max-height: 270px;">
+                          <img class="img" src="/img/Cencen Property Logo (Sosmed).png" alt="Testimoni 1" style="max-height: 270px;">
                         </div>
                         <div class="row-md-7 px-3 py-2" style="background-color: #BC9C22;"> 
                           <p class="my-0 text-white">Nur<br>User 1</p>
@@ -622,7 +716,7 @@
                     <div class="row">
                       <div class="col-md-3 p-0">
                         <div class="row-md-5 bg-primary">
-                          <img class="img-fluid w-100" src="/img/Cencen Property Logo (Sosmed).png" alt="Testimoni 2" style="max-height: 270px;">
+                          <img class="img" src="/img/Cencen Property Logo (Sosmed).png" alt="Testimoni 2" style="max-height: 270px;">
                         </div>
                         <div class="row-md-7 px-3 py-2" style="background-color: #BC9C22;"> 
                           <p class="my-0 text-white">Hidayat<br>User 2</p>
@@ -640,9 +734,8 @@
         </div>
       </div>
 
-    
-      <!--Pertanyaan-->
-    <div class="container pt-5 mt-5 mb-5" style="font-family: Arial, Helvetica, sans-serif; color: #bc9c22; width:600px">
+    <!--Pertanyaan-->
+    <div class="container pt-5 mt-5 mb-5" style="font-family: Arial, Helvetica, sans-serif; color: #bc9c22; ">
       <h4 class="fw-bold text-center" style="font-size: 20px">Ajukan Pertanyaan</h4>
       <form action="/action_page.php">
         <div class="mb-3 mt-4">
