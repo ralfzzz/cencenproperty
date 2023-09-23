@@ -28,6 +28,9 @@ class LandingPageController extends Controller
     }
 
     public function terbaru(){
-        return view('landingPage.terbaru');
+        return view('landingPage.terbaru',[
+            'posts' => Post::latest()->paginate(8)
+
+        ]);
     }
 }
