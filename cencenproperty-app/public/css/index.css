@@ -212,7 +212,32 @@ hr {
             .disewa .badge {
                 color: #366ace;
             }
+            /* Disewa-Biru */
             .disewa p {
                 color: black;
             }
-            /* Disewa-Biru */
+
+#logo_footer {
+    width: 110px;
+    height: 65px;
+    object-fit:none;
+}
+            
+
+@media screen and (min-width: 768px) {
+   #br_footer{
+        height:100%;
+        width: 2px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #br_footer{
+        height:2px;
+        width:100%;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        margin-left:0;
+        margin-right:0;
+    }
+}
