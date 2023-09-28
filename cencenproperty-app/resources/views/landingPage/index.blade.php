@@ -34,7 +34,9 @@
                     <img src="/img/live_logo.png" alt="Live@" id="logo">
                 </div>
             </a>
-            <button class="btn btn-primary ms-auto buttongold" id="btn-titip">Titip Jual</button>
+            
+            <button class="btn btn-primary ms-auto buttongold" id="btn-titip"><a href="https://wa.me/6282134829391/?text=Hello World" class="text-decoration-none text-white">Titip Jual</a></button>
+            
     
     <style type="text/css">
       a img {
@@ -264,12 +266,14 @@
               @endif
                 <div class="card-body py-1 h-100">
                   <div class="row d-flex">
+                    <a href="/post?id={{ $post->id }}" class="stretched-link text-decoration-none">
                     <p
                       class="card-title mb-0"
                       style="font-weight: bold; color: white"
                     >
                       {{ $post->title }}
                     </p>
+                    </a>
                     <div class="d-flex">
                       <div class="flex-grow-1">
                         <p
@@ -301,7 +305,6 @@
                           "
                         ></div>
                       </div>
-                      <a href="/post?id={{ $post->id }}" class="stretched-link text-decoration-none">
                       <div class="d-flex align-items-center">
                         <p
                           class="badge bg-light text-wrap p-2 py-3 mb-0"
@@ -310,7 +313,6 @@
                           {{ $post->sell_rent }}
                         </p>
                       </div>
-                      </a>
                     </div>
                   </div>
                 </div>
