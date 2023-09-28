@@ -15,12 +15,22 @@ class LandingPageController extends Controller
         ]);
     }
 
-    public function page(){
-        return view('landingPage.product');
+    public function post(){
+        $id = request()->id;
+        $post = Post::where('id', $id)->get();
+        // @dd($post[0]->facility);
+        return view('landingPage.post',[
+            'post' => $post,
+        ]);
     }
 
     public function category(){
-        return view('landingPage.kategori');
+        $category = request()->category;
+        // @dd($category);
+        return view('landingPage.kategori',[
+            'posts' => Post::latest()->where('property_type', $category)->paginate(8),
+            'label' => $category
+        ]);
     }
 
     public function tes(){

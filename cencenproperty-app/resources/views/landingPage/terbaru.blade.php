@@ -206,7 +206,7 @@
             @else
               <img src="https://source.unsplash.com/200x200?home" class="img-fluid object-fit-fill" style="height: 300px; min-height: 300px" alt="image house">
             @endif
-            <!--Hot list-->
+            {{-- <!--Hot list-->
             <div class="card-img-overlay d-flex justify-content-end">
               <p
                 class="badge bg-danger text-wrap"
@@ -223,7 +223,7 @@
                 Hot List
               </p>
             </div>
-            <!--Hot list-->
+            <!--Hot list--> --}}
             @if($post->sell_rent == 'Dijual')
               <div class="dijual">
             @else

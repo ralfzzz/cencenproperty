@@ -132,18 +132,34 @@
 		<div class="container text-center mt-5">
 		<div class="row align-items-start">
 			<div class="col-md-7">
-				<p class="container h1 text-start fw-bold">Cencen Property <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">Dijual</span> <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">Rumah</span></p>
+				<p class="container h1 text-start fw-bold">{{ $post[0]->title }} <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">{{ $post[0]->sell_rent }}</span> <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">{{ $post[0]->property_type }}</span></p>
 				<div id="carouselExample" class="carousel slide my-3">
-					<div class="carousel-inner rounded-3"  style="max-height: 300px;">
+					<div class="carousel-inner rounded-3"  style="max-height: 400px; min-height: 400px">
+                        @if($post[0]->image)
 						<div class="carousel-item active">
-							<img src="https://source.unsplash.com/900x800?home" class="d-block w-100" alt="...">
-						</div>
+							<img src="{{ asset('storage/'.$post[0]->image) }}" class="d-block img-fluid " alt="...">
+						</div>                            
+                        @endif
+                        @if($post[0]->image2)
 						<div class="carousel-item">
-							<img src="https://source.unsplash.com/900x800?home" class="d-block w-100" alt="...">
+							<img src="{{ asset('storage/'.$post[0]->image2) }}" class="d-block img-fluid " alt="...">
 						</div>
+                        @endif
+                        @if($post[0]->image3)
 						<div class="carousel-item">
-							<img src="https://source.unsplash.com/900x800?home" class="d-block w-100" alt="...">
+							<img src="{{ asset('storage/'.$post[0]->image3) }}" class="d-block img-fluid " alt="...">
 						</div>
+                        @endif
+                        @if($post[0]->image4)
+                        <div class="carousel-item">
+							<img src="{{ asset('storage/'.$post[0]->image4) }}" class="d-block img-fluid " alt="...">
+						</div>
+                        @endif
+                        @if($post[0]->image5)
+                        <div class="carousel-item">
+							<img src="{{ asset('storage/'.$post[0]->image5) }}" class="d-block img-fluid " alt="...">
+						</div>
+                        @endif
 					</div>
 					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -173,50 +189,50 @@
 				<div class="tab-content text-start">
 					<div id="home" class="container tab-pane active"><br>
 						<p style="color: #BC9C22">Harga</p>
-						<p>Rp. 500 jt</p>
+						<p>{{ $post[0]->price }}</p>
 						<hr>
 						<div class="row"> 
 							<div class="col-md-3">
 								<p style="color: #BC9C22">Kamar Tidur</p>
-								<a><span class="fa fa-bed"></span> 2</a>
+								<a><span class="fa fa-bed"></span> {{ $post[0]->bedroom }}+{{ $post[0]->additional_bedroom }}</a>
 							</div>
 							<div class="col-md-3">
 								<p style="color: #BC9C22">Kamar Mandi</p>
-								<a><span class="fa fa-bath"></span> 1</a>
+								<a><span class="fa fa-bath"></span> {{ $post[0]->bathroom }}</a>
 							</div>
 						</div>
 						<hr>
 						<div class="row"> 
 							<div class="col-md-3">
 								<p style="color: #BC9C22">Tipe</p>
-								<p>Land Size</p>
+								<p>{{ $post[0]->size_type }}</p>
 							</div>
 							<div class="col-md-3">
 								<p style="color: #BC9C22">Luas</p>
-								<p>150 sqm</p>
+								<p>{{ $post[0]->size }} sqm</p>
 							</div>
 						</div>
 						<hr>
 						<p style="color: #BC9C22">Tentang</p>
-						<p class="text-align-justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						<p class="text-align-justify">{{ $post[0]->description }}</p>
 						
 					</div>
 
 					<div id="menu1" class="container tab-pane fade"><br>
-							<li>Kolam renang</li>
-							<li>Clubhouse</li>
-							<li>Taman</li>
+                        @foreach(preg_split('/[,\\n]/', $post[0]->facility) as $value) 
+                        <li>{{ $value }}</li>
+                        @endforeach
 					</div>
 					<div id="menu2" class="container tab-pane fade"><br>
 						<div class="row align-items-start">
 						<div class="col-md-5">
 							<p style="color: #BC9C22">Alamat</p>
-							<p>Jl. Gatot subroto</p>
+							<p>{{ $post[0]->address }}</p>
 						</div>
 
 						<div class="col-md-5">
 							<div id="map-container-google-1" class="container">
-								<iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+								<iframe src="https://maps.google.com/maps?q={{ $post[0]->address }}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
 									style="border:0" class="w-100" allowfullscreen class="mx-0"></iframe>
 							</div>
 						</div>

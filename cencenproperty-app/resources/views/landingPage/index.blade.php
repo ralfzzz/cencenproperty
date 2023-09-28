@@ -235,7 +235,7 @@
               src="{{ asset('storage/'.$post->image) }}"
               class="img-fluid object-fit-scale"
               style="height: 300px; min-height: 300px"
-            />
+              />
               @else
                 <img src="https://source.unsplash.com/200x200?home" class="img-fluid object-fit-fill" style="height: 300px; min-height: 300px" alt="image house">
               @endif
@@ -276,7 +276,7 @@
                           class="card-text mb-0"
                           style="color: white; font-size: 13px"
                         >
-                          {{ $post->address }}
+                          {{ $post->kota_kabupaten }}
                         </p>
                         <p
                           class="badge bg-light text-wrap mb-0"
@@ -301,7 +301,7 @@
                           "
                         ></div>
                       </div>
-  
+                      <a href="/post?id={{ $post->id }}" class="stretched-link text-decoration-none">
                       <div class="d-flex align-items-center">
                         <p
                           class="badge bg-light text-wrap p-2 py-3 mb-0"
@@ -310,6 +310,7 @@
                           {{ $post->sell_rent }}
                         </p>
                       </div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -372,14 +373,16 @@
           <div class="row text-white text-center px-0 " style=" justify-content:space-around;">
             <div class="row col-md-3 px-0 mt-2" style="padding:0px;margin:0;">
               <div class="col-md-12 rounded-2" style=" padding:0px; background-image: url(https://source.unsplash.com/450x400?home)">
-                <form action="" style="height: 100%; width: 100%;"> 
+                <form action="/category" method="GET" style="height: 100%; width: 100%;"> 
+                  <input type="hidden" name="category" value="Apartemen" />
                   <button type="Apartment" class="btn text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 30px;">
                     <p class="text-white fw-bold" style="background-color:#0000; font-size: 20px;border: #0000;">Apartment</p> 
                   </button>
                 </form>
               </div>
               <div class="col-md-12 rounded-2 mt-2" style="padding:0px; background-image: url(https://source.unsplash.com/500x400?home)">
-                <form action="" style="height: 100%; width: 100%;">
+                <form action="/category" method="GET" style="height: 100%; width: 100%;"> 
+                  <input type="hidden" name="category" value="Rumah" />
                   <button type="Rumah" class="btn text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 30px;">
                     <p class="text-white fw-bold" style="background-color:#0000; font-size: 20px;border: #0000;">Rumah</p> 
                   </button>
@@ -390,7 +393,8 @@
 
             <div class="col-md-2 mx-0 my-0 mt-2 px-0" style="padding:0px;">
               <div class=" rounded-2" style="background-image: url(https://source.unsplash.com/600x400?home); max-height:333px; height:100%; width: auto;">
-                <form action="" style="height: 100%; width: 100%;">
+                <form action="/category" method="GET" style="height: 100%; width: 100%;"> 
+                  <input type="hidden" name="category" value="Ruko" />
                   <button type="Ruko" class="btn text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 20px;">
                     <p class="text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Ruko</p> 
                   </button>
@@ -399,9 +403,10 @@
             </div> 
             <div class="col-md-2 mx-0 my-0 mt-2 px-0" style="padding:0px;">
               <div class="rounded-2" style="background-image: url(https://source.unsplash.com/400x400?home); max-height:333px; height:100%; width: auto;">
-                <form action="" style="height: 100%; width: 100%;">  
+                <form action="/category" method="GET" style="height: 100%; width: 100%;"> 
+                  <input type="hidden" name="category" value="Kos" />
                   <button type="Kost" class="btn text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 20px;">
-                    <p class="text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Kost</p> 
+                    <p class="text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Kos</p> 
                   </button>
                 </form>
               </div> 
@@ -409,21 +414,24 @@
   
             <div class="row col-md-4 mt-2 px-0 mx-0 my-0 ">
               <div class=" rounded-2 px-0" style="background-image: url(https://source.unsplash.com/1000x800?home)">
-                <form action="" style="height: 100%; width: 100%;"> 
+                <form action="/category" method="GET" style="height: 100%; width: 100%;"> 
+                  <input type="hidden" name="category" value="Kios" />
                   <button type="Kios" class="btn text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 25px;">
                     <p class="text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Kios</p> 
                   </button>
                 </form>
               </div>
               <div class=" mt-2 rounded-2 px-0" style="background-image: url(https://source.unsplash.com/800x800?home)">
-                <form action="" style="height: 100%; width: 100%;">
+                <form action="/category" method="GET" style="height: 100%; width: 100%;"> 
+                  <input type="hidden" name="category" value="Tanah" />
                   <button type="Tanah" class="btn text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 25px;">
                     <p class="text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Tanah</button> 
                   </button>
                 </form>
               </div>
               <div class=" mt-2 rounded-2 px-0" style="background-image: url(https://source.unsplash.com/900x800?home)">
-                <form action="" style="height: 100%; width: 100%;">
+                <form action="/category" method="GET" style="height: 100%; width: 100%;"> 
+                  <input type="hidden" name="category" value="Kantor" />
                   <button type="Kantor" class="btn text-white fw-bold px-0 rounded-2" style="background-color: rgba(0, 0, 0, 0.4); height:100%; width:100%; padding-top: 25px;">
                     <p class="text-white fw-bold" style="background-color:#0000; font-size: 20px; border: #0000;">Kantor</p> 
                   </button>
