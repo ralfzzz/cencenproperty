@@ -218,9 +218,10 @@
 </div>
 <!--Selengkapnya-->
 <div class="container mt-2 d-flex justify-content-end">
-  <a href="/all" class="link" style="color: #bc9c22"
-    >Lihat Selengkapnya...</a
-  >
+  <form action="/all">
+    {{-- <input type="hidden" name="category" value="{{ $category }}"> --}}
+    <button class="btn btn-primary" type="submit" id="search">Lihat Selengkapnya...</i></button>
+  </form>
 </div>
 <!--Selengkapnya-->
 </div>

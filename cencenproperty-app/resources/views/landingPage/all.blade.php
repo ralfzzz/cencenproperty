@@ -6,6 +6,7 @@
       <nav class="navbar my-5">
         <div class="container-fluid p-0">
           <form class="d-flex" role="search" action="/search" method="get">
+            <input type="hidden" name="category" value="{{ $category }}">
             <input
               class="form-control"
               type="search"
@@ -16,6 +17,9 @@
                 border-bottom-right-radius: 0;
                 border-top-right-radius: 0;
               "
+              name="search"
+              id="search"
+              value="{{ request('search') }}"
             />
             <button
               class="btn"
