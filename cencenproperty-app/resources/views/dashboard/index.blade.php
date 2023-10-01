@@ -34,8 +34,8 @@
               <div class="col-md-5">
                 <select class="form-select @error('sell_rent') is-invalid @enderror" id="sell_rent" name="sell_rent">
                   <option disabled selected>Choose...</option>
-                  <option value="Sell">Sell</option>
-                  <option value="Rent">Rent</option>
+                  <option value="Dijual">Dijual</option>
+                  <option value="Disewa">Disewa</option>
                 </select>
                 @error('sell_rent')
                 <div class="invalid-feedback">
@@ -57,7 +57,7 @@
                   <option value="Rumah">Rumah</option>
                   <option value="Apartemen">Apartemen</option>
                   <option value="Tanah">Tanah</option>
-                  <option value="Rumah Susun/ Townhouse">Rumah Susun/ Townhouse</option>
+                  <option value="Kos">Kos</option>
                   <option value="Ruko">Ruko</option>
                   <option value="Kios">Kios</option>
                   <option value="Kantor">Kantor</option>
@@ -101,6 +101,22 @@
                 </div>
                 @enderror
                 </div>
+              </div>
+            </div>
+          </div>
+          {{-- kota/kabupaten --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="kota_kabpaten" class="col-form-label d-block ps-md-5">Kota/Kabupaten</label>
+              </div>
+              <div class="col-md-5">
+                <input type="text" class="form-control @error('kota_kabupaten') is-invalid @enderror" id="kota_kabupaten" name="kota_kabupaten" value="{{ old('kota_kabupaten') }}">
+                @error('kota_kabupaten')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
               </div>
             </div>
           </div>

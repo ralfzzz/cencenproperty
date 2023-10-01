@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('description');
             $table->text('address');
+            $table->text('kota_kabupaten');
             $table->string('size_type');
             $table->double('size');
             $table->integer('bedroom');

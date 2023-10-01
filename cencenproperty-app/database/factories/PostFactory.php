@@ -55,6 +55,7 @@ class PostFactory extends Factory
             'slug' => PostFactory::slugify($title),
             'description' => fake()->text(),
             'address' => fake()->sentence(),
+            'kota_kabupaten' => fake()->sentence(),
             'size_type' => fake()->word(),
             'size' => fake()->randomDigitNotNull(),
             'bedroom' => fake()->randomDigitNotNull(),

@@ -109,6 +109,22 @@
               </div>
             </div>
           </div>
+          {{-- kota/kabupaten --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="kota_kabpaten" class="col-form-label d-block ps-md-5">Kota/Kabupaten</label>
+              </div>
+              <div class="col-md-5">
+                <input type="text" class="form-control @error('kota_kabupaten') is-invalid @enderror" id="kota_kabupaten" name="kota_kabupaten" value="{{ old('kota_kabupaten', $posts->kota_kabupaten) }}">
+                @error('kota_kabupaten')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
+              </div>
+            </div>
+          </div>
           {{-- size type --}}
           <div class="container-fluid mb-3">
             <div class="row">

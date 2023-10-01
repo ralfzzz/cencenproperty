@@ -1,12 +1,11 @@
 @extends('landingPage.layouts.main')
 @section('container')
-  
 
     <div class="container">
       <!--Seacrh bar-->
       <nav class="navbar my-5">
         <div class="container-fluid p-0">
-          <form class="d-flex" role="search">
+          <form class="d-flex" role="search" action="/search" method="get">
             <input
               class="form-control"
               type="search"
@@ -32,20 +31,7 @@
           </form>
         </div>
       </nav>
-  
       <!--Seacrh bar-->
-
-      <!--Kategori-->
-      <div class="align-items-start mb-3">
-        <p
-          class="badge bg text-wrap p-4 py-3 mb-0"
-          style="font-size: 15px; background-color: #366ace"
-        >
-          {{ $label }}
-        </p>
-      </div>
-      <!--Kategori-->
-
       <!--Card-->
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3 mb-4">
         <!--Card Dijual-->
@@ -87,14 +73,15 @@
             @endif
               <div class="card-body py-1 h-100">
                 <div class="row d-flex">
-                  <a href="/post?id={{ $post->id }}" class="stretched-link text-decoration-none">
+                <a href="/post?id={{ $post->id }}" class="stretched-link text-decoration-none">
+
                   <p
                     class="card-title mb-0"
                     style="font-weight: bold; color: white"
                   >
                     {{ $post->title }}
                   </p>
-                  </a>
+                </a>
                   <div class="d-flex">
                     <div class="flex-grow-1">
                       <p

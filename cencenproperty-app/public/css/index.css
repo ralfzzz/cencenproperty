@@ -84,9 +84,7 @@ body{
     display: flex;
 }
 
-#search-box.container{
-    padding: 0;
-}
+
 
 
 #sewa-beli-container{
@@ -99,17 +97,20 @@ body{
     padding: 0; 
     background-color: transparent;
     color: white;
-    
 }
 
-#sewa-beli-btn{
+.sewa-beli-btn{
     margin:5px;
     background-color: transparent;
-    border-bottom: 3px solid rgb(255, 255, 255);
-    padding: 0;
+    border: 0;padding: 0;
+    color: #fff;
     text-align: left;
-    border-radius:0px;
     width: fit-content;
+    border-bottom: 3px transparent;
+}
+
+.sewa-beli-btn-active{
+    border-bottom: 3px solid rgb(255, 255, 255);
 }
 
 #search-input{
@@ -182,11 +183,6 @@ hr {
     margin: 12px;
 }
 
-.row{
-    padding: None;
-    
-}
-
 .uil-angle-down{
     height: 65px;
     width: 65px;
@@ -216,7 +212,32 @@ hr {
             .disewa .badge {
                 color: #366ace;
             }
+            /* Disewa-Biru */
             .disewa p {
                 color: black;
             }
-            /* Disewa-Biru */
+
+#logo_footer {
+    width: 110px;
+    height: 65px;
+    object-fit:none;
+}
+            
+
+@media screen and (min-width: 768px) {
+   #br_footer{
+        height:100%;
+        width: 2px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #br_footer{
+        height:2px;
+        width:100%;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        margin-left:0;
+        margin-right:0;
+    }
+}
