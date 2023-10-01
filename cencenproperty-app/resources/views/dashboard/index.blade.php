@@ -45,6 +45,26 @@
               </div>
             </div>
           </div>
+          {{-- hotlist --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="hot_list" class="col-form-label d-block ps-md-5">Hot List Property</label>
+              </div>
+              <div class="col-md-5">
+                <select class="form-select @error('hot_list') is-invalid @enderror" id="hot_list" name="hot_list">
+                  <option disabled selected>Choose...</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+                @error('hot_list')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
+              </div>
+            </div>
+          </div>
           {{-- property type --}}
           <div class="container-fluid mb-3">
             <div class="row">

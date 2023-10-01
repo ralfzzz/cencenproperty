@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('user_id');
             $table->timestamps();
             $table->string('sell_rent');
+            $table->string('hot_list');
             $table->string('property_type');
             $table->string('title');
             $table->string('slug')->unique();

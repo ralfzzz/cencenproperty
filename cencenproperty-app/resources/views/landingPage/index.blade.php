@@ -95,6 +95,7 @@
         @else
           <img src="https://source.unsplash.com/200x200?home" class="img-fluid object-fit-fill" style="height: 300px; min-height: 300px" alt="image house">
         @endif
+        @if($post->hot_list == "Yes")  
         <!--Hot list-->
         <div class="card-img-overlay d-flex justify-content-end">
           <p
@@ -112,6 +113,8 @@
             Hot List
           </p>
         </div>
+        @endif
+
         <!--Hot list-->
         @if($post->sell_rent == 'Dijual')
           <div class="dijual">

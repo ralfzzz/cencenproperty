@@ -23,10 +23,30 @@
               <div class="col-md-5">
                 <select class="form-select @error('sell_rent') is-invalid @enderror" id="sell_rent" name="sell_rent">
                   <option disabled >Choose...</option>
-                  <option value="Sell"  @if($posts->sell_rent == 'Sell') selected @endif>Sell</option>
-                  <option value="Rent"  @if($posts->sell_rent == 'Rent') selected @endif>Rent</option>
+                  <option value="Dijual"  @if($posts->sell_rent == 'Dijual') selected @endif>Dijual</option>
+                  <option value="Disewa"  @if($posts->sell_rent == 'Disewa') selected @endif>Disewa</option>
                 </select>
                 @error('sell_rent')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
+              </div>
+            </div>
+          </div>
+          {{-- hotlist --}}
+          <div class="container-fluid mb-3">
+            <div class="row">
+              <div class="col-md-2">
+                <label for="hot_list" class="col-form-label d-block ps-md-5">Hot List Property</label>
+              </div>
+              <div class="col-md-5">
+                <select class="form-select @error('hot_list') is-invalid @enderror" id="hot_list" name="hot_list">
+                  <option disabled selected>Choose...</option>
+                  <option value="Yes" @if($posts->hot_list == 'Yes') selected @endif>Yes</option>
+                  <option value="No" @if($posts->hot_list == 'No') selected @endif>No</option>
+                </select>
+                @error('hot_list')
                 <div class="invalid-feedback">
                     {{ $message }}
                 </div>
