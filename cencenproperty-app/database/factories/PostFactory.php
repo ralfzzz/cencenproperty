@@ -54,7 +54,7 @@ class PostFactory extends Factory
             'property_type' => fake()->word(),
             'title' => $title,
             'slug' => PostFactory::slugify($title),
-            'description' => fake()->word(),
+            'description' => fake()->text(),
             'address' => fake()->sentence(),
             'kota_kabupaten' => fake()->sentence(2),
             'size_type' => fake()->word(),

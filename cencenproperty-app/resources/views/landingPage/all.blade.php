@@ -94,7 +94,7 @@
                         class="card-text mb-0"
                         style="color: white; font-size: 13px"
                       >
-                        {{ $post->address }}
+                        {{ $post->kota_kabupaten }}
                       </p>
                       <p
                         class="badge bg-light text-wrap mb-0"

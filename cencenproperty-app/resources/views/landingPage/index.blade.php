@@ -217,7 +217,7 @@
   <!--Dijual-->
 </div>
 <!--Selengkapnya-->
-<div class="container mt-2 d-flex justify-content-end">
+<div class="container mt-3 px-0 d-flex justify-content-end">
   <form action="/all">
     {{-- <input type="hidden" name="category" value="{{ $category }}"> --}}
     <button class="btn btn-primary" type="submit" id="search">Lihat Selengkapnya...</i></button>
