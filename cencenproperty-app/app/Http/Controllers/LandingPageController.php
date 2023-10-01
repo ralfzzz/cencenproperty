@@ -18,7 +18,6 @@ class LandingPageController extends Controller
     public function post(){
         $id = request()->id;
         $post = Post::where('id', $id)->get();
-        // @dd($post[0]->facility);
         return view('landingPage.post',[
             'post' => $post,
         ]);
@@ -26,19 +25,14 @@ class LandingPageController extends Controller
 
     public function category(){
         $category = request()->category;
-        // @dd($category);
-        return view('landingPage.kategori',[
+        return view('landingPage.category',[
             'posts' => Post::latest()->where('property_type', $category)->paginate(8),
             'label' => $category
         ]);
     }
 
-    public function tes(){
-        return view('landingPage.tes');
-    }
-
-    public function terbaru(){
-        return view('landingPage.terbaru',[
+    public function all(){
+        return view('landingPage.all',[
             'posts' => Post::latest()->paginate(8)
 
         ]);

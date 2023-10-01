@@ -23,9 +23,9 @@ use App\Http\Controllers\DashboardPostController;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
 Route::get('/login', [LoginController::class, 'view'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -41,8 +41,8 @@ Route::get('/dashboard2', [DashboardController::class, 'view2'])->middleware('au
 
 Route::Resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 
-Route::get('/LandingPage', [LandingPageController::class, 'view']);
+Route::get('/', [LandingPageController::class, 'view']);
 Route::get('/post', [LandingPageController::class, 'post']);
 Route::get('/category', [LandingPageController::class, 'category']);
-Route::get('/tes', [LandingPageController::class, 'tes']);
-Route::get('/terbaru', [LandingPageController::class, 'terbaru']);
+Route::get('/all', [LandingPageController::class, 'all']);
+Route::get('/search', [LandingPageController::class, 'search']);
