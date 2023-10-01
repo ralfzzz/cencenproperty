@@ -17,7 +17,7 @@ class DashboardController extends Controller
     public function view2(){
         return view('dashboard.index2',[
             'title' => 'Dashboard Edit',
-            'posts' => Post::latest()->get(),
+            'posts' => Post::latest()->paginate(8),
             'sell_rent' => 'all'
 
         ]);
@@ -26,38 +26,38 @@ class DashboardController extends Controller
     public function rent(){
         return view('dashboard.index2',[
             'title' => 'Dashboard Edit',
-            'posts' => Post::latest()->where('sell_rent', '=', 'Disewa')->get(),
-            'sell_rent' => 'Rent'
+            'posts' => Post::latest()->where('sell_rent', '=', 'Disewa')->paginate(8),
+            'sell_rent' => 'Disewa'
         ]);
     }
 
     public function sell(){
         return view('dashboard.index2',[
             'title' => 'Dashboard Edit',
-            'posts' => Post::latest()->where('sell_rent', '=', 'Dijual')->get(),
-            'sell_rent' => 'Sell'
+            'posts' => Post::latest()->where('sell_rent', '=', 'Dijual')->paginate(8),
+            'sell_rent' => 'Dijual'
         ]);
     }
 
     public function search(Request $request){
-        if (request('sell_rent_category') == 'Sell') {
+        if (request('sell_rent_category') == 'Dijual') {
             return view('dashboard.index2',[
                 'title' => 'Dashboard Edit',
-                'posts' => Post::latest()->filter(request(['search']))->where('sell_rent','=','Dijual')->get(),
-                'sell_rent' => 'Sell'
+                'posts' => Post::latest()->filter(request(['search']))->where('sell_rent','=','Dijual')->paginate(8),
+                'sell_rent' => 'Dijual'
                 
             ]);
-        } elseif (request('sell_rent_category') == 'Rent') {
+        } elseif (request('sell_rent_category') == 'Disewa') {
             return view('dashboard.index2',[
                 'title' => 'Dashboard Edit',
-                'posts' => Post::latest()->filter(request(['search']))->where('sell_rent','=','Disewa')->get(),
-                'sell_rent' => 'Rent'
+                'posts' => Post::latest()->filter(request(['search']))->where('sell_rent','=','Disewa')->paginate(8),
+                'sell_rent' => 'Disewa'
 
             ]);
         } else {
             return view('dashboard.index2',[
                 'title' => 'Dashboard Edit',
-                'posts' => Post::latest()->filter(request(['search']))->get(),
+                'posts' => Post::latest()->filter(request(['search']))->paginate(8),
                 'sell_rent' => 'all'
             ]);
         }
