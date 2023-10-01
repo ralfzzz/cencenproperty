@@ -6,6 +6,7 @@
       <nav class="navbar my-5">
         <div class="container-fluid p-0">
           <form class="d-flex" role="search" action="/search" method="get">
+            <input type="hidden" name="category" value="{{ $category }}">
             <input
               class="form-control"
               type="search"
@@ -16,6 +17,9 @@
                 border-bottom-right-radius: 0;
                 border-top-right-radius: 0;
               "
+              name="search"
+              id="search"
+              value="{{ request('search') }}"
             />
             <button
               class="btn"
@@ -48,7 +52,8 @@
             @else
               <img src="https://source.unsplash.com/200x200?home" class="img-fluid object-fit-fill" style="height: 300px; min-height: 300px" alt="image house">
             @endif
-            {{-- <!--Hot list-->
+        @if($post->hot_list == "Yes")  
+            <!--Hot list-->
             <div class="card-img-overlay d-flex justify-content-end">
               <p
                 class="badge bg-danger text-wrap"
@@ -65,7 +70,8 @@
                 Hot List
               </p>
             </div>
-            <!--Hot list--> --}}
+            <!--Hot list-->
+            @endif
             @if($post->sell_rent == 'Dijual')
               <div class="dijual">
             @else
@@ -88,7 +94,7 @@
                         class="card-text mb-0"
                         style="color: white; font-size: 13px"
                       >
-                        {{ $post->address }}
+                        {{ $post->kota_kabupaten }}
                       </p>
                       <p
                         class="badge bg-light text-wrap mb-0"

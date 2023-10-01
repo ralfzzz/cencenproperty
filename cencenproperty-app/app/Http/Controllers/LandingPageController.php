@@ -10,7 +10,8 @@ class LandingPageController extends Controller
 {
     public function view(){
         return view('landingPage.index',[
-            'posts' => Post::latest()->take(8)->get()
+            'posts' => Post::latest()->take(8)->get(),
+            'category' => 'all'
 
         ]);
     }
@@ -33,8 +34,33 @@ class LandingPageController extends Controller
 
     public function all(){
         return view('landingPage.all',[
-            'posts' => Post::latest()->paginate(8)
+            'posts' => Post::latest()->paginate(8),
+            'category' => 'all'
 
         ]);
+    }
+
+    public function search(Request $request){
+        if (request('category') == 'Apartemen') {
+            return view('landingpage.all',[
+                'title' => 'Dashboard Edit',
+                'posts' => Post::latest()->filter(request(['search']))->where('sell_rent','=','Dijual')->paginate(8),
+                'category' => 'Dijual'
+                
+            ]);
+        } elseif (request('category') == 'Rumah') {
+            return view('landingpage.all',[
+                'title' => 'Dashboard Edit',
+                'posts' => Post::latest()->filter(request(['search']))->where('sell_rent','=','Disewa')->paginate(8),
+                'category' => 'Disewa'
+
+            ]);
+        } else {
+            return view('landingpage.all',[
+                'title' => 'Dashboard Edit',
+                'posts' => Post::latest()->filter(request(['search']))->paginate(8),
+                'category' => 'all'
+            ]);
+        }
     }
 }

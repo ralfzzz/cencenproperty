@@ -46,16 +46,17 @@ class PostFactory extends Factory
     
     public function definition()
     {
-        $title = fake()->sentence();
+        $title = fake()->word();
 
         return [
             'sell_rent' => fake()->word(),
+            'hot_list' => fake()->word(),
             'property_type' => fake()->word(),
             'title' => $title,
             'slug' => PostFactory::slugify($title),
             'description' => fake()->text(),
             'address' => fake()->sentence(),
-            'kota_kabupaten' => fake()->sentence(),
+            'kota_kabupaten' => fake()->sentence(2),
             'size_type' => fake()->word(),
             'size' => fake()->randomDigitNotNull(),
             'bedroom' => fake()->randomDigitNotNull(),

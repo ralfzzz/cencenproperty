@@ -42,6 +42,7 @@ class DashboardPostController extends Controller
 
         $validateInput = $request->validate([
             'sell_rent' => 'required|max:255',
+            'hot_list' => 'required|max:10',
             'property_type' => 'required|',
             'title' => 'required|unique:posts|max:25',
             'description' => 'required',
@@ -130,6 +131,7 @@ class DashboardPostController extends Controller
     {
         $rules = ([
             'sell_rent' => 'required|max:255',
+            'hot_list' => 'required|max:10',
             'property_type' => 'required|',
             'title' => 'required|max:25',
             'description' => 'required',

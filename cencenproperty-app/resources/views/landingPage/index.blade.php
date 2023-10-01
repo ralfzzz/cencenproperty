@@ -95,6 +95,7 @@
         @else
           <img src="https://source.unsplash.com/200x200?home" class="img-fluid object-fit-fill" style="height: 300px; min-height: 300px" alt="image house">
         @endif
+        @if($post->hot_list == "Yes")  
         <!--Hot list-->
         <div class="card-img-overlay d-flex justify-content-end">
           <p
@@ -112,6 +113,8 @@
             Hot List
           </p>
         </div>
+        @endif
+
         <!--Hot list-->
         @if($post->sell_rent == 'Dijual')
           <div class="dijual">
@@ -214,10 +217,11 @@
   <!--Dijual-->
 </div>
 <!--Selengkapnya-->
-<div class="container mt-2 d-flex justify-content-end">
-  <a href="/all" class="link" style="color: #bc9c22"
-    >Lihat Selengkapnya...</a
-  >
+<div class="container mt-3 px-0 d-flex justify-content-end">
+  <form action="/all">
+    {{-- <input type="hidden" name="category" value="{{ $category }}"> --}}
+    <button class="btn btn-primary" type="submit" id="search">Lihat Selengkapnya...</i></button>
+  </form>
 </div>
 <!--Selengkapnya-->
 </div>

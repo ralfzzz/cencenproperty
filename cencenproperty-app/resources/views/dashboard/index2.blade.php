@@ -14,10 +14,10 @@
                 <button class="btn btn-secondary"><strong class="text-white">All Posts</strong></button>
               </form>
               <form action="/dashboard/posts/sell">
-                <button class="btn btn-secondary"><strong class="text-white">Sell</strong></button>
+                <button class="btn btn-secondary"><strong class="text-white">Dijual</strong></button>
               </form>
               <form action="/dashboard/posts/rent">
-                <button class="btn btn-primary" type="submit"><strong class="text-white">Rent</strong></button>
+                <button class="btn btn-primary" type="submit"><strong class="text-white">Disewa</strong></button>
               </form>
             </div>
             <div class="col-md-5 ps-0 pe-3 me-5 ms-2">
@@ -55,7 +55,7 @@
               @endif
             </div>
             <div class="col-md-9 border border-3 rounded px-3 py-2 ms-md-4">
-              @if($post->sell_rent == 'Sell')
+              @if($post->sell_rent == 'Dijual')
               <h6>{{ $post->title }} <span class="badge text-bg-warning">{{ $post->sell_rent }}</span> <span class="badge bg-light text-bg-light border border-dark">{{ $post->property_type }}</span></h6>
               @else
               <h6>{{ $post->title }} <span class="badge text-bg-primary">{{ $post->sell_rent }}</span> <span class="badge bg-light text-bg-light border border-dark">{{ $post->property_type }}</span></h6>
@@ -76,7 +76,9 @@
           </div>
         </div>
         @endforeach
-
+        <div class="d-flex justify-content-center">
+          {{ $posts->links() }}
+        </div>
 @else
 <div class="container-fluid mt-5">
 <div class="row d-flex justify-content-center align-items-center" id="nothing-found">
