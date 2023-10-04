@@ -41,18 +41,54 @@ class LandingPageController extends Controller
     }
 
     public function search(Request $request){
+        $category = request('category');
         if (request('category') == 'Apartemen') {
-            return view('landingpage.all',[
+            return view('landingpage.category',[
                 'title' => 'Dashboard Edit',
-                'posts' => Post::latest()->filter(request(['search']))->where('sell_rent','=','Dijual')->paginate(8),
-                'category' => 'Dijual'
+                'posts' => Post::latest()->filter(request(['search']))->where('property_type','=',$category)->paginate(8),
+                'label' => $category
                 
             ]);
         } elseif (request('category') == 'Rumah') {
-            return view('landingpage.all',[
+            return view('landingpage.category',[
                 'title' => 'Dashboard Edit',
-                'posts' => Post::latest()->filter(request(['search']))->where('sell_rent','=','Disewa')->paginate(8),
-                'category' => 'Disewa'
+                'posts' => Post::latest()->filter(request(['search']))->where('property_type','=',$category)->paginate(8),
+                'label' => $category
+
+            ]);
+        } elseif (request('category') == 'Ruko') {
+            return view('landingpage.category',[
+                'title' => 'Dashboard Edit',
+                'posts' => Post::latest()->filter(request(['search']))->where('property_type','=',$category)->paginate(8),
+                'label' => $category
+
+            ]);
+        } elseif (request('category') == 'Kos') {
+            return view('landingpage.category',[
+                'title' => 'Dashboard Edit',
+                'posts' => Post::latest()->filter(request(['search']))->where('property_type','=',$category)->paginate(8),
+                'label' => $category
+
+            ]);
+        } elseif (request('category') == 'Kios') {
+            return view('landingpage.category',[
+                'title' => 'Dashboard Edit',
+                'posts' => Post::latest()->filter(request(['search']))->where('property_type','=',$category)->paginate(8),
+                'label' => $category
+
+            ]);
+        } elseif (request('category') == 'Tanah') {
+            return view('landingpage.category',[
+                'title' => 'Dashboard Edit',
+                'posts' => Post::latest()->filter(request(['search']))->where('property_type','=',$category)->paginate(8),
+                'label' => $category
+
+            ]);
+        } elseif (request('category') == 'Kantor') {
+            return view('landingpage.category',[
+                'title' => 'Dashboard Edit',
+                'posts' => Post::latest()->filter(request(['search']))->where('property_type','=',$category)->paginate(8),
+                'label' => $category
 
             ]);
         } else {
