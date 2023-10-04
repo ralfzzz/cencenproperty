@@ -6,7 +6,8 @@
       <!--Seacrh bar-->
       <nav class="navbar my-5">
         <div class="container-fluid p-0">
-          <form class="d-flex" role="search">
+          <form class="d-flex" role="search" action="/search" method="get">
+            <input type="hidden" name="category" value="{{ $label }}">
             <input
               class="form-control"
               type="search"
@@ -17,6 +18,9 @@
                 border-bottom-right-radius: 0;
                 border-top-right-radius: 0;
               "
+              name="search"
+              id="search"
+              value="{{ request('search') }}"
             />
             <button
               class="btn"
@@ -101,7 +105,7 @@
                         class="card-text mb-0"
                         style="color: white; font-size: 13px"
                       >
-                        {{ $post->address }}
+                        {{ $post->kota_kabupaten }}
                       </p>
                       <p
                         class="badge bg-light text-wrap mb-0"
