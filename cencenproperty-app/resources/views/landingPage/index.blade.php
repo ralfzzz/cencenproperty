@@ -2,6 +2,7 @@
 @section('container')
   
 <!-- Search Bar -->
+<form action="">
 <div id="search-bar" class="container-fluid" style="font-family:Arial, Helvetica, sans-serif">
   <div id="search-box" class="container">
       <div class="container"  id="title-bar">
@@ -35,10 +36,12 @@
                   Cari
                   </button>
                   <ul class="dropdown-menu">
-                      <li><h6 class="dropdown-header">Dropdown header</h6></li>
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><h6 class="dropdown-header">Location Available</h6></li>
+                      @foreach($datas as $data)
+                      <li><a class="dropdown-item" href="#">{{ $data->address }}</a></li>
+                      <li><a class="dropdown-item" href="#">{{ $data->kota_kabupaten }}</a></li>
+                      <li><a class="dropdown-item" href="#">{{ $data->located_near }}</a></li>
+                      @endforeach
                   </ul>
               </div>
               <div class="col dropdown" id="dropdown-filter">
@@ -47,9 +50,9 @@
                       Cari
                   </button>
                   <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>                            
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    @foreach($datas as $data)
+                      <li><a class="dropdown-item" href="#">{{ $data->property_type }}</a></li>
+                    @endforeach
                   </ul>
               </div>
               <div class="col dropdown" id="dropdown-filter">
@@ -58,9 +61,9 @@
                       Cari
                   </button>
                   <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      @foreach($datas as $data)
+                        <li><a class="dropdown-item" href="#">{{ $data->furniture_electronics }}</a></li>
+                      @endforeach
                   </ul>
               </div>
           </div>
@@ -70,6 +73,7 @@
       </div>
   </div>
 </div>
+</form>
 
 <!-- Properti Terbaru -->
 <div class="container">
