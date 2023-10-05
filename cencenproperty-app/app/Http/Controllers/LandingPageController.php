@@ -11,6 +11,7 @@ class LandingPageController extends Controller
     public function view(){
         return view('landingPage.index',[
             'posts' => Post::latest()->take(8)->get(),
+            'datas' => Post::groupBy('property_type')->get(),
             'category' => 'all'
 
         ]);
