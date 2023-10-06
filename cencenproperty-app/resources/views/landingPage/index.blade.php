@@ -32,11 +32,10 @@
           <div class="row align-items-center col-wrapper" id="dropdown-filter-container" >
               <div class="col dropdown" id="dropdown-filter" style="font-family: Arial, Helvetica, sans-serif;">
                   <label class="form-label">Lokasi</label>
-                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
+                  <button data-bs-display="static"  class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
                   Cari
                   </button>
                   <ul class="dropdown-menu">
-                      <li><h6 class="dropdown-header">Location Available</h6></li>
                       @foreach($datas as $data)
                       <li><a class="dropdown-item" href="#">{{ $data->address }}</a></li>
                       <li><a class="dropdown-item" href="#">{{ $data->kota_kabupaten }}</a></li>
@@ -46,7 +45,7 @@
               </div>
               <div class="col dropdown" id="dropdown-filter">
                   <label class="form-label">Tipe</label>
-                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
+                  <button data-bs-display="static" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
                       Cari
                   </button>
                   <ul class="dropdown-menu">
@@ -57,10 +56,10 @@
               </div>
               <div class="col dropdown" id="dropdown-filter">
                   <label class="form-label">Furnishing</label>
-                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
+                  <button data-bs-display="static" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
                       Cari
                   </button>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu" >
                       @foreach($datas as $data)
                         <li><a class="dropdown-item" href="#">{{ $data->furniture_electronics }}</a></li>
                       @endforeach
