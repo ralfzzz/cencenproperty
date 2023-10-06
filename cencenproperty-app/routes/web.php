@@ -46,3 +46,4 @@ Route::get('/post', [LandingPageController::class, 'post']);
 Route::get('/category', [LandingPageController::class, 'category']);
 Route::get('/all', [LandingPageController::class, 'all']);
 Route::get('/search', [LandingPageController::class, 'search']);
+Route::get('/searchAll', [LandingPageController::class, 'searchAll']);

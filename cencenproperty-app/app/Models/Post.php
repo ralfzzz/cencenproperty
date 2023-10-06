@@ -39,6 +39,22 @@ class Post extends Model
         });
     }
 
+    public function scopeFilterAll(Builder $query, array $filters)
+    {
+        $query->when($filters[0] ?? false, function($query, $filters){
+            $search = $filters['search'];
+            $locations = $filters['locations'];
+            $type = $filters['type'];
+            $furnishing = $filters['furnishing'];
+            return $query->where('title','like','%'.$search.'%')
+                    ->orWhere('description','like','%'.$search.'%')
+                    ->orWhere('furniture_electronics','like','%'.$furnishing.'%')
+                    ->orWhere('address','like','%'.$locations.'%')
+                    ->orWhere('kota_kabupaten','like','%'.$locations.'%')
+                    ->orWhere('located_near','like','%'.$locations.'%');
+        });
+    }
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id');

@@ -2,7 +2,7 @@
 @section('container')
   
 <!-- Search Bar -->
-<form action="">
+<form action="/searchAll" method="GET">
 <div id="search-bar" class="container-fluid" style="font-family:Arial, Helvetica, sans-serif">
   <div id="search-box" class="container">
       <div class="container"  id="title-bar">
@@ -10,8 +10,10 @@
       </div>
       <div class="text-center" id="search-content">
           <div class="col-wrapper" id="sewa-beli-container">
-            <button class="sewa-beli-btn sewa-beli-btn-active">Sewa</button>
-            <button class="sewa-beli-btn">Beli</button>
+            <button class="sewa-beli-btn sewa-beli-btn-active" type="button">Sewa</button>
+            <button class="sewa-beli-btn" type="button">Beli</button>
+            {{-- ketika tombol sewa/beli dipencet memasukkan value ke input bawah ini Sewa/Beli--}}
+            <input type="hidden" name="sewa_beli" value="">
             <script>
                 const stateBtn = document.querySelectorAll('.sewa-beli-btn');
                 stateBtn.forEach( state =>{
@@ -24,7 +26,7 @@
             </script>
           </div>
           <div class="input-group col-wrapper">
-              <input type="text" class="form-control" id="search-input" placeholder="Search Anything" >
+              <input type="text" class="form-control" id="search-input" placeholder="Search everything..." value="{{ request('search') }}" name="search">
           </div>
           <span>
               <hr>
@@ -32,38 +34,53 @@
           <div class="row align-items-center col-wrapper" id="dropdown-filter-container" >
               <div class="col dropdown" id="dropdown-filter" style="font-family: Arial, Helvetica, sans-serif;">
                   <label class="form-label">Lokasi</label>
-                  <button data-bs-display="static"  class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
+                  {{-- <button data-bs-display="static"  class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
                   Cari
-                  </button>
-                  <ul class="dropdown-menu">
+                  </button> --}}
+                  <select name="locations" id="locations">
+                    @foreach($datas as $data)
+                    <option value="{{ $data->address }}">{{ $data->address }}</option>
+                    <option value="{{ $data->kota_kabupaten }}">{{ $data->kota_kabupaten }}</option>
+                    <option value="{{ $data->located_near }}">{{ $data->located_near }}</option>
+                    @endforeach
+                  </select>
+                  {{-- <ul class="dropdown-menu">
                       @foreach($datas as $data)
                       <li><a class="dropdown-item" href="#">{{ $data->address }}</a></li>
                       <li><a class="dropdown-item" href="#">{{ $data->kota_kabupaten }}</a></li>
                       <li><a class="dropdown-item" href="#">{{ $data->located_near }}</a></li>
                       @endforeach
-                  </ul>
+                  </ul> --}}
               </div>
               <div class="col dropdown" id="dropdown-filter">
                   <label class="form-label">Tipe</label>
-                  <button data-bs-display="static" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
+                  {{-- <button data-bs-display="static" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
                       Cari
-                  </button>
-                  <ul class="dropdown-menu">
+                  </button> --}}
+                  <select name="type" id="type">
+                    @foreach($property as $data)
+                    <option value="{{ $data->property_type }}">{{ $data->property_type }}</option>
+                    @endforeach
+                  </select>
+                  {{-- <ul class="dropdown-menu">
                     @foreach($datas as $data)
                       <li><a class="dropdown-item" href="#">{{ $data->property_type }}</a></li>
                     @endforeach
-                  </ul>
+                  </ul> --}}
               </div>
               <div class="col dropdown" id="dropdown-filter">
                   <label class="form-label">Furnishing</label>
-                  <button data-bs-display="static" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
+                  {{-- <button data-bs-display="static" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
                       Cari
-                  </button>
-                  <ul class="dropdown-menu" >
-                      @foreach($datas as $data)
+                  </button> --}}
+                  <select name="furnishing" id="furnishing">
+                    @foreach($furniture as $data)
+                    <option value="{{ $data->furniture_electronics }}">{{ $data->furniture_electronics }}</option>
+                    @endforeach
+                  </select>
+                  {{-- <ul class="dropdown-menu" >
                         <li><a class="dropdown-item" href="#">{{ $data->furniture_electronics }}</a></li>
-                      @endforeach
-                  </ul>
+                  </ul> --}}
               </div>
           </div>
       </div>
@@ -322,7 +339,7 @@
               <div class="row">
                 <div class="col-md-3 p-0">
                   <div class="row-md-5 bg-primary">
-                    <img class="img-fluid w-100" src="/img/Cencen Property Logo (Sosmed).png" alt="Testimoni 0" style="max-height: 270px;">
+                    <img class="img-fluid w-100 object-fit-cover" src="/img/Cencen Property Logo (Sosmed).png" alt="Testimoni 0" style="max-height: 270px;">
                   </div>
                   <div class="row-md-7 px-3 py-3" style="background-color: #BC9C22;"> 
                     <p class="my-0 text-white">M.Fadhil<br>CEO</p>
@@ -348,7 +365,7 @@
               <div class="row">
                 <div class="col-md-3 p-0">
                   <div class="row-md-5 bg-primary">
-                    <img class="img-fluid w-100" src="/img/Cencen Property Logo (Sosmed).png" alt="Testimoni 1" style="max-height: 270px;">
+                    <img class="img-fluid w-100 object-fit-cover" src="/img/Cencen Property Logo (Sosmed).png" alt="Testimoni 1" style="max-height: 270px;">
                   </div>
                   <div class="row-md-7 px-3 py-3" style="background-color: #BC9C22;"> 
                     <p class="my-0 text-white">Nur<br>User 1</p>
@@ -374,9 +391,9 @@
               <div class="row">
                 <div class="col-md-3 p-0">
                   <div class="row-md-5 bg-primary">
-                    <img class="img-fluid w-100" src="/img/Cencen Property Logo (Sosmed).png" alt="Testimoni 2" style="max-height: 270px;">
+                    <img class="img-fluid w-100 object-fit-cover" src="/img/Cencen Property Logo (Sosmed).png" alt="Testimoni 2" style="max-height: 270px;">
                   </div>
-                  <div class="row-md-7 px-3 py-3" style="background-color: #BC9C22;"> 
+                  <div class="row-md-7 px-3 py-3 " style="background-color: #BC9C22;"> 
                     <p class="my-0 text-white">Hidayat<br>User 2</p>
                   </div>
                 </div>

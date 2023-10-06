@@ -11,7 +11,9 @@ class LandingPageController extends Controller
     public function view(){
         return view('landingPage.index',[
             'posts' => Post::latest()->take(8)->get(),
-            'datas' => Post::groupBy('property_type')->get(),
+            'property' => Post::groupBy('property_type')->get(),
+            'furniture' => Post::groupBy('furniture_electronics')->get(),
+            'datas' => Post::get(),
             'category' => 'all'
 
         ]);
@@ -28,14 +30,14 @@ class LandingPageController extends Controller
     public function category(){
         $category = request()->category;
         return view('landingPage.category',[
-            'posts' => Post::latest()->where('property_type', $category)->paginate(8),
+            'posts' => Post::latest()->where('property_type', $category)->paginate(12),
             'label' => $category
         ]);
     }
 
     public function all(){
         return view('landingPage.all',[
-            'posts' => Post::latest()->paginate(8),
+            'posts' => Post::latest()->paginate(12),
             'category' => 'all'
 
         ]);
@@ -99,5 +101,15 @@ class LandingPageController extends Controller
                 'category' => 'all'
             ]);
         }
+    }
+
+    public function searchAll(Request $request){
+            // @dd($request);
+            return view('landingpage.all',[
+                'title' => 'Dashboard Edit',
+                'posts' => Post::latest()->filterAll([$request])->where('property_type','=',$request['type'])->paginate(8)->withQueryString(),
+                'category' => "all"
+                
+            ]);
     }
 }
