@@ -10,17 +10,18 @@
       </div>
       <div class="text-center" id="search-content">
           <div class="col-wrapper" id="sewa-beli-container">
-            <button class="sewa-beli-btn sewa-beli-btn-active" type="button">Sewa</button>
-            <button class="sewa-beli-btn" type="button">Beli</button>
+            <input class="sewa-beli-btn sewa-beli-btn-active" type="button" value="Sewa" name="sewa_beli">
+            <input class="sewa-beli-btn " type="button" value="Beli" name="sewa_beli">
+            {{-- <button class="sewa-beli-btn" type="button">Beli</button> --}}
             {{-- ketika tombol sewa/beli dipencet memasukkan value ke input bawah ini Sewa/Beli--}}
-            <input type="hidden" name="sewa_beli" value="">
+            {{-- <input class=".sewa-beli-btn" type="hidden" name="sewa_beli" id="sewa_beli" value=""> --}}
             <script>
                 const stateBtn = document.querySelectorAll('.sewa-beli-btn');
                 stateBtn.forEach( state =>{
                     state.addEventListener('click',()=>{
                     document.querySelector('.sewa-beli-btn-active')?.classList.remove('sewa-beli-btn-active')
                     state.classList.add('sewa-beli-btn-active')
-                    console.log("tes")
+                    // console.log("tes")
                     });
                 });
             </script>
