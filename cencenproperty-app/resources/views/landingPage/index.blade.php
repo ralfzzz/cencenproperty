@@ -48,56 +48,41 @@
               <hr>
           </span>
           <div class="row align-items-center col-wrapper" id="dropdown-filter-container" >
+            
               <div class="col dropdown" id="dropdown-filter" style="font-family: Arial, Helvetica, sans-serif;">
                   <label class="form-label">Lokasi</label>
-                  {{-- <button data-bs-display="static"  class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
-                  Cari
-                  </button> --}}
-                  <select name="locations" id="locations">
+                  <select class="form-select form-select-sm mb-3" name="locations" id="locations">
                     @foreach($datas as $data)
                     <option value="{{ $data->address }}">{{ $data->address }}</option>
                     <option value="{{ $data->kota_kabupaten }}">{{ $data->kota_kabupaten }}</option>
                     <option value="{{ $data->located_near }}">{{ $data->located_near }}</option>
                     @endforeach
                   </select>
-                  {{-- <ul class="dropdown-menu">
-                      @foreach($datas as $data)
-                      <li><a class="dropdown-item" href="#">{{ $data->address }}</a></li>
-                      <li><a class="dropdown-item" href="#">{{ $data->kota_kabupaten }}</a></li>
-                      <li><a class="dropdown-item" href="#">{{ $data->located_near }}</a></li>
-                      @endforeach
-                  </ul> --}}
               </div>
               <div class="col dropdown" id="dropdown-filter">
                   <label class="form-label">Tipe</label>
-                  {{-- <button data-bs-display="static" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
-                      Cari
-                  </button> --}}
-                  <select name="type" id="type">
+                  <select class="form-select form-select-sm mb-3" name="type" id="type">
                     @foreach($property as $data)
                     <option value="{{ $data->property_type }}">{{ $data->property_type }}</option>
                     @endforeach
                   </select>
-                  {{-- <ul class="dropdown-menu">
-                    @foreach($datas as $data)
-                      <li><a class="dropdown-item" href="#">{{ $data->property_type }}</a></li>
-                    @endforeach
-                  </ul> --}}
               </div>
               <div class="col dropdown" id="dropdown-filter">
                   <label class="form-label">Furnishing</label>
-                  {{-- <button data-bs-display="static" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
-                      Cari
-                  </button> --}}
-                  <select name="furnishing" id="furnishing">
+                  <select class="form-select form-select-sm mb-3" name="furnishing" id="furnishing">
                     @foreach($furniture as $data)
                     <option value="{{ $data->furniture_electronics }}">{{ $data->furniture_electronics }}</option>
                     @endforeach
                   </select>
-                  {{-- <ul class="dropdown-menu" >
-                        <li><a class="dropdown-item" href="#">{{ $data->furniture_electronics }}</a></li>
-                  </ul> --}}
               </div>
+              <script>
+                var tes=document.querySelectorAll('option')
+                tes.forEach(x=>{
+                  width=x.clientWidth;
+                  if(x.textContent.length>20)
+                  x.textContent=x.textContent.substring(0,18)+'...';
+                })
+            </script>
           </div>
       </div>
       <div class="col-wrapper" id="btn-container">
