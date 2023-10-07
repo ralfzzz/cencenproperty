@@ -107,7 +107,7 @@ class LandingPageController extends Controller
             // @dd($request);
             return view('landingpage.all',[
                 'title' => 'Dashboard Edit',
-                'posts' => Post::latest()->filterAll([$request])->where('property_type','=',$request['type'])->paginate(8)->withQueryString(),
+                'posts' => Post::latest()->filterAll([$request])->where('property_type','=',$request['type'])->where('sell_rent','=',$request['sewa_beli'])->paginate(8)->withQueryString(),
                 'category' => "all"
                 
             ]);

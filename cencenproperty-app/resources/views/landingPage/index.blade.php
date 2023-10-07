@@ -10,12 +10,12 @@
       </div>
       <div class="text-center" id="search-content">
           <div class="col-wrapper" id="sewa-beli-container">
-            <input class="sewa-beli-btn sewa-beli-btn-active" type="button" value="Sewa" name="sewa_beli">
-            <input class="sewa-beli-btn " type="button" value="Beli" name="sewa_beli">
-            {{-- <button class="sewa-beli-btn" type="button">Beli</button> --}}
+            <button class="sewa-beli-btn sewa-beli-btn-active" type="button" id="sewa-btn">Sewa</button>
+            <button class="sewa-beli-btn " type="button" id="beli-btn">Beli</button>
             {{-- ketika tombol sewa/beli dipencet memasukkan value ke input bawah ini Sewa/Beli--}}
-            {{-- <input class=".sewa-beli-btn" type="hidden" name="sewa_beli" id="sewa_beli" value=""> --}}
+            <input type="hidden" name="sewa_beli" id="sewa_beli" value="Sewa">
             <script>
+            $(document).ready(function () {
                 const stateBtn = document.querySelectorAll('.sewa-beli-btn');
                 stateBtn.forEach( state =>{
                     state.addEventListener('click',()=>{
@@ -24,6 +24,21 @@
                     // console.log("tes")
                     });
                 });
+
+                
+                // Wait for the document to be ready
+              // Select the button by its ID and attach a click event handler
+              $("#sewa-btn").click(function () {
+                // Code to run when the button is clicked
+                $("#sewa_beli").val("Disewa");
+                // alert("Button clicked!");
+              });
+              $("#beli-btn").click(function () {
+                // Code to run when the button is clicked
+                $("#sewa_beli").val("Dijual");
+                // alert("Button clicked!");
+              });
+            });
             </script>
           </div>
           <div class="input-group col-wrapper">
