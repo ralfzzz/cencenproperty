@@ -324,7 +324,6 @@ hr {
     padding: 0;
     border: 0;
     background-color: #fff;
-    width: 20%;
     z-index: 5;
  }
 
@@ -338,13 +337,10 @@ hr {
  }
 
  #type-icon{
-    
     position: relative;
     padding: 0;
     border: 0;
     background-color: #fff;
-    width: 20%;
-    z-index: 5;
  }
 
  .btn.btn-secondary.type{
@@ -361,7 +357,6 @@ hr {
     padding: 0;
     border: 0;
     background-color: #fff;
-    width: 20%;
     z-index: 5;
  }
 

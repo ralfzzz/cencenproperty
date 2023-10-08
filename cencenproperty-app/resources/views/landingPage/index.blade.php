@@ -62,14 +62,12 @@
                   <span class="default">Cari</span>
                   <button class="fa-solid fa-caret-down pr-3" id="loc-icon" type="button"></button>
                 </div>
-                  
-                  
                 <input type="hidden" name='location' id="location" value="">
                 <ul class="dropdown-menu">
                     @foreach($datas as $data)
-                    <li class="option"><a class="dropdown-item" href="#">{{ $data->address }}</a></li>
-                    <li class="option"><a class="dropdown-item" href="#">{{ $data->kota_kabupaten }}</a></li>
-                    <li class="option"><a class="dropdown-item" href="#">{{ $data->located_near }}</a></li>
+                    <li class="option"><a class="dropdown-item" href="#!" >{{ $data->address }}</a></li>
+                    <li class="option"><a class="dropdown-item" href="#!" >{{ $data->kota_kabupaten }}</a></li>
+                    <li class="option"><a class="dropdown-item" href="#!" >{{ $data->located_near }}</a></li>
                     @endforeach
                 </ul>
               </div>
@@ -89,6 +87,7 @@
                       if(($("input[name='location']").val())!=''){
                         $("#loc-icon").removeClass('fa-caret-down');
                         $("#loc-icon").addClass('fa-xmark');
+                        
                       }
                       })
                     })
@@ -100,6 +99,8 @@
                         // console.log($("input[name='location']").val())
                         $("#loc-icon").addClass('fa-caret-down');
                         $("#loc-icon").removeClass('fa-xmark');
+                        $(".btn.btn-secondary.loc").removeClass("show");
+                        $(".dropdown-menu").removeClass("show");
                       }
                     });
                     
@@ -117,7 +118,7 @@
                 <input type="hidden" name='type' id="type" value="">
                   <ul class="dropdown-menu">
                     @foreach($property as $data)
-                      <li class="option" value="{{ $data->property_type }}"><a class="dropdown-item" href="#">{{ $data->property_type }}</a></li>
+                      <li class="option" value="{{ $data->property_type }}"><a class="dropdown-item" href="#!" >{{ $data->property_type }}</a></li>
                     @endforeach
                   </ul>
               </div>
@@ -146,6 +147,7 @@
                         // console.log($("input[name='type']").val())
                         $("#type-icon").addClass('fa-caret-down');
                         $("#type-icon").removeClass('fa-xmark');
+                        $(".dropdown-menu").removeClass("show");
                       }
                     });
               </script>
@@ -161,7 +163,7 @@
                 <input type="hidden" name='furnishing' id="furnishing" value="">
                 <ul class="dropdown-menu" >
                     @foreach($furniture as $data)
-                      <li class="option"><a class="dropdown-item" href="#">{{ $data->furniture_electronics }}</a></li>
+                      <li class="option"><a class="dropdown-item" href="#!" >{{ $data->furniture_electronics }}</a></li>
                     @endforeach
                 </ul>
               </div>
@@ -190,6 +192,7 @@
                         // console.log($("input[name='fur']").val())
                         $("#fur-icon").addClass('fa-caret-down');
                         $("#fur-icon").removeClass('fa-xmark');
+                        $(".dropdown-menu").removeClass("show");
                       }
                     });
               </script>
