@@ -31,7 +31,7 @@
                   
                 }
                 if($("#beli-btn").hasClass('sewa-beli-btn-active')){
-                  $("#sewa_beli").val('Dibeli');
+                  $("#sewa_beli").val('Dijual');
                   closeBeliBtn.style.display="block";
                 }
               });
@@ -48,7 +48,7 @@
             
           </script>
           <div class="input-group ">
-            <input type="text" class="form-control" id="search-input" placeholder="Search everything..." value="{{ request('search') }}" name="search">
+            <input type="text" class="form-control" id="search-input" placeholder="Search everything..." value="{{ request('search') }}" name="search" required>
           </div>
           <span>
               <hr>
@@ -116,7 +116,7 @@
                 </div>
                 <input type="hidden" name='type' id="type" value="">
                   <ul class="dropdown-menu">
-                    @foreach($datas as $data)
+                    @foreach($property as $data)
                       <li class="option" value="{{ $data->property_type }}"><a class="dropdown-item" href="#">{{ $data->property_type }}</a></li>
                     @endforeach
                   </ul>
@@ -160,7 +160,7 @@
                 </div>
                 <input type="hidden" name='furnishing' id="furnishing" value="">
                 <ul class="dropdown-menu" >
-                    @foreach($datas as $data)
+                    @foreach($furniture as $data)
                       <li class="option"><a class="dropdown-item" href="#">{{ $data->furniture_electronics }}</a></li>
                     @endforeach
                 </ul>
@@ -175,8 +175,8 @@
                     option.addEventListener("click", ()=>{
                       let selectedOption3 = option.querySelector(".dropdown-item").innerText; 
                       sBtn_text3.innerText = selectedOption3;
-                      $("input[name='fur']").val(selectedOption3)
-                      if(($("input[name='fur']").val())!=''){
+                      $("input[name='furnishing']").val(selectedOption3)
+                      if(($("input[name='furnishing']").val())!=''){
                         $("#fur-icon").removeClass('fa-caret-down');
                         $("#fur-icon").addClass('fa-xmark');
                       }
@@ -185,7 +185,7 @@
                     
                     closeBtn3.addEventListener('click',function(){
                       if(($("#fur-icon").hasClass('fa-xmark'))){
-                        $("input[name='fur']").val('')
+                        $("input[name='furnishing']").val('')
                         sBtn_text3.innerText = 'Cari';
                         // console.log($("input[name='fur']").val())
                         $("#fur-icon").addClass('fa-caret-down');
