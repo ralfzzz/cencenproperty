@@ -19,6 +19,12 @@
 					@if($post[0]->image3)
 				    <div class="carousel-item"><img src="{{ asset('storage/'.$post[0]->image3) }}" class="d-block w-100">
 					@endif
+					@if($post[0]->image4)
+				    <div class="carousel-item"><img src="{{ asset('storage/'.$post[0]->image4) }}" class="d-block w-100">
+					@endif
+					@if($post[0]->image5)
+				    <div class="carousel-item"><img src="{{ asset('storage/'.$post[0]->image5) }}" class="d-block w-100">
+					@endif
 				</div>
 				</div> 
 					<button class="carousel-control-prev" type="button" data-bs-target="#carouselHero" data-bs-slide="prev">
@@ -29,6 +35,7 @@
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Next</span>
 					</button>
+				</div>
 				</div>
 
 						
