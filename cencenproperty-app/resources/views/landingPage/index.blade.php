@@ -538,6 +538,7 @@
 <div class="container pt-5" style="font-family: Arial, Helvetica, sans-serif; color: #bc9c22; ">
 <h4 class="fw-bold text-center" style="font-size: 20px">Ajukan Pertanyaan</h4>
 <form id="contact-form" action="https://formspree.io/f/mwkdajpb" method="post">
+  @csrf
   <div class="mb-3 mt-4">
     <label for="email">Email</label>
     <input type="email" class="form-control" id="email" name="Email">
