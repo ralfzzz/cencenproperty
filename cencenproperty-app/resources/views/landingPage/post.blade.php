@@ -4,10 +4,10 @@
 
     </div>
 		<!-- Column -->
-		<div class="container text-center">
+		<div class="container text-center mt-5">
 		<div class="row align-items-start">
 			<div class="col-md-7">
-				<p class="container h1 text-start fw-bold">Cencen Property <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">Dijual</span> <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">Rumah</span></p>
+				<p class="container h1 text-start fw-bold">{{ $post[0]->title }} <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">{{ $post[0]->sell_rent }}</span> <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">{{ $post[0]->property_type }}</span></p>
 				<div id="carouselHero" class="carousel slide" data-bs-ride="carousel">
 					<div class="carousel-inner rounded-3">
 						@if($post[0]->image)
