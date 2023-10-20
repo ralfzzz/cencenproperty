@@ -9,24 +9,24 @@
 			<div class="col-md-7">
 				<p class="container h1 text-start fw-bold">Cencen Property <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">Dijual</span> <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">Rumah</span></p>
 				<div id="carouselHero" class="carousel slide" data-bs-ride="carousel">
-				  <div class="carousel-inner rounded-3">
-				  	@if($post[0]->image)
-				    <div class="carousel-item active"><img src="{{ asset('storage/'.$post[0]->image) }}" class="d-block w-100"></div>
-					@endif
-					@if($post[0]->image2)
-				    <div class="carousel-item"><img src="{{ asset('storage/'.$post[0]->image2) }}" class="d-block w-100">
-					@endif
-					@if($post[0]->image3)
-				    <div class="carousel-item"><img src="{{ asset('storage/'.$post[0]->image3) }}" class="d-block w-100">
-					@endif
-					@if($post[0]->image4)
-				    <div class="carousel-item"><img src="{{ asset('storage/'.$post[0]->image4) }}" class="d-block w-100">
-					@endif
-					@if($post[0]->image5)
-				    <div class="carousel-item"><img src="{{ asset('storage/'.$post[0]->image5) }}" class="d-block w-100">
-					@endif
-				</div>
-				</div> 
+					<div class="carousel-inner rounded-3">
+						@if($post[0]->image)
+						<div class="carousel-item active"><img src="{{ asset('storage/'.$post[0]->image) }}" class="d-block w-100"></div>
+						@endif
+						@if($post[0]->image2)
+						<div class="carousel-item"><img src="{{ asset('storage/'.$post[0]->image2) }}" class="d-block w-100"></div>
+						@endif
+						@if($post[0]->image3)
+						<div class="carousel-item"><img src="{{ asset('storage/'.$post[0]->image3) }}" class="d-block w-100"></div>
+						@endif
+						@if($post[0]->image4)
+						<div class="carousel-item"><img src="{{ asset('storage/'.$post[0]->image4) }}" class="d-block w-100"></div>
+						@endif
+						@if($post[0]->image5)
+						<div class="carousel-item"><img src="{{ asset('storage/'.$post[0]->image5) }}" class="d-block w-100"></div>
+						@endif
+					</div>
+				
 					<button class="carousel-control-prev" type="button" data-bs-target="#carouselHero" data-bs-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Previous</span>
@@ -35,7 +35,6 @@
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Next</span>
 					</button>
-				</div>
 				</div>
 
 						
