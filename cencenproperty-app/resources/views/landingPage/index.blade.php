@@ -537,14 +537,14 @@
 <!--Pertanyaan-->
 <div class="container pt-5" style="font-family: Arial, Helvetica, sans-serif; color: #bc9c22; ">
 <h4 class="fw-bold text-center" style="font-size: 20px">Ajukan Pertanyaan</h4>
-<form action="/action_page.php">
+<form id="contact-form" action="https://formspree.io/f/mwkdajpb" method="post">
   <div class="mb-3 mt-4">
     <label for="email">Email</label>
-    <input type="email" class="form-control" id="email" name="email">
+    <input type="email" class="form-control" id="email" name="Email">
   </div>
   <div class="mb-3 mt-4">
     <label for="pertantyaan">Pertanyaan</label>
-    <textarea class="form-control" rows="6" id="pertanyaan" name="text"></textarea>
+    <textarea class="form-control" rows="6" id="pertanyaan" name="Pertanyaan"></textarea>
   </div>
   <div style="text-align-last:right">
     <button type="submit" class="btn text-white mb-5 " style="background-color: #bc9c22;">
