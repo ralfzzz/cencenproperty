@@ -554,4 +554,6 @@
 </form>
 </div>
 
+@include('landingPage.partials.floatbutton')
+
 @endsection
