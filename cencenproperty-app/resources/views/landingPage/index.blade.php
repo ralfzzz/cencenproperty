@@ -355,7 +355,8 @@
 <div class="container mt-3 px-0 d-flex justify-content-end">
   <form action="/all">
     {{-- <input type="hidden" name="category" value="{{ $category }}"> --}}
-    <button class="btn btn-primary" type="submit" id="search">Lihat Selengkapnya...</i></button>
+    <button class="btn btn-primary" type="submit" id="search" style="
+    background-color: #366ace; border-color:#366ace">Lihat Selengkapnya...</i></button>
   </form>
 </div>
 <!--Selengkapnya-->
