@@ -548,7 +548,7 @@
   </div>
   <div style="text-align-last:right">
     <button type="submit" class="btn text-white mb-5 " style="background-color: #bc9c22;">
-      <a><span class="fa fa-paper-plane me-2"></span>Submit</a>
+      <a><span class="fa fa-paper-plane me-2 text-decoration-noe"></span>Kirim</a>
     </button>
   </div>
 </form>
