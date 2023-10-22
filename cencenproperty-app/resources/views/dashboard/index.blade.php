@@ -328,6 +328,11 @@
               <div class="col-md-5">
                 <div class="input-group mb-1">
                   <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image" onchange="previewImage()">
+                  @error('image')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
                   {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
                 <img class="img-preview img-fluid mt-2 col-sm-5 px-0 " style="max-width: 180px; max-height: 180px;">
@@ -344,6 +349,11 @@
               <div class="col-md-5">
                 <div class="input-group mb-1">
                   <input type="file" class="form-control @error('image2') is-invalid @enderror" id="image2" name="image2" onchange="previewImage2()">
+                  @error('image2')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
                   {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
                 <img class="img-preview img-fluid mt-2 col-sm-5 px-0 image2" style="max-width: 180px; max-height: 180px;">
@@ -360,6 +370,11 @@
               <div class="col-md-5">
                 <div class="input-group mb-1">
                   <input type="file" class="form-control @error('image3') is-invalid @enderror" id="image3" name="image3" onchange="previewImage3()">
+                  @error('image3')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
                   {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
                 <img class="img-preview img-fluid mt-2 col-sm-5 px-0 image3" style="max-width: 180px; max-height: 180px;">
@@ -376,6 +391,11 @@
               <div class="col-md-5">
                 <div class="input-group mb-1">
                   <input type="file" class="form-control @error('image4') is-invalid @enderror" id="image4" name="image4" onchange="previewImage4()">
+                  @error('image4')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
                   {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
                 <img class="img-preview img-fluid mt-2 col-sm-5 px-0 image4" style="max-width: 180px; max-height: 180px;">
@@ -392,6 +412,11 @@
               <div class="col-md-5">
                 <div class="input-group mb-1">
                   <input type="file" class="form-control @error('image5') is-invalid @enderror" id="image5" name="image5" onchange="previewImage5()">
+                  @error('image5')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
                   {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
                 <img class="img-preview img-fluid mt-2 col-sm-5 px-0 image5" style="max-width: 180px; max-height: 180px;">

@@ -146,11 +146,11 @@ class DashboardPostController extends Controller
             'facility' => 'required',
             'located_near' => 'required',
             'price' => 'required',
-            'image' => 'required|image|file|max:1024',
-            'image2' => 'required|image|file|max:1024',
-            'image3' => 'required|image|file|max:1024',
-            'image4' => 'required|image|file|max:1024',
-            'image5' => 'required|image|file|max:1024',
+            'image' => 'image|file|max:1024',
+            'image2' => 'image|file|max:1024',
+            'image3' => 'image|file|max:1024',
+            'image4' => 'image|file|max:1024',
+            'image5' => 'image|file|max:1024',
         ]);
 
         $validateInput = $request->validate($rules);
