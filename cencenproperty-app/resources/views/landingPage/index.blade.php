@@ -3,92 +3,207 @@
   
 <!-- Search Bar -->
 <form action="/searchAll" method="GET">
-<div id="search-bar" class="container-fluid" style="font-family:Arial, Helvetica, sans-serif">
-  <div id="search-box" class="container">
-      <div class="container"  id="title-bar">
+  <div id="search-bar" class="container-fluid" style="font-family:Arial, Helvetica, sans-serif; position:relative; z-index:2;">
+      <div id="search-box" class="container">
+        <div class="container"  id="title-bar">
           <h1 style="font-family: Arial, Helvetica, sans-serif">Cari Properti Anda</h1>
-      </div>
-      <div class="text-center" id="search-content">
+        </div>
+        <div class="text-center px-4 py-3" id="search-content">
           <div class="col-wrapper" id="sewa-beli-container">
-            <button class="sewa-beli-btn sewa-beli-btn-active" type="button">Sewa</button>
-            <button class="sewa-beli-btn" type="button">Beli</button>
+            <button class="sewa-beli-btn mx-1" type="button" id="sewa-btn">Sewa</button>
+            <button class="sewa-beli-btn mx-1" type="button" id="beli-btn">Beli</button>
+            <button class="fa-solid fa-xmark" type="button" id="close-beli-btn"></button>
             {{-- ketika tombol sewa/beli dipencet memasukkan value ke input bawah ini Sewa/Beli--}}
-            <input type="hidden" name="sewa_beli" value="">
-            <script>
-                const stateBtn = document.querySelectorAll('.sewa-beli-btn');
-                stateBtn.forEach( state =>{
-                    state.addEventListener('click',()=>{
-                    document.querySelector('.sewa-beli-btn-active')?.classList.remove('sewa-beli-btn-active')
-                    state.classList.add('sewa-beli-btn-active')
-                    console.log("tes")
-                    });
-                });
-            </script>
-          </div>
-          <div class="input-group col-wrapper">
-              <input type="text" class="form-control" id="search-input" placeholder="Search everything..." value="{{ request('search') }}" name="search">
+            <input type="hidden" name="sewa_beli" id="sewa_beli" value="">
+          </div>   
+          <script>
+            const buttonValue=document.getElementById("sewa_beli");
+            const closeBeliBtn=document.getElementById("close-beli-btn");
+            const stateBtn = document.querySelectorAll('.sewa-beli-btn');
+            let flagCheck=false;
+            stateBtn.forEach( state =>{
+                state.addEventListener('click',()=>{
+                document.querySelector('.sewa-beli-btn-active')?.classList.remove('sewa-beli-btn-active')
+                state.classList.add('sewa-beli-btn-active')
+                if($("#sewa-btn").hasClass('sewa-beli-btn-active')){
+                  $("#sewa_beli").val('Disewa');
+                  closeBeliBtn.style.display="block";
+                  
+                }
+                if($("#beli-btn").hasClass('sewa-beli-btn-active')){
+                  $("#sewa_beli").val('Dijual');
+                  closeBeliBtn.style.display="block";
+                }
+              });
+            });
+            
+            closeBeliBtn.addEventListener('click',function(){
+              if(buttonValue.value!=''){
+                closeBeliBtn.style.display="none";
+                buttonValue.value='';
+                $("#sewa-btn").removeClass('sewa-beli-btn-active');
+                $("#beli-btn").removeClass('sewa-beli-btn-active');
+              }
+            });
+            
+          </script>
+          <div class="input-group ">
+            <input type="text" class="form-control" id="search-input" placeholder="Search everything..." value="{{ request('search') }}" name="search" required>
           </div>
           <span>
               <hr>
           </span>
           <div class="row align-items-center col-wrapper" id="dropdown-filter-container" >
-              <div class="col dropdown" id="dropdown-filter" style="font-family: Arial, Helvetica, sans-serif;">
-                  <label class="form-label">Lokasi</label>
-                  {{-- <button data-bs-display="static"  class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
-                  Cari
-                  </button> --}}
-                  <select name="locations" id="locations">
+            <div class="col dropdown loc" id="dropdown-filter" style="font-family: Arial, Helvetica, sans-serif;">
+              <label class="form-label">Lokasi</label>
+                  
+              <div id="filter-menu">
+                <div data-bs-display="static"  class="btn btn-secondary loc" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="default">Cari</span>
+                  <button class="fa-solid fa-caret-down pr-3" id="loc-icon" type="button"></button>
+                </div>
+                <input type="hidden" name='location' id="location" value="">
+                <ul id="sch" class="dropdown-menu">
                     @foreach($datas as $data)
-                    <option value="{{ $data->address }}">{{ $data->address }}</option>
-                    <option value="{{ $data->kota_kabupaten }}">{{ $data->kota_kabupaten }}</option>
-                    <option value="{{ $data->located_near }}">{{ $data->located_near }}</option>
+                    <li class="option"><a class="dropdown-item" href="#!" >{{ $data->address }}</a></li>
+                    <li class="option"><a class="dropdown-item" href="#!" >{{ $data->kota_kabupaten }}</a></li>
+                    <li class="option"><a class="dropdown-item" href="#!" >{{ $data->located_near }}</a></li>
                     @endforeach
-                  </select>
-                  {{-- <ul class="dropdown-menu">
-                      @foreach($datas as $data)
-                      <li><a class="dropdown-item" href="#">{{ $data->address }}</a></li>
-                      <li><a class="dropdown-item" href="#">{{ $data->kota_kabupaten }}</a></li>
-                      <li><a class="dropdown-item" href="#">{{ $data->located_near }}</a></li>
-                      @endforeach
-                  </ul> --}}
+                </ul>
               </div>
-              <div class="col dropdown" id="dropdown-filter">
-                  <label class="form-label">Tipe</label>
-                  {{-- <button data-bs-display="static" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
-                      Cari
-                  </button> --}}
-                  <select name="type" id="type">
+              <script>
+
+                    const optionMenu =document.querySelector(".loc"),
+                        options=optionMenu.querySelectorAll(".option"),
+                        sBtn_text = optionMenu.querySelector(".default"),
+                        closeBtn=document.querySelector("#loc-icon");
+
+                    options.forEach(option =>{
+                    option.addEventListener("click", ()=>{
+                      let selectedOption = option.querySelector(".dropdown-item").innerText; 
+                      sBtn_text.innerText = selectedOption;
+                      $("input[name='location']").val(selectedOption)
+                      // console.log($("input[name='location']").val())
+                      if(($("input[name='location']").val())!=''){
+                        $("#loc-icon").removeClass('fa-caret-down');
+                        $("#loc-icon").addClass('fa-xmark');
+                        
+                      }
+                      })
+                    })
+                    
+                    closeBtn.addEventListener('click',function(){
+                      if(($("#loc-icon").hasClass('fa-xmark'))){
+                        $("input[name='location']").val('')
+                        sBtn_text.innerText = 'Cari';
+                        // console.log($("input[name='location']").val())
+                        $("#loc-icon").addClass('fa-caret-down');
+                        $("#loc-icon").removeClass('fa-xmark');
+                        $(".btn.btn-secondary.loc").removeClass("show");
+                        $("#sch .dropdown-menu").removeClass("show");
+                      }
+                    });
+                    
+
+              </script>
+            </div>
+
+            <div class="col dropdown type" id="dropdown-filter">
+              <label class="form-label">Tipe</label>
+              <div id="filter-menu">
+                <div data-bs-display="static" name="type" value="" class="btn btn-secondary type" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                  <span class="default">Cari</span>
+                  <button class="fa-solid fa-caret-down pr-3" id="type-icon" type="button"></button>
+                </div>
+                <input type="hidden" name='type' id="type" value="">
+                  <ul id="sch" class="dropdown-menu">
                     @foreach($property as $data)
-                    <option value="{{ $data->property_type }}">{{ $data->property_type }}</option>
+                      <li class="option" value="{{ $data->property_type }}"><a class="dropdown-item" href="#!" >{{ $data->property_type }}</a></li>
                     @endforeach
-                  </select>
-                  {{-- <ul class="dropdown-menu">
-                    @foreach($datas as $data)
-                      <li><a class="dropdown-item" href="#">{{ $data->property_type }}</a></li>
-                    @endforeach
-                  </ul> --}}
+                  </ul>
               </div>
-              <div class="col dropdown" id="dropdown-filter">
-                  <label class="form-label">Furnishing</label>
-                  {{-- <button data-bs-display="static" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="filter-menu">
-                      Cari
-                  </button> --}}
-                  <select name="furnishing" id="furnishing">
+              <script>
+                    const optionMenu2 = document.querySelector(".type"),
+                        options2=optionMenu2.querySelectorAll(".option"),
+                        sBtn_text2 = optionMenu2.querySelector(".default"),
+                        closeBtn2=document.getElementById("type-icon");
+
+                    options2.forEach(option =>{
+                    option.addEventListener("click", ()=>{
+                      let selectedOption2 = option.querySelector(".dropdown-item").innerText; 
+                      sBtn_text2.innerText = selectedOption2;
+                      $("input[name='type']").val(selectedOption2)
+                      if(($("input[name='type']").val())!=''){
+                        $("#type-icon").removeClass('fa-caret-down');
+                        $("#type-icon").addClass('fa-xmark');
+                      }
+                      })
+                    })
+                    
+                    closeBtn2.addEventListener('click',function(){
+                      if(($("#type-icon").hasClass('fa-xmark'))){
+                        $("input[name='type']").val('')
+                        sBtn_text2.innerText = 'Cari';
+                        // console.log($("input[name='type']").val())
+                        $("#type-icon").addClass('fa-caret-down');
+                        $("#type-icon").removeClass('fa-xmark');
+                        $("#sch .dropdown-menu").removeClass("show");
+                      }
+                    });
+              </script>
+            </div>
+              
+            <div class="col dropdown fur" id="dropdown-filter">
+              <label class="form-label">Furnishing</label>
+              <div id="filter-menu">
+                <div data-bs-display="static" name="furnishing" value="tes" class="btn btn-secondary fur" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                  <span class="default">Cari</span>
+                  <button class="fa-solid fa-caret-down pr-3" id="fur-icon" type="button"></button>
+                </div>
+                <input type="hidden" name='furnishing' id="furnishing" value="">
+                <ul id="sch" class="dropdown-menu" >
                     @foreach($furniture as $data)
-                    <option value="{{ $data->furniture_electronics }}">{{ $data->furniture_electronics }}</option>
+                      <li class="option"><a class="dropdown-item" href="#!" >{{ $data->furniture_electronics }}</a></li>
                     @endforeach
-                  </select>
-                  {{-- <ul class="dropdown-menu" >
-                        <li><a class="dropdown-item" href="#">{{ $data->furniture_electronics }}</a></li>
-                  </ul> --}}
+                </ul>
               </div>
+              <script>
+                    const optionMenu3 = document.querySelector(".fur"),
+                        options3=optionMenu3.querySelectorAll(".option"),
+                        sBtn_text3 = optionMenu3.querySelector(".default"),
+                        closeBtn3=document.getElementById("fur-icon");
+
+                    options3.forEach(option =>{
+                    option.addEventListener("click", ()=>{
+                      let selectedOption3 = option.querySelector(".dropdown-item").innerText; 
+                      sBtn_text3.innerText = selectedOption3;
+                      $("input[name='furnishing']").val(selectedOption3)
+                      if(($("input[name='furnishing']").val())!=''){
+                        $("#fur-icon").removeClass('fa-caret-down');
+                        $("#fur-icon").addClass('fa-xmark');
+                      }
+                      })
+                    })
+                    
+                    closeBtn3.addEventListener('click',function(){
+                      if(($("#fur-icon").hasClass('fa-xmark'))){
+                        $("input[name='furnishing']").val('')
+                        sBtn_text3.innerText = 'Cari';
+                        // console.log($("input[name='fur']").val())
+                        $("#fur-icon").addClass('fa-caret-down');
+                        $("#fur-icon").removeClass('fa-xmark');
+                        $("#sch .dropdown-menu").removeClass("show");
+                      }
+                    });
+              </script>
+            </div>
           </div>
-      </div>
-      <div class="col-wrapper" id="btn-container">
+        </div>
+        <div class="col-wrapper" id="btn-container">
           <button class="btn btn-primary buttongold" type="submit" id="search-button">Search</button>
+        </div>
       </div>
   </div>
-</div>
 </form>
 
 <!-- Properti Terbaru -->
@@ -240,7 +355,8 @@
 <div class="container mt-3 px-0 d-flex justify-content-end">
   <form action="/all">
     {{-- <input type="hidden" name="category" value="{{ $category }}"> --}}
-    <button class="btn btn-primary" type="submit" id="search">Lihat Selengkapnya...</i></button>
+    <button class="btn btn-primary" type="submit" id="search" style="
+    background-color: #366ace; border-color:#366ace">Lihat Selengkapnya...</i></button>
   </form>
 </div>
 <!--Selengkapnya-->
@@ -421,21 +537,24 @@
 <!--Pertanyaan-->
 <div class="container pt-5" style="font-family: Arial, Helvetica, sans-serif; color: #bc9c22; ">
 <h4 class="fw-bold text-center" style="font-size: 20px">Ajukan Pertanyaan</h4>
-<form action="/action_page.php">
+<form id="contact-form" action="https://formspree.io/f/mwkdajpb" method="post">
+  @csrf
   <div class="mb-3 mt-4">
     <label for="email">Email</label>
-    <input type="email" class="form-control" id="email" name="email">
+    <input type="email" class="form-control" id="email" name="Email">
   </div>
   <div class="mb-3 mt-4">
     <label for="pertantyaan">Pertanyaan</label>
-    <textarea class="form-control" rows="6" id="pertanyaan" name="text"></textarea>
+    <textarea class="form-control" rows="6" id="pertanyaan" name="Pertanyaan"></textarea>
   </div>
   <div style="text-align-last:right">
     <button type="submit" class="btn text-white mb-5 " style="background-color: #bc9c22;">
-      <a><span class="fa fa-paper-plane me-2"></span>Submit</a>
+      <a><span class="fa fa-paper-plane me-2 text-decoration-noe"></span>Kirim</a>
     </button>
   </div>
 </form>
 </div>
+
+@include('landingPage.partials.floatbutton')
 
 @endsection

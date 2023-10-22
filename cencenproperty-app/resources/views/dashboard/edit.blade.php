@@ -318,6 +318,11 @@
                 <div class="input-group">
                   <input type="hidden" name="oldImage" value="{{ $posts->image }}">
                   <input type="file" class="form-control @error('image') is-invalid @enderror" id="image" name="image" onchange="previewImage()">
+                  @error('image')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
                   {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
                 @if($posts->image)
@@ -341,6 +346,11 @@
                 <div class="input-group">
                   <input type="hidden" name="oldImage2" value="{{ $posts->image2 }}">
                   <input type="file" class="form-control @error('image2') is-invalid @enderror" id="image2" name="image2" onchange="previewImage2()">
+                  @error('image2')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
                   {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
                 @if($posts->image2)
@@ -364,6 +374,11 @@
                 <div class="input-group">
                   <input type="hidden" name="oldImage3" value="{{ $posts->image3 }}">
                   <input type="file" class="form-control @error('image3') is-invalid @enderror" id="image3" name="image3" onchange="previewImage3()">
+                  @error('image3')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
                   {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
                 @if($posts->image3)
@@ -387,6 +402,11 @@
                 <div class="input-group">
                   <input type="hidden" name="oldImage4" value="{{ $posts->image4 }}">
                   <input type="file" class="form-control @error('image4') is-invalid @enderror" id="image4" name="image4" onchange="previewImage4()">
+                  @error('image4')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
                   {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
                 @if($posts->image4)
@@ -410,6 +430,11 @@
                 <div class="input-group">
                   <input type="hidden" name="oldImage5" value="{{ $posts->image5 }}">
                   <input type="file" class="form-control @error('image5') is-invalid @enderror" id="image5" name="image5" onchange="previewImage5()">
+                  @error('image5')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                @enderror
                   {{-- <img class="img-preview img-fluid mb-2 col-sm-5 px-0"> --}}
                 </div>
                 @if($posts->image5)

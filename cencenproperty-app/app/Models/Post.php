@@ -34,6 +34,7 @@ class Post extends Model
     public function scopeFilter(Builder $query, array $filters)
     {
         $query->when($filters['search'] ?? false, function($query, $search){
+            // @dd($search);
             return $query->where('title','like','%'.$search.'%')
                     ->orWhere('description','like','%'.$search.'%');
         });
@@ -42,10 +43,11 @@ class Post extends Model
     public function scopeFilterAll(Builder $query, array $filters)
     {
         $query->when($filters[0] ?? false, function($query, $filters){
-            $search = $filters['search'];
-            $locations = $filters['locations'];
-            $type = $filters['type'];
-            $furnishing = $filters['furnishing'];
+            $search = ($filters['search'] == null)?'NULL':$filters['search'];
+            $locations = ($filters['locations'] == null)?'NULL':$filters['locations'];
+            $furnishing = ($filters['furnishing'] == null)?'NULL':$filters['furnishing'];
+            // @dd($locations);
+
             return $query->where('title','like','%'.$search.'%')
                     ->orWhere('description','like','%'.$search.'%')
                     ->orWhere('furniture_electronics','like','%'.$furnishing.'%')

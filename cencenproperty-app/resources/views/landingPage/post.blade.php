@@ -7,45 +7,45 @@
 		<div class="container text-center mt-5">
 		<div class="row align-items-start">
 			<div class="col-md-7">
-				<p class="container h1 text-start fw-bold">{{ $post[0]->title }} <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">{{ $post[0]->sell_rent }}</span> <span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">{{ $post[0]->property_type }}</span></p>
-				<div id="carouselExample" class="carousel slide my-3">
-					<div class="carousel-inner rounded-3"  style="max-height: 400px; min-height: 400px">
-                        @if($post[0]->image)
-						<div class="carousel-item active">
-							<img src="{{ asset('storage/'.$post[0]->image) }}" class="d-block img-fluid " alt="...">
-						</div>                            
-                        @endif
-                        @if($post[0]->image2)
-						<div class="carousel-item">
-							<img src="{{ asset('storage/'.$post[0]->image2) }}" class="d-block img-fluid " alt="...">
-						</div>
-                        @endif
-                        @if($post[0]->image3)
-						<div class="carousel-item">
-							<img src="{{ asset('storage/'.$post[0]->image3) }}" class="d-block img-fluid " alt="...">
-						</div>
-                        @endif
-                        @if($post[0]->image4)
-                        <div class="carousel-item">
-							<img src="{{ asset('storage/'.$post[0]->image4) }}" class="d-block img-fluid " alt="...">
-						</div>
-                        @endif
-                        @if($post[0]->image5)
-                        <div class="carousel-item">
-							<img src="{{ asset('storage/'.$post[0]->image5) }}" class="d-block img-fluid " alt="...">
-						</div>
-                        @endif
+				<p class="container h1 text-start fw-bold">{{ $post[0]->title }} 
+					@if($post[0]->sell_rent == 'Dijual')
+					<span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">{{ $post[0]->sell_rent }}</span> 
+					<span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #BC9C22;">{{ $post[0]->property_type }}
+					@else
+					<span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #366ace;">{{ $post[0]->sell_rent }}</span> 
+					<span class="badge fw-normal fs-6 px-3 rounded-1" style="background-color: #366ace;">{{ $post[0]->property_type }}
+					@endif
+					</span></p>
+				<div id="carouselHero" class="carousel slide" data-bs-ride="carousel">
+					<div class="carousel-inner rounded-3">
+						@if($post[0]->image)
+						<div class="carousel-item active"><img src="{{ asset('storage/'.$post[0]->image) }}" class="d-block w-100"></div>
+						@endif
+						@if($post[0]->image2)
+						<div class="carousel-item"><img src="{{ asset('storage/'.$post[0]->image2) }}" class="d-block w-100"></div>
+						@endif
+						@if($post[0]->image3)
+						<div class="carousel-item"><img src="{{ asset('storage/'.$post[0]->image3) }}" class="d-block w-100"></div>
+						@endif
+						@if($post[0]->image4)
+						<div class="carousel-item"><img src="{{ asset('storage/'.$post[0]->image4) }}" class="d-block w-100"></div>
+						@endif
+						@if($post[0]->image5)
+						<div class="carousel-item"><img src="{{ asset('storage/'.$post[0]->image5) }}" class="d-block w-100"></div>
+						@endif
 					</div>
-					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+				
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselHero" data-bs-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Previous</span>
 					</button>
-					<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselHero" data-bs-slide="next">
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Next</span>
 					</button>
 				</div>
-				
+
+						
 			<div class="container">
 				<!-- Nav tabs -->
 				<ul class="nav nav-underline" role="tablist">
