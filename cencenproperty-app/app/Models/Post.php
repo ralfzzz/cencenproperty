@@ -42,18 +42,33 @@ class Post extends Model
 
     public function scopeFilterAll(Builder $query, array $filters)
     {
+        // dd($filters);
         $query->when($filters[0] ?? false, function($query, $filters){
-            $search = ($filters['search'] == null)?'NULL':$filters['search'];
-            $locations = ($filters['locations'] == null)?'NULL':$filters['locations'];
-            $furnishing = ($filters['furnishing'] == null)?'NULL':$filters['furnishing'];
-            // @dd($locations);
+            // $search = ($filters['search'] == null)?'NULL':$filters['search'];
+            // $locations = ($filters['locations'] == null)?'NULL':$filters['locations'];
+            // $furnishing = ($filters['furnishing'] == null)?'NULL':$filters['furnishing'];
+            $search = $filters['search'];
+            $locations = $filters['location'];
+            $furnishing = $filters['furnishing'];
+            
+            if ($locations) {
+                // @dd($locations);
+                return $query->where('title','like','%'.$search.'%')
+                        ->where('description','like','%'.$search.'%')
+                        ->where('furniture_electronics','like','%'.$furnishing.'%')
+                        ->where('address','like','%'.$locations.'%')
+                        ->orWhere('kota_kabupaten','like','%'.$locations.'%')
+                        ->orWhere('located_near','like','%'.$locations.'%');
+            } else {
+                return $query->where('title','like','%'.$search.'%')
+                        ->where('description','like','%'.$search.'%')
+                        ->where('furniture_electronics','like','%'.$furnishing.'%')
+                        ->where('address','like','%'.$locations.'%')
+                        ->where('kota_kabupaten','like','%'.$locations.'%')
+                        ->where('located_near','like','%'.$locations.'%');
+                // @dd($furnishing);
+            }
 
-            return $query->where('title','like','%'.$search.'%')
-                    ->orWhere('description','like','%'.$search.'%')
-                    ->orWhere('furniture_electronics','like','%'.$furnishing.'%')
-                    ->orWhere('address','like','%'.$locations.'%')
-                    ->orWhere('kota_kabupaten','like','%'.$locations.'%')
-                    ->orWhere('located_near','like','%'.$locations.'%');
         });
     }
 

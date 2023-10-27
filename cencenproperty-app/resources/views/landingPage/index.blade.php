@@ -48,7 +48,7 @@
             
           </script>
           <div class="input-group ">
-            <input type="text" class="form-control" id="search-input" placeholder="Search everything..." value="{{ request('search') }}" name="search" required>
+            <input type="text" class="form-control" id="search-input" placeholder="Search everything..." value="{{ request('search') }}" name="search">
           </div>
           <span>
               <hr>

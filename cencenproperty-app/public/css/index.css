@@ -176,7 +176,6 @@ body{
 #sch.dropdown-menu {
     --bs-dropdown-min-width:3rem;
     position: absolute;
-    display: none;
     min-width: var(--bs-dropdown-min-width);
 }
 
