@@ -64,10 +64,13 @@
                 </div>
                 <input type="hidden" name='location' id="location" value="">
                 <ul id="sch" class="dropdown-menu">
+                  <li>
+                    <div><input id="FilterSearch" class="dropdown-item" type="text" onkeyup="Filter()" placeholder="Cari..."/></div>
+                  </li>
                     @foreach($datas as $data)
-                    <li class="option"><a class="dropdown-item" href="#!" >{{ $data->address }}</a></li>
-                    <li class="option"><a class="dropdown-item" href="#!" >{{ $data->kota_kabupaten }}</a></li>
-                    <li class="option"><a class="dropdown-item" href="#!" >{{ $data->located_near }}</a></li>
+                    <li class="option"><a class="dropdown-item" id="locationId" href="#!" >{{ $data->address }}</a></li>
+                    <li class="option"><a class="dropdown-item" id="locationId" href="#!" >{{ $data->kota_kabupaten }}</a></li>
+                    <li class="option"><a class="dropdown-item" id="locationId" href="#!" >{{ $data->located_near }}</a></li>
                     @endforeach
                 </ul>
               </div>
@@ -83,6 +86,7 @@
                       let selectedOption = option.querySelector(".dropdown-item").innerText; 
                       sBtn_text.innerText = selectedOption;
                       $("input[name='location']").val(selectedOption)
+                      document.getElementById('FilterSearch').value="";
                       // console.log($("input[name='location']").val())
                       if(($("input[name='location']").val())!=''){
                         $("#loc-icon").removeClass('fa-caret-down');
@@ -92,6 +96,27 @@
                       })
                     })
                     
+                    function Filter() {
+                      
+                      // Declare variables
+                      var input, filter, ul, li, a, i, txtValue;
+                      input = document.getElementById('FilterSearch');
+                      filter = input.value.toUpperCase();
+                      ul = document.getElementById("sch");
+                      li = ul.getElementsByTagName('li');
+
+                      // Loop through all list items, and hide those who don't match the search query
+                      for (i = 0; i < li.length; i++) {
+                        a = $("#locationId.dropdown-item")[i];
+                        txtValue = a.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                          a.style.display = "";
+                        } else {
+                          a.style.display = "none";
+                        }
+                      }
+                    }
+
                     closeBtn.addEventListener('click',function(){
                       if(($("#loc-icon").hasClass('fa-xmark'))){
                         $("input[name='location']").val('')
@@ -100,7 +125,7 @@
                         $("#loc-icon").addClass('fa-caret-down');
                         $("#loc-icon").removeClass('fa-xmark');
                         $(".btn.btn-secondary.loc").removeClass("show");
-                        $("#sch .dropdown-menu").removeClass("show");
+                        $("#sch.dropdown-menu").removeClass("show");
                       }
                     });
                     
