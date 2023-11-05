@@ -60,7 +60,7 @@
               @else
               <h6>{{ $post->title }} <span class="badge text-bg-primary">{{ $post->sell_rent }}</span> <span class="badge bg-light text-bg-light border border-dark">{{ $post->property_type }}</span></h6>
               @endif
-              <h6 class="p-0 m-0">IDR. {{ $post->price }}</h6>
+              <h6 class="p-0 m-0">IDR. @money($post->price)</h6>
               <p class="p-0 m-0">{{ $post->size_type }} | <small>{{ $post->size }} sqm</small></p>
               <p class="p-0 m-0"><i class="fa-solid fa-bed"></i> {{ $post->bedroom }}+{{ $post->additional_bedroom }}</p>
               <p class="p-0 mb-0"><i class="fa-solid fa-bath fa-lg"></i> {{ $post->bathroom }}</p>
