@@ -108,7 +108,9 @@ class LandingPageController extends Controller
             // @dd(Post::latest()->filterAll([$request])->get());
             $type=$request['type'];
             $sewa_beli=$request['sewa_beli'];
+            // dd($type)
             if ($type==null && $sewa_beli==null) {
+            // dd($request['location']);
                 return view('landingPage.all',[
                     'title' => 'Dashboard Edit',
                     'posts' => Post::latest()->filterAll([$request])->paginate(12)->withQueryString(),

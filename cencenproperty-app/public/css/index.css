@@ -176,14 +176,18 @@ body{
 #sch.dropdown-menu {
     --bs-dropdown-min-width:3rem;
     position: absolute;
-    display: none;
     min-width: var(--bs-dropdown-min-width);
+}
+
+#FilterSearch{
+    padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
 }
 
 #sch.dropdown-menu.show {
     position: absolute;
     transform: translate3d(12px, 84px, 0px);
-    height: 320px;
+    height: fit-content;
+    max-height: 320px ;
     width: calc(100% - 24px);
     inset: 0px auto auto 0px;
     margin: 0px;
